@@ -16,5 +16,13 @@ export const menu: CoreMenu[] = [
     type: 'item',
     icon: 'file',
     url: 'sample'
+  },
+  {
+    id: 'addEmployee',
+    title: 'Add Employee',
+    translate: 'MENU.ADDEMPLOYEE',
+    type: 'item',
+    icon: 'file',
+    url: 'NewEmployee'
   }
 ]

@@ -8,6 +8,13 @@ import { ContentHeaderModule } from 'app/layout/components/content-header/conten
 
 import { SampleComponent } from './sample.component'
 import { HomeComponent } from './home.component'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { BrowserModule } from '@angular/platform-browser';
+import { AddEmployeeComponent } from './add-employee/add-employee.component'
+import { CommonModule } from '@angular/common'
+import { NgSelectModule } from '@ng-select/ng-select'
+import { CoreDirectivesModule } from '@core/directives/directives'
+import { CardSnippetModule } from '@core/components/card-snippet/card-snippet.module'
 
 const routes = [
   {
@@ -18,11 +25,28 @@ const routes = [
     path: 'home',
     component: HomeComponent
   }
+  ,
+  {
+    path: 'NewEmployee',
+    component: AddEmployeeComponent
+  }
 ]
 
 @NgModule({
-  declarations: [SampleComponent, HomeComponent],
-  imports: [RouterModule.forChild(routes), ContentHeaderModule, TranslateModule, CoreCommonModule],
+  declarations: [SampleComponent, HomeComponent, AddEmployeeComponent],
+  imports: [
+    RouterModule.forChild(routes),
+    ContentHeaderModule,
+    TranslateModule,
+    ReactiveFormsModule,
+    FormsModule,
+    BrowserModule,
+    CommonModule,
+    CoreCommonModule,
+    CardSnippetModule,
+    CoreDirectivesModule,
+    NgSelectModule
+  ],
   exports: [SampleComponent, HomeComponent]
 })
-export class SampleModule {}
+export class SampleModule { }

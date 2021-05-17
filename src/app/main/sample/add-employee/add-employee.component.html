@@ -1,0 +1,497 @@
+<div class="content-wrapper">
+    <div class="content-body">
+        <!-- content-header component -->
+        <app-content-header [contentHeader]="contentHeader"></app-content-header>
+        <!-- Horizontal Wizard -->
+        <section class="horizontal-wizard">
+            <div id="stepper1" class="bs-stepper horizontal-wizard-example">
+                <div class="bs-stepper-header">
+                    <div class="step" data-target="#account-details">
+                        <button class="step-trigger">
+                            <span class="bs-stepper-box">1</span>
+                            <span class="bs-stepper-label">
+                                <span class="bs-stepper-title">معلومات الموظف</span>
+                                <!-- <span class="bs-stepper-subtitle">Setup Account Details</span> -->
+                            </span>
+                        </button>
+                    </div>
+                    <div class="line"><i data-feather="chevron-right" class="font-medium-2"></i></div>
+                    <div class="step" data-target="#personal-info">
+                        <button class="step-trigger">
+                            <span class="bs-stepper-box">2</span>
+                            <span class="bs-stepper-label">
+                                <span class="bs-stepper-title">معلومات الراتب والوظيفة</span>
+                                <!-- <span class="bs-stepper-subtitle">Add Personal Info</span> -->
+                            </span>
+                        </button>
+                    </div>
+                    <div class="line"><i data-feather="chevron-right" class="font-medium-2"></i></div>
+                    <div class="step" data-target="#address">
+                        <button class="step-trigger">
+                            <span class="bs-stepper-box">3</span>
+                            <span class="bs-stepper-label">
+                                <span class="bs-stepper-title">معلومات الجواز </span>
+                                <!-- <span class="bs-stepper-subtitle">Add Address</span> -->
+                            </span>
+                        </button>
+                    </div>
+                    <div class="line"><i data-feather="chevron-right" class="font-medium-2"></i></div>
+                    <div class="step" data-target="#uniform">
+                        <button class="step-trigger">
+                            <span class="bs-stepper-box">4</span>
+                            <span class="bs-stepper-label">
+                                <span class="bs-stepper-title">معلومات الزي الموحد</span>
+                                <!-- <span class="bs-stepper-subtitle">Add Social Links</span> -->
+                            </span>
+                        </button>
+                    </div>
+                    <div class="line"><i data-feather="chevron-right" class="font-medium-2"></i></div>
+                    <div class="step" data-target="#access-detail">
+                        <button class="step-trigger">
+                            <span class="bs-stepper-box">5</span>
+                            <span class="bs-stepper-label">
+                                <span class="bs-stepper-title">معلومات الوصول</span>
+                                <!-- <span class="bs-stepper-subtitle">Add Social Links</span> -->
+                            </span>
+                        </button>
+                    </div>
+                    <div class="line"><i data-feather="chevron-right" class="font-medium-2"></i></div>
+                    <div class="step" data-target="#id-details">
+                        <button class="step-trigger">
+                            <span class="bs-stepper-box">6</span>
+                            <span class="bs-stepper-label">
+                                <span class="bs-stepper-title">معلومات الاي دي</span>
+                                <!-- <span class="bs-stepper-subtitle">Add Social Links</span> -->
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="bs-stepper-content">
+                    <form (ngSubmit)="(HWForm.form.valid)" #HWForm="ngForm">
+                        <div id="account-details" class="content">
+                            <form #accountDetailsForm="ngForm">
+                                <div class="content-header">
+                                    <h5 class="mb-0">معلومات الموظف</h5>
+                                    <!-- <small class="text-muted">Enter Your Account Details.</small> -->
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label" for="username">اسم الموظف</label>
+                                        <!--   -->
+                                        <input [(ngModel)]="TDNameVar" #TDNameRef="ngModel" required type="text" name="username" id="username" class="form-control" [class.error]="!TDNameRef.valid && accountDetailsForm.submitted" placeholder="johndoe" />
+                                        <span *ngIf="accountDetailsForm.submitted && TDNameRef.invalid" class="invalid-form">
+                                            <small class="form-text text-danger" *ngIf="TDNameRef.errors.required">This
+                                                field is required!</small>
+                                        </span>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label" for="phone_number">رقم الهاتف</label>
+                                        <input [(ngModel)]="TDPhoneVar" #TDPhoneRef="ngModel" required type="number" name="phone_number" id="phone_number" class="form-control" [class.error]="!TDPhoneRef.valid && accountDetailsForm.submitted" />
+                                        <span *ngIf="accountDetailsForm.submitted && TDPhoneRef.invalid" class="invalid-form">
+                                            <small class="form-text text-danger" *ngIf="TDPhoneRef.errors.required">This
+                                                field is required!</small>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group form-password-toggle col-md-6">
+                                        <label class="form-label" for="password">Password</label>
+                                        <input type="password" name="password" id="password" class="form-control" [class.error]="!TDPasswordOnlyRef.valid && accountDetailsForm.submitted" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" ngModel #TDPasswordOnlyRef="ngModel"
+                                            required minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
+                                        <div *ngIf="TDPasswordOnlyRef.invalid && accountDetailsForm.submitted" class="form-text text-danger">
+                                            <small *ngIf="TDPasswordOnlyRef.errors.required"> Password is required.
+                                            </small>
+                                            <small *ngIf="TDPasswordOnlyRef.errors.pattern">
+                                                Must contain at least one number and one uppercase and lowercase letter,
+                                                and at least 8 or more
+                                                characters.</small>
+                                        </div>
+                                    </div>
+                                    <div class="form-group form-password-toggle col-md-6">
+                                        <label class="form-label" for="confirm-password">Confirm Password</label>
+                                        <input type="password" name="confirm-password" id="confirm-password" class="form-control" [class.error]="!TDRepeatPasswordRef.valid && accountDetailsForm.submitted" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                                            required ngModel #TDRepeatPasswordRef="ngModel" pattern="{{ TDPasswordOnlyRef.value }}" minlength="6" />
+                                        <div *ngIf="TDRepeatPasswordRef.invalid && accountDetailsForm.submitted" class="form-text text-danger">
+                                            <small *ngIf="TDRepeatPasswordRef.errors.required"> Confirm password is
+                                                required. </small>
+                                            <small *ngIf="TDRepeatPasswordRef.errors.pattern">
+                                                Password & Confirm Password does not match.</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label" for="Nationality">الجنسيه</label>
+                                        <input [(ngModel)]="TDNationalityVar" #TDNationalityRef="ngModel" type="text" name="Nationality" id="Nationality" class="form-control" [class.error]="!TDNationalityRef.valid && accountDetailsForm.submitted" />
+                                        <span *ngIf="accountDetailsForm.submitted && TDNationalityRef.invalid" class="invalid-form">
+                                            <small class="form-text text-danger"
+                                                *ngIf="TDNationalityRef.errors.required">This
+                                                field is required!</small>
+                                        </span>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label" for="Type">الجنس</label>
+                                        <input [(ngModel)]="TDTypeVar" #TDTypeRef="ngModel" type="text" name="Type" id="Type" class="form-control" [class.error]="!TDTypeRef.valid && accountDetailsForm.submitted" />
+                                        <span *ngIf="accountDetailsForm.submitted && TDTypeRef.invalid" class="invalid-form">
+                                            <small class="form-text text-danger" *ngIf="TDTypeRef.errors.required">This
+                                                field is required!</small>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <!-- DateOfBirth -->
+                                        <label class="form-label" for="DateOfBirth">تاريخ الميلاد</label>
+                                        <input [(ngModel)]="TDDateOfBirthVar" #TDDateOfBirthRef="ngModel" type="date" name="DateOfBirth" id="DateOfBirth" class="form-control" [class.error]="!TDDateOfBirthRef.valid && accountDetailsForm.submitted" />
+                                        <span *ngIf="accountDetailsForm.submitted && TDDateOfBirthRef.invalid" class="invalid-form">
+                                            <small class="form-text text-danger"
+                                                *ngIf="TDDateOfBirthRef.errors.required">This
+                                                field is required!</small>
+                                        </span>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label" for="Age">العمر</label>
+                                        <input [(ngModel)]="TDAgeVar" #TDAgeRef="ngModel" type="number" name="Age" id="Age" class="form-control" [class.error]="!TDAgeRef.valid && accountDetailsForm.submitted" />
+                                        <span *ngIf="accountDetailsForm.submitted && TDAgeRef.invalid" class="invalid-form">
+                                            <small class="form-text text-danger" *ngIf="TDAgeRef.errors.required">This
+                                                field is required!</small>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label" for="Visaprofession">المهنه في التاشره</label>
+                                        <input [(ngModel)]="TDVisaprofessionVar" #TDVisaprofessionRef="ngModel" type="text" name="Visaprofession" id="Visaprofession" class="form-control" [class.error]="!TDVisaprofessionRef.valid && accountDetailsForm.submitted" />
+                                        <span *ngIf="accountDetailsForm.submitted && TDVisaprofessionRef.invalid" class="invalid-form">
+                                            <small class="form-text text-danger"
+                                                *ngIf="TDVisaprofessionRef.errors.required">This
+                                                field is required!</small>
+                                        </span>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label" for="Actualprofession">المهنه الفعليه</label>
+                                        <input [(ngModel)]="TDActualprofessionVar" #TDActualprofessionRef="ngModel" type="text" name="Actualprofession" id="Actualprofession" class="form-control" [class.error]="!TDActualprofessionRef.valid && accountDetailsForm.submitted" />
+                                        <span *ngIf="accountDetailsForm.submitted && TDActualprofessionRef.invalid" class="invalid-form">
+                                            <small class="form-text text-danger" *ngIf="TDActualprofessionRef.errors.required">This
+                                                field is required!</small>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <button (click)="horizontalWizardStepperPrevious()" class="btn btn-outline-secondary btn-prev" disabled rippleEffect>
+                                        <i data-feather="arrow-left" class="align-middle mr-sm-25 mr-0"></i>
+                                        <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                    </button>
+                                    <button (click)="horizontalWizardStepperNext(accountDetailsForm)" type="submit" class="btn btn-primary btn-next" rippleEffect>
+                                        <span class="align-middle d-sm-inline-block d-none">Next</span>
+                                        <i data-feather="arrow-right" class="align-middle ml-sm-25 ml-0"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="personal-info" class="content">
+                            <form #personalInfoForm="ngForm">
+                                <div class="content-header">
+                                    <h5 class="mb-0">معلومات الراتب والوظيفة</h5>
+                                    <!-- <small>Enter Your Personal Info.</small> -->
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label" for="EmployeeType">نوع الموظف</label>
+                                        <input [(ngModel)]="TDEmployeeTypeVar" #TDEmployeeTypeRef="ngModel" required type="text" name="EmployeeType" id="EmployeeType" class="form-control" [class.error]="personalInfoForm.submitted && TDEmployeeTypeRef.invalid" />
+                                        <span *ngIf="personalInfoForm.submitted && TDEmployeeTypeRef.invalid" class="invalid-form">
+                                            <small class="form-text text-danger"
+                                                *ngIf="TDEmployeeTypeRef.errors.required">This field is required!</small>
+                                        </span>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label" for="Salary">الراتب الاساسي</label>
+                                        <input [(ngModel)]="TDSalaryVar" #TDSalaryRef="ngModel" required type="text" name="last-name" id="last-name" class="form-control" [class.error]="personalInfoForm.submitted && TDSalaryRef.invalid" />
+                                        <span *ngIf="personalInfoForm.submitted && TDSalaryRef.invalid" class="invalid-form">
+                                            <small class="form-text text-danger"
+                                                *ngIf="TDSalaryRef.errors.required">This field is required!</small>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+
+                                        <label class="form-label" for="Subsistence">بدل الإعاشة</label>
+                                        <input [(ngModel)]="TDSubsistenceVar" #TDSubsistenceRef="ngModel" required type="text" name="Subsistence" id="Subsistence" class="form-control" [class.error]="personalInfoForm.submitted && TDSubsistenceRef.invalid" />
+                                        <span *ngIf="personalInfoForm.submitted && TDSubsistenceRef.invalid" class="invalid-form">
+                                            <small class="form-text text-danger"
+                                                *ngIf="TDSubsistenceRef.errors.required">This field is required!</small>
+                                        </span>
+                                    </div>
+                                    <div class="form-group col-md-6">
+
+                                        <label class="form-label" for="HousingAllowance">الراتب الاساسي</label>
+                                        <input [(ngModel)]="TDHousingAllowanceVar" #TDHousingAllowanceRef="ngModel" required type="text" name="last-name" id="last-name" class="form-control" [class.error]="personalInfoForm.submitted && TDHousingAllowanceRef.invalid" />
+                                        <span *ngIf="personalInfoForm.submitted && TDHousingAllowanceRef.invalid" class="invalid-form">
+                                            <small class="form-text text-danger"
+                                                *ngIf="TDHousingAllowanceRef.errors.required">This field is required!</small>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+
+                                        <label class="form-label" for="RelocationAllowance">بدل الإنتقال</label>
+                                        <input [(ngModel)]="TDRelocationAllowanceVar" #TDRelocationAllowanceRef="ngModel" required type="text" name="RelocationAllowance" id="RelocationAllowance" class="form-control" [class.error]="personalInfoForm.submitted && TDRelocationAllowanceRef.invalid"
+                                        />
+                                        <span *ngIf="personalInfoForm.submitted && TDRelocationAllowanceRef.invalid" class="invalid-form">
+                                            <small class="form-text text-danger"
+                                                *ngIf="TDRelocationAllowanceRef.errors.required">This field is required!</small>
+                                        </span>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label" for="TotalSalary">إجمالي الراتب</label>
+                                        <input [(ngModel)]="TDTotalSalaryVar" #TDTotalSalaryRef="ngModel" required type="text" name="TotalSalary" id="TotalSalary" class="form-control" [class.error]="personalInfoForm.submitted && TDTotalSalaryRef.invalid" />
+                                        <span *ngIf="personalInfoForm.submitted && TDTotalSalaryRef.invalid" class="invalid-form">
+                                            <small class="form-text text-danger"
+                                                *ngIf="TDTotalSalaryRef.errors.required">This field is required!</small>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label" for="country">Country</label>
+                                        <ng-select [items]="selectBasic" bindLabel="name"> </ng-select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label" for="language">Language</label>
+                                        <ng-select [items]="selectMulti" [multiple]="true" [closeOnSelect]="false" [searchable]="false" bindLabel="name" name="selectLanguage" placeholder="Select people" [(ngModel)]="selectMultiSelected">
+                                        </ng-select>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between">
+                                    <button (click)="horizontalWizardStepperPrevious()" class="btn btn-primary btn-prev" rippleEffect>
+                                        <i data-feather="arrow-left" class="align-middle mr-sm-25 mr-0"></i>
+                                        <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                    </button>
+                                    <button (click)="horizontalWizardStepperNext(personalInfoForm)" class="btn btn-primary btn-next" rippleEffect>
+                                        <span class="align-middle d-sm-inline-block d-none">Next</span>
+                                        <i data-feather="arrow-right" class="align-middle ml-sm-25 ml-0"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="address" class="content">
+                            <form #addressForm="ngForm">
+                                <div class="content-header">
+                                    <h5 class="mb-0">Address</h5>
+                                    <small>Enter Your Address.</small>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label" for="address">Address</label>
+                                        <input [(ngModel)]="addressVar" #addressRef="ngModel" required type="text" id="address" name="address" class="form-control" [class.error]="addressForm.submitted && addressRef.invalid" placeholder="98  Borough bridge Road, Birmingham" />
+                                        <span *ngIf="addressForm.submitted && addressRef.invalid" class="invalid-form">
+                                            <small class="form-text text-danger" *ngIf="addressRef.errors.required">This
+                                                field is required!</small>
+                                        </span>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label" for="landmark">Landmark</label>
+                                        <input [(ngModel)]="landmarkVar" #landmarkRef="ngModel" required type="text" name="landmark" id="landmark" class="form-control" [class.error]="addressForm.submitted && landmarkRef.invalid" placeholder="Borough bridge" />
+                                        <span *ngIf="addressForm.submitted && landmarkRef.invalid" class="invalid-form">
+                                            <small class="form-text text-danger"
+                                                *ngIf="landmarkRef.errors.required">This field is required!</small>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label" for="pincode1">Pincode</label>
+                                        <input type="text" id="pincode1" class="form-control" placeholder="658921" />
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label" for="city1">City</label>
+                                        <input type="text" id="city1" class="form-control" placeholder="Birmingham" />
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between">
+                                    <button (click)="horizontalWizardStepperPrevious()" class="btn btn-primary btn-prev" rippleEffect>
+                                        <i data-feather="arrow-left" class="align-middle mr-sm-25 mr-0"></i>
+                                        <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                    </button>
+                                    <button (click)="horizontalWizardStepperNext(addressForm)" class="btn btn-primary btn-next" rippleEffect>
+                                        <span class="align-middle d-sm-inline-block d-none">Next</span>
+                                        <i data-feather="arrow-right" class="align-middle ml-sm-25 ml-0"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="uniform" class="content">
+                            <form #socialLinkForm="ngForm">
+                                <div class="content-header">
+                                    <h5 class="mb-0">Social Links</h5>
+                                    <small>Enter Your Social Links.</small>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label" for="twitter">Twitter</label>
+                                        <input [(ngModel)]="twitterVar" #twitterkRef="ngModel" required type="text" id="twitter" name="twitter" class="form-control" [class.error]="socialLinkForm.submitted && twitterkRef.invalid" placeholder="https://twitter.com/abc" />
+                                        <span *ngIf="socialLinkForm.submitted && twitterkRef.invalid" class="invalid-form">
+                                            <small class="form-text text-danger"
+                                                *ngIf="twitterkRef.errors.required">This field is required!</small>
+                                        </span>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label" for="facebook">Facebook</label>
+                                        <input [(ngModel)]="facebookVar" #facebookRef="ngModel" required type="text" id="facebook" name="facebook" class="form-control" [class.error]="socialLinkForm.submitted && facebookRef.invalid" placeholder="https://facebook.com/abc" />
+                                        <span *ngIf="socialLinkForm.submitted && facebookRef.invalid" class="invalid-form">
+                                            <small class="form-text text-danger"
+                                                *ngIf="facebookRef.errors.required">This field is required!</small>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label" for="google">Google+</label>
+                                        <input [(ngModel)]="googleVar" #googleRef="ngModel" required type="text" id="google" name="google" class="form-control" [class.error]="socialLinkForm.submitted && googleRef.invalid" placeholder="https://plus.google.com/abc" />
+                                        <span *ngIf="socialLinkForm.submitted && googleRef.invalid" class="invalid-form">
+                                            <small class="form-text text-danger" *ngIf="googleRef.errors.required">This
+                                                field is required!</small>
+                                        </span>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label" for="linkedin">Linkedin</label>
+                                        <input [(ngModel)]="linkedinVar" #linkedinRef="ngModel" required type="text" id="linkedin" name="linkedin" class="form-control" [class.error]="socialLinkForm.submitted && linkedinRef.invalid" placeholder="https://linkedin.com/abc" />
+                                        <span *ngIf="socialLinkForm.submitted && linkedinRef.invalid" class="invalid-form">
+                                            <small class="form-text text-danger"
+                                                *ngIf="linkedinRef.errors.required">This field is required!</small>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <button (click)="horizontalWizardStepperPrevious()" class="btn btn-primary btn-prev" rippleEffect>
+                                        <i data-feather="arrow-left" class="align-middle mr-sm-25 mr-0"></i>
+                                        <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                    </button>
+                                    <button class="btn btn-success btn-submit" rippleEffect>Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="access-detail" class="content">
+                            <form #socialLinkForm="ngForm">
+                                <div class="content-header">
+                                    <h5 class="mb-0">Social Links</h5>
+                                    <small>Enter Your Social Links.</small>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label" for="twitter">Twitter</label>
+                                        <input [(ngModel)]="twitterVar" #twitterkRef="ngModel" required type="text" id="twitter" name="twitter" class="form-control" [class.error]="socialLinkForm.submitted && twitterkRef.invalid" placeholder="https://twitter.com/abc" />
+                                        <span *ngIf="socialLinkForm.submitted && twitterkRef.invalid" class="invalid-form">
+                                            <small class="form-text text-danger"
+                                                *ngIf="twitterkRef.errors.required">This field is required!</small>
+                                        </span>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label" for="facebook">Facebook</label>
+                                        <input [(ngModel)]="facebookVar" #facebookRef="ngModel" required type="text" id="facebook" name="facebook" class="form-control" [class.error]="socialLinkForm.submitted && facebookRef.invalid" placeholder="https://facebook.com/abc" />
+                                        <span *ngIf="socialLinkForm.submitted && facebookRef.invalid" class="invalid-form">
+                                            <small class="form-text text-danger"
+                                                *ngIf="facebookRef.errors.required">This field is required!</small>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label" for="google">Google+</label>
+                                        <input [(ngModel)]="googleVar" #googleRef="ngModel" required type="text" id="google" name="google" class="form-control" [class.error]="socialLinkForm.submitted && googleRef.invalid" placeholder="https://plus.google.com/abc" />
+                                        <span *ngIf="socialLinkForm.submitted && googleRef.invalid" class="invalid-form">
+                                            <small class="form-text text-danger" *ngIf="googleRef.errors.required">This
+                                                field is required!</small>
+                                        </span>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label" for="linkedin">Linkedin</label>
+                                        <input [(ngModel)]="linkedinVar" #linkedinRef="ngModel" required type="text" id="linkedin" name="linkedin" class="form-control" [class.error]="socialLinkForm.submitted && linkedinRef.invalid" placeholder="https://linkedin.com/abc" />
+                                        <span *ngIf="socialLinkForm.submitted && linkedinRef.invalid" class="invalid-form">
+                                            <small class="form-text text-danger"
+                                                *ngIf="linkedinRef.errors.required">This field is required!</small>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <button (click)="horizontalWizardStepperPrevious()" class="btn btn-primary btn-prev" rippleEffect>
+                                        <i data-feather="arrow-left" class="align-middle mr-sm-25 mr-0"></i>
+                                        <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                    </button>
+                                    <button class="btn btn-success btn-submit" rippleEffect>Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="id-details" class="content">
+                            <form #socialLinkForm="ngForm">
+                                <div class="content-header">
+                                    <h5 class="mb-0">Social Links</h5>
+                                    <small>Enter Your Social Links.</small>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label" for="twitter">Twitter</label>
+                                        <input [(ngModel)]="twitterVar" #twitterkRef="ngModel" required type="text" id="twitter" name="twitter" class="form-control" [class.error]="socialLinkForm.submitted && twitterkRef.invalid" placeholder="https://twitter.com/abc" />
+                                        <span *ngIf="socialLinkForm.submitted && twitterkRef.invalid" class="invalid-form">
+                                            <small class="form-text text-danger"
+                                                *ngIf="twitterkRef.errors.required">This field is required!</small>
+                                        </span>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label" for="facebook">Facebook</label>
+                                        <input [(ngModel)]="facebookVar" #facebookRef="ngModel" required type="text" id="facebook" name="facebook" class="form-control" [class.error]="socialLinkForm.submitted && facebookRef.invalid" placeholder="https://facebook.com/abc" />
+                                        <span *ngIf="socialLinkForm.submitted && facebookRef.invalid" class="invalid-form">
+                                            <small class="form-text text-danger"
+                                                *ngIf="facebookRef.errors.required">This field is required!</small>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label" for="google">Google+</label>
+                                        <input [(ngModel)]="googleVar" #googleRef="ngModel" required type="text" id="google" name="google" class="form-control" [class.error]="socialLinkForm.submitted && googleRef.invalid" placeholder="https://plus.google.com/abc" />
+                                        <span *ngIf="socialLinkForm.submitted && googleRef.invalid" class="invalid-form">
+                                            <small class="form-text text-danger" *ngIf="googleRef.errors.required">This
+                                                field is required!</small>
+                                        </span>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label" for="linkedin">Linkedin</label>
+                                        <input [(ngModel)]="linkedinVar" #linkedinRef="ngModel" required type="text" id="linkedin" name="linkedin" class="form-control" [class.error]="socialLinkForm.submitted && linkedinRef.invalid" placeholder="https://linkedin.com/abc" />
+                                        <span *ngIf="socialLinkForm.submitted && linkedinRef.invalid" class="invalid-form">
+                                            <small class="form-text text-danger"
+                                                *ngIf="linkedinRef.errors.required">This field is required!</small>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <button (click)="horizontalWizardStepperPrevious()" class="btn btn-primary btn-prev" rippleEffect>
+                                        <i data-feather="arrow-left" class="align-middle mr-sm-25 mr-0"></i>
+                                        <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                    </button>
+                                    <button class="btn btn-success btn-submit" rippleEffect>Submit</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!--/ Horizontal Wizard -->
+
+    </div>
+</div>
