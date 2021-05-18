@@ -9,20 +9,28 @@ export const menu: CoreMenu[] = [
     icon: 'home',
     url: 'home'
   },
-  {
-    id: 'sample',
-    title: 'Sample',
-    translate: 'MENU.SAMPLE',
-    type: 'item',
-    icon: 'file',
-    url: 'sample'
-  },
+  // {
+  //   id: 'sample',
+  //   title: 'Sample',
+  //   translate: 'MENU.SAMPLE',
+  //   type: 'item',
+  //   icon: 'file',
+  //   url: 'sample'
+  // },
   {
     id: 'addEmployee',
     title: 'Add Employee',
     translate: 'MENU.ADDEMPLOYEE',
     type: 'item',
-    icon: 'file',
+    icon: 'user',
     url: 'NewEmployee'
+  },
+  {
+    id: 'Employees',
+    title: 'Employees',
+    translate: 'MENU.EMPLOYEES',
+    type: 'item',
+    icon: 'credit-card',
+    url: 'Employees'
   }
 ]

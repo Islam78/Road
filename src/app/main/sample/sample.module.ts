@@ -15,6 +15,15 @@ import { CommonModule } from '@angular/common'
 import { NgSelectModule } from '@ng-select/ng-select'
 import { CoreDirectivesModule } from '@core/directives/directives'
 import { CardSnippetModule } from '@core/components/card-snippet/card-snippet.module'
+import { Ng2FlatpickrModule } from 'ng2-flatpickr';
+import { FileUploadModule } from 'ng2-file-upload';
+import { EmployeesComponent } from './employees/employees/employees.component';
+import { CsvModule } from '@ctrl/ngx-csv';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { NgxBarcodeModule } from 'ngx-barcode'
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+import { ToastrModule } from 'ngx-toastr'
+
 
 const routes = [
   {
@@ -24,16 +33,20 @@ const routes = [
   {
     path: 'home',
     component: HomeComponent
-  }
-  ,
+  },
   {
     path: 'NewEmployee',
     component: AddEmployeeComponent
+  },
+  {
+    path: 'Employees',
+    component: EmployeesComponent
   }
 ]
 
+
 @NgModule({
-  declarations: [SampleComponent, HomeComponent, AddEmployeeComponent],
+  declarations: [SampleComponent, HomeComponent, AddEmployeeComponent, EmployeesComponent],
   imports: [
     RouterModule.forChild(routes),
     ContentHeaderModule,
@@ -45,7 +58,16 @@ const routes = [
     CoreCommonModule,
     CardSnippetModule,
     CoreDirectivesModule,
-    NgSelectModule
+    Ng2FlatpickrModule,
+    NgSelectModule,
+    FileUploadModule,
+    CardSnippetModule,
+    NgxDatatableModule,
+    CsvModule,
+    NgxBarcodeModule,
+    NgbModule,
+    ToastrModule
+    
   ],
   exports: [SampleComponent, HomeComponent]
 })

@@ -1,0 +1,16 @@
+    @import '@core/scss/angular/libs/datatables.component.scss';
+    .datatable-scroll {
+        width: auto !important;
+    }
+    
+    .card .card-header {
+        display: none !important;
+    }
+    
+    .card>i {
+        display: none !important;
+    }
+    
+    gx-datatable {
+        padding: 50px;
+    }
