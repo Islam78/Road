@@ -22,9 +22,7 @@
                 </div>
             </div>
         </div>
-        <ngx-datatable [rows]="kitchenSinkRows" [rowHeight]="58" class="bootstrap core-bootstrap" style="padding: 16px;"
-         [limit]="10" [columnMode]="ColumnMode.force" [headerHeight]="40" [footerHeight]="50" 
-         [scrollbarH]="false" [selectionType]="SelectionType.checkbox" [limit]="basicSelectedOption"
+        <ngx-datatable [rows]="kitchenSinkRows" [rowHeight]="58" class="bootstrap core-bootstrap" [limit]="10" [columnMode]="ColumnMode.force" [headerHeight]="40" [footerHeight]="50" [scrollbarH]="false" [selectionType]="SelectionType.checkbox" [limit]="basicSelectedOption"
             (activate)="onActivate($event)" (select)="onSelect($event)">
             <ngx-datatable-column [width]="50" [sortable]="false" [canAutoResize]="false" [draggable]="false" [resizeable]="false">
                 <ng-template ngx-datatable-header-template let-value="value" let-allRowsSelected="allRowsSelected" let-selectFn="selectFn">
@@ -56,9 +54,9 @@
             <ngx-datatable-column name="job" prop="actual_job" [width]="120"></ngx-datatable-column>
             <ngx-datatable-column name="employee status" prop="employee_status" [width]="120"></ngx-datatable-column>
             <ngx-datatable-column name="Actions" [width]="120" [sortable]="false">
-                <ng-template ngx-datatable-cell-template let-row="row">
-                    <div class="d-flex align-items-center" (click)="edit(row.id)">
-                        <i data-feather="edit" class="text-primary cursor-pointer" ></i>
+                <ng-template ngx-datatable-cell-template>
+                    <div class="d-flex align-items-center">
+                        <i data-feather="edit" class="text-primary cursor-pointer"></i>
                     </div>
                 </ng-template>
             </ngx-datatable-column>

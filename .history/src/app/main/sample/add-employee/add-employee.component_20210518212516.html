@@ -77,9 +77,9 @@
 
                                 <div class="row">
                                     <div class="form-group col-md-6">
-                                        <label class="form-label" for="user_name">اسم الموظف</label>
+                                        <label class="form-label" for="username">اسم الموظف</label>
                                         <!--   -->
-                                        <input [(ngModel)]="TDNameVar" #TDNameRef="ngModel" required type="text" name="user_name" id="user_name" class="form-control" [class.error]="!TDNameRef.valid && accountDetailsForm.submitted" placeholder="johndoe" />
+                                        <input [(ngModel)]="TDNameVar" #TDNameRef="ngModel" required type="text" name="username" id="username" class="form-control" [class.error]="!TDNameRef.valid && accountDetailsForm.submitted" placeholder="johndoe" />
                                         <span *ngIf="accountDetailsForm.submitted && TDNameRef.invalid" class="invalid-form">
                                             <small class="form-text text-danger" *ngIf="TDNameRef.errors.required">This
                                                 field is required!</small>

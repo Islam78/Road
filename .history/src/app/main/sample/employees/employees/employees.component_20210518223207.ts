@@ -195,10 +195,4 @@ export class EmployeesComponent implements OnInit {
   }
 
 
-  modalOpenPrimary(modalPrimary) {
-    // this.modalService.open(modalPrimary, {
-    //   centered: true,
-    //   windowClass: 'modal modal-primary'
-    // });
-  }
 }

@@ -3,7 +3,6 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AddEmployeeService } from '@core/services/addEmployee/add-employee.service';
 import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
-import { EmployeeService } from 'app/auth/service/employee.service';
 import Stepper from 'bs-stepper';
 import { FileUploader } from 'ng2-file-upload';
 import { FlatpickrOptions } from 'ng2-flatpickr';
@@ -108,7 +107,7 @@ export class AddEmployeeComponent implements OnInit {
   sub:any;
   id:number=0
   constructor(private gf: FormBuilder, private _serv: AddEmployeeService, private toastr: ToastrService,
-    private route: ActivatedRoute, public router: Router,private employeeService:EmployeeService
+    private route: ActivatedRoute, public router: Router,
     ) { 
 
       this.sub = this.route.params.subscribe(
@@ -116,8 +115,7 @@ export class AddEmployeeComponent implements OnInit {
            this.id =params['id'] ;
         })
         if(this.id!=0){
-          console.log(` wellcom to : ${this.id}`)
-          this.employeeService.getById(this.id)
+          
         }
     }
   ngOnInit() {

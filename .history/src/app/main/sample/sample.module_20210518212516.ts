@@ -39,10 +39,6 @@ const routes = [
     component: AddEmployeeComponent
   },
   {
-    path: 'EditEmployee/:id',
-    component: AddEmployeeComponent
-  },
-  {
     path: 'Employees',
     component: EmployeesComponent
   }

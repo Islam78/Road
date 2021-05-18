@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { AddEmployeeService } from '@core/services/addEmployee/add-employee.service';
 import { SelectionType, ColumnMode } from '@swimlane/ngx-datatable';
 import { Subject } from 'rxjs';
@@ -123,7 +122,7 @@ export class EmployeesComponent implements OnInit {
     ],
     "msg": null
   }]
-  constructor(private _serv: AddEmployeeService,public router: Router) { }
+  constructor(private _serv: AddEmployeeService) { }
 
 
   ngOnInit(): void {
@@ -189,16 +188,5 @@ export class EmployeesComponent implements OnInit {
     this.chkBoxSelected.push(...selected);
   }
 
-  edit(id){
-    this.router.navigate(['EditEmployee/',id]);
 
-  }
-
-
-  modalOpenPrimary(modalPrimary) {
-    // this.modalService.open(modalPrimary, {
-    //   centered: true,
-    //   windowClass: 'modal modal-primary'
-    // });
-  }
 }

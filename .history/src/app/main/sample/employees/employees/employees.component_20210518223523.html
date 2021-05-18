@@ -22,9 +22,7 @@
                 </div>
             </div>
         </div>
-        <ngx-datatable [rows]="kitchenSinkRows" [rowHeight]="58" class="bootstrap core-bootstrap" style="padding: 16px;"
-         [limit]="10" [columnMode]="ColumnMode.force" [headerHeight]="40" [footerHeight]="50" 
-         [scrollbarH]="false" [selectionType]="SelectionType.checkbox" [limit]="basicSelectedOption"
+        <ngx-datatable [rows]="kitchenSinkRows" [rowHeight]="58" class="bootstrap core-bootstrap" [limit]="10" [columnMode]="ColumnMode.force" [headerHeight]="40" [footerHeight]="50" [scrollbarH]="false" [selectionType]="SelectionType.checkbox" [limit]="basicSelectedOption"
             (activate)="onActivate($event)" (select)="onSelect($event)">
             <ngx-datatable-column [width]="50" [sortable]="false" [canAutoResize]="false" [draggable]="false" [resizeable]="false">
                 <ng-template ngx-datatable-header-template let-value="value" let-allRowsSelected="allRowsSelected" let-selectFn="selectFn">
