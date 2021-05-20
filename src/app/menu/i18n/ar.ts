@@ -1,12 +1,14 @@
 export const locale = {
-  lang: 'fr',
+  lang: 'ar',
   data: {
     MENU: {
       HOME: 'الرئيسية',
       SAMPLE: 'Sample',
       ADDEMPLOYEE: 'اضافه موظف',
       EMPLOYEES:'الموظفين',
-      ADMINGROUPS:'مجموعات الإدارة',
+      ADMINGROUPS:'مجموعات الإدارة'
     }
   }
 }
+
+

@@ -7,7 +7,7 @@
     <div class="search-input" [class.open]="openSearchRef === true">
         <!-- Search Input -->
         <div class="search-input-icon"><span [data-feather]="'search'" [class]="'ficon'"></span></div>
-        <input class="form-control input" type="text" placeholder="Explore Vuexy..." tabindex="-1" data-search="search" (keyup)="searchUpdate($event)" [(ngModel)]="searchText" #openSearch /><button class="btn search-input-close p-0" (click)="toggleSearch()"><span [data-feather]="'x'"></span></button>
+        <input class="form-control input" type="text" placeholder="Explore Maysan..." tabindex="-1" data-search="search" (keyup)="searchUpdate($event)" [(ngModel)]="searchText" #openSearch /><button class="btn search-input-close p-0" (click)="toggleSearch()"><span [data-feather]="'x'"></span></button>
 
         <!-- Search List -->
         <ul class="search-list search-list-main" [perfectScrollbar] [class.show]="searchText !== ''" #pageList>
