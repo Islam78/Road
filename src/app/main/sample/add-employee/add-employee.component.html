@@ -1,3 +1,44 @@
+<!-- <fieldset class="form-group">
+    <div class="custom-file">
+        <input type="file" class="custom-file-input" type="file" ng2FileSelect [uploader]="passportuploader" id="file-upload-single" />
+        <label class="custom-file-label">Choose file</label>
+    </div>
+    <table class="table" *ngIf="passportuploader.options.isHTML5">
+        <tbody>
+            <tr *ngFor="let item of passportuploader.queue">
+                <td>
+                    <strong>{{ item?.file?.name }}</strong>
+                </td>
+                <td *ngIf="passportuploader.options.isHTML5" nowrap>
+                    Size: {{ item?.file?.size / 1024 / 1024 | number: '.2' }} MB
+                </td>
+                <td *ngIf="passportuploader.options.isHTML5">
+                    Progress
+                    <ngb-progressbar type="primary" [value]="item.progress">
+                    </ngb-progressbar>
+                </td>
+                <td class="text-center">
+                    <span *ngIf="item.isSuccess"><i data-feather="check"></i></span>
+                    <span *ngIf="item.isCancel"><i data-feather="slash"></i></span>
+                    <span *ngIf="item.isError"><i data-feather="x-circle"></i></span>
+                </td>
+                <td nowrap>
+                    <button type="button" class="btn btn-raised btn-outline-success btn-sm mr-50" (click)="item.upload()" [disabled]="item.isReady || item.isUploading || item.isSuccess" rippleEffect>
+                        <span data-feather="upload"></span>
+                    </button>
+                    <button type="button" class="btn btn-raised btn-outline-warning btn-sm mr-50" (click)="item.cancel()" [disabled]="!item.isUploading" rippleEffect>
+                        <i data-feather="slash"></i>
+                    </button>
+                    <button type="button" class="btn btn-raised btn-outline-danger btn-sm" (click)="item.remove()" rippleEffect>
+                        <i data-feather="trash"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-info" (click)="postImage()"> upload test </button>
+</fieldset> -->
+
 <div class="content-wrapper">
     <div class="content-body">
         <!-- content-header component -->
@@ -97,7 +138,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="form-group form-password-toggle col-md-6">
-                                        <label class="form-label" for="password">Password</label>
+                                        <label class="form-label" for="password">كلمة المرور</label>
                                         <input [(ngModel)]="TDPasswordVar" type="password" name="password" id="password" class="form-control" [class.error]="!TDPasswordOnlyRef.valid && accountDetailsForm.submitted" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
                                             ngModel #TDPasswordOnlyRef="ngModel" required minlength="6" />
                                         <!--required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" -->
@@ -111,7 +152,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group form-password-toggle col-md-6">
-                                        <label class="form-label" for="confirm-password">Confirm Password</label>
+                                        <label class="form-label" for="confirm-password">تأكيد كلمة المرور</label>
                                         <input type="password" name="confirm-password" id="confirm-password" class="form-control" [class.error]="!TDRepeatPasswordRef.valid && accountDetailsForm.submitted" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
                                             ngModel #TDRepeatPasswordRef="ngModel" pattern="{{ TDPasswordOnlyRef.value }}" minlength="6" />
                                         <!--required -->

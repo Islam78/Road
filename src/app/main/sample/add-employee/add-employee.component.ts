@@ -98,29 +98,48 @@ export class AddEmployeeComponent implements OnInit {
   ActualprofessionArr
   Actualprofession(event) {
     console.log(event);
-    
+
     if (event) {
       this.Actualprofession = event.id
       console.log(this.Actualprofession);
     }
 
   }
-  sub:any;
-  id:number=0
+  sub: any;
+  id: number = 0
   constructor(private gf: FormBuilder, private _serv: AddEmployeeService, private toastr: ToastrService,
-    private route: ActivatedRoute, public router: Router,private employeeService:EmployeeService
-    ) { 
+    private route: ActivatedRoute, public router: Router, private employeeService: EmployeeService
+  ) {
 
-      this.sub = this.route.params.subscribe(
-        params => { 
-           this.id =params['id'] ;
-        })
-        if(this.id!=0){
-          console.log(` wellcom to : ${this.id}`)
-          this.employeeService.getById(this.id)
-        }
+    this.sub = this.route.params.subscribe(
+      params => {
+        this.id = params['id'];
+      })
+    if (this.id != 0) {
+      console.log(` wellcom to : ${this.id}`)
+      this.employeeService.getById(this.id)
     }
+  }
+  tForm: FormData = new FormData();
+  postImage() {
+    console.log('postImage');
+    this.tForm.append('test', this.passportuploader.queue[0].file.name)
+    this.tForm.append('tesst', "1")
+    this.tForm.append('t', this.passportuploader.queue[0].file.rawFile, this.passportuploader.queue[0].file.name)
+    console.log([this.passportuploader.queue[0].file.rawFile][0]);
+    console.log(this.tForm.getAll("t"));
+    let arr = {
+      "file1": [[this.passportuploader.queue[0].file.rawFile][0]],
+      "age": 22
+    }
+    this._serv.postImage(arr).subscribe(
+      res => {
+        console.log(res);
+      }
+    )
+  }
   ngOnInit() {
+
     this._serv.khayalGroups().subscribe(res => { })
     this._serv.khayal_jobs().subscribe((res: any) => {
       this.ActualprofessionArr = res.data
@@ -234,7 +253,4 @@ export class AddEmployeeComponent implements OnInit {
     this.GenrateForm()
     this._serv.addEmployee(this.GForm.value).subscribe()
   }
-
-
-
 }

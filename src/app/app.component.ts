@@ -15,9 +15,9 @@ import { CoreTranslationService } from '@core/services/translation.service';
 
 import { menu } from 'app/menu/menu';
 import { locale as menuEnglish } from 'app/menu/i18n/en';
-import { locale as menuFrench } from 'app/menu/i18n/fr';
-import { locale as menuGerman } from 'app/menu/i18n/de';
-import { locale as menuPortuguese } from 'app/menu/i18n/pt';
+import { locale as menuArabic } from 'app/menu/i18n/ar';
+// import { locale as menuGerman } from 'app/menu/i18n/de';
+// import { locale as menuPortuguese } from 'app/menu/i18n/pt';
 
 @Component({
   selector: 'app-root',
@@ -69,13 +69,13 @@ export class AppComponent implements OnInit, OnDestroy {
     this._coreMenuService.setCurrentMenu('main');
 
     // Add languages to the translation service
-    this._translateService.addLangs(['en', 'fr', 'de', 'pt']);
+    this._translateService.addLangs(['en', 'ar']);
 
     // This language will be used as a fallback when a translation isn't found in the current language
-    this._translateService.setDefaultLang('en');
+    this._translateService.setDefaultLang('ar');
 
     // Set the translations for the menu
-    this._coreTranslationService.translate(menuEnglish, menuFrench, menuGerman, menuPortuguese);
+    this._coreTranslationService.translate(menuEnglish, menuArabic);
 
     // Set application default language.
     // Change application language? Read the ngxTranslate Fix

@@ -18,6 +18,7 @@ import { coreConfig } from 'app/app-config'
 import { AppComponent } from 'app/app.component'
 import { LayoutModule } from 'app/layout/layout.module'
 import { SampleModule } from 'app/main/sample/sample.module';
+import { ConfirmationService, MessageService } from 'primeng/api'
 
 const appRoutes: Routes = [
   {
@@ -61,7 +62,7 @@ const appRoutes: Routes = [
     LayoutModule,
     SampleModule
   ],
-
+  providers: [ConfirmationService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -43,4 +43,16 @@ export class AddEmployeeService {
       }
     })
   }
+  
+
+  postImage(body){
+    return this._http.post(`${environment.apiUrl}/khayal_file`, body, {
+      headers: {
+        // khayal1Token: "khayal123",
+        // token: "c77b6074ba91f7a77e03dd46e9eea9bad26da99ffc5da4a39c9be84a86525fcc",
+        'Content-Type': 'multipart/form-data; ',
+        'enctype': 'multipart/form-data' 
+      }
+    })
+  }
 }

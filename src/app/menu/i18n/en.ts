@@ -5,7 +5,8 @@ export const locale = {
       HOME: 'Home',
       SAMPLE: 'Sample',
       ADDEMPLOYEE: 'Add Employee',
-      EMPLOYEES:'Employees'
+      EMPLOYEES:'Employees',
+      ADMINGROUPS:'Admin Groups',
     }
   }
 }

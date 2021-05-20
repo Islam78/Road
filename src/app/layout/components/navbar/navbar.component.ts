@@ -33,7 +33,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   public languageOptions: any
   public navigation: any
-  public selectedLanguage: any
+  public selectedLanguage: any = 'de'
 
   @HostBinding('class.fixed-top')
   public isFixed = false
@@ -81,29 +81,33 @@ export class NavbarComponent implements OnInit, OnDestroy {
     private _mediaObserver: MediaObserver,
     public _translateService: TranslateService
   ) {
+    
     this._authenticationService.currentUser.subscribe(x => (this.currentUser = x))
-
+      
     this.languageOptions = {
       en: {
-        title: 'English',
+        title: 'En',
         flag: 'us'
       },
-      fr: {
-        title: 'French',
-        flag: 'fr'
-      },
-      de: {
-        title: 'German',
-        flag: 'de'
-      },
-      pt: {
-        title: 'Portuguese',
-        flag: 'pt'
+      ar: {
+        title: 'العربية',
+        flag: 'Ar'
       }
+      // ,
+      // de: {
+      //   title: 'German',
+      //   flag: 'de'
+      // },
+      // pt: {
+      //   title: 'Portuguese',
+      //   flag: 'pt'
+      // }
     }
 
     // Set the private defaults
     this._unsubscribeAll = new Subject()
+
+    
   }
 
   // Public Methods
@@ -129,6 +133,11 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
     // Use the selected language id for translations
     this._translateService.use(language)
+    console.log(language);
+    
+    if (language == 'ar') {
+      // alert('s')
+    }
   }
 
   /**
@@ -204,11 +213,13 @@ export class NavbarComponent implements OnInit, OnDestroy {
         }
       })
     }
-
+    // this.setLanguage('fr');
+    // this._translateService.use('fr')
     // Set the selected language from default languageOptions
     this.selectedLanguage = _.find(this.languageOptions, {
       id: this._translateService.currentLang
     })
+    
   }
 
   /**

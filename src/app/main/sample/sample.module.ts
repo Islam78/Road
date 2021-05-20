@@ -22,8 +22,13 @@ import { CsvModule } from '@ctrl/ngx-csv';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { NgxBarcodeModule } from 'ngx-barcode'
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
-import { ToastrModule } from 'ngx-toastr'
-
+import { ToastrModule } from 'ngx-toastr';
+import { AdminGroupsComponent } from './admin-groups/admin-groups/admin-groups.component'
+//  primeng
+import {TableModule} from 'primeng/table';
+import { ButtonModule } from 'primeng/button';
+import { MessagesModule } from 'primeng/messages';
+import { DialogModule } from 'primeng/dialog';
 
 const routes = [
   {
@@ -46,11 +51,17 @@ const routes = [
     path: 'Employees',
     component: EmployeesComponent
   }
+
+  ,
+  {
+    path: 'AdminGroups',
+    component: AdminGroupsComponent
+  }
 ]
 
 
 @NgModule({
-  declarations: [SampleComponent, HomeComponent, AddEmployeeComponent, EmployeesComponent],
+  declarations: [SampleComponent, HomeComponent, AddEmployeeComponent, EmployeesComponent, AdminGroupsComponent],
   imports: [
     RouterModule.forChild(routes),
     ContentHeaderModule,
@@ -70,7 +81,12 @@ const routes = [
     CsvModule,
     NgxBarcodeModule,
     NgbModule,
-    ToastrModule
+    ToastrModule,
+    TableModule,
+    DialogModule,
+    ButtonModule,
+    MessagesModule,
+    
     
   ],
   exports: [SampleComponent, HomeComponent]
