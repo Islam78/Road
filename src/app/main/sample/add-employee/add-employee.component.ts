@@ -237,7 +237,7 @@ export class AddEmployeeComponent implements OnInit {
   }
   getId() {
     this.horizontalWizardStepper.next();
-    this.GenrateForm();
+    // this.GenrateForm();
 
     this._serv.addEmployee(this.GForm.value).subscribe((res: any) => {
       this.JobNumberVar = res?.data.job_number
