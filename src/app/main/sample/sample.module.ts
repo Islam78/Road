@@ -29,6 +29,14 @@ import {TableModule} from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { MessagesModule } from 'primeng/messages';
 import { DialogModule } from 'primeng/dialog';
+import { IssuanceContractsComponent } from './issuance-contracts/issuance-contracts.component';
+import { IssuingActionComponent } from './issuing-action/issuing-action.component';
+import { WorkDefinitionComponent } from './work-definition/work-definition.component';
+import { ResignationRequestsComponent } from './resignation-requests/resignation-requests.component';
+import { EndingServicesComponent } from './ending-services/ending-services.component';
+import { TransferRequestDepartmentComponent } from './transfer-request-department/transfer-request-department.component';
+import { TransferRequestProjectsComponent } from './transfer-request-projects/transfer-request-projects.component';
+import { ExitRequestComponent } from './exit-request/exit-request.component';
 
 const routes = [
   {
@@ -50,18 +58,48 @@ const routes = [
   {
     path: 'Employees',
     component: EmployeesComponent
-  }
-
-  ,
+  },
   {
     path: 'AdminGroups',
     component: AdminGroupsComponent
+  },
+  {
+    path: 'IssuanceContracts',
+    component: IssuanceContractsComponent
+  },
+  {
+    path: 'IssuingAction',
+    component: IssuingActionComponent
+  },
+  {
+    path: 'WorkDefinition',
+    component: WorkDefinitionComponent
+  },
+  {
+    path: 'ResignationRequests',
+    component: ResignationRequestsComponent
+  },
+  {
+    path: 'EndingServices',
+    component: EndingServicesComponent
+  },
+  {
+    path: 'TransferRequestDepartment',
+    component: TransferRequestDepartmentComponent
+  },
+  {
+    path: 'TransferRequestProjects',
+    component: TransferRequestProjectsComponent
+  },
+  {
+    path: 'ExitRequest',
+    component: ExitRequestComponent
   }
 ]
 
 
 @NgModule({
-  declarations: [SampleComponent, HomeComponent, AddEmployeeComponent, EmployeesComponent, AdminGroupsComponent],
+  declarations: [SampleComponent, HomeComponent, AddEmployeeComponent, EmployeesComponent, AdminGroupsComponent, IssuanceContractsComponent, IssuingActionComponent, WorkDefinitionComponent, ResignationRequestsComponent, EndingServicesComponent, TransferRequestDepartmentComponent, TransferRequestProjectsComponent, ExitRequestComponent],
   imports: [
     RouterModule.forChild(routes),
     ContentHeaderModule,
