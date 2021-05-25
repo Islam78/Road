@@ -39,6 +39,30 @@ export const menu: CoreMenu[] = [
             type: 'item',
             icon: 'circle',
             url: 'AdminGroups'
+          },
+          {
+            id: 'EmploymentOffices',
+            title: 'Employment Offices',
+            translate: 'MENU.EmploymentOffices',
+            type: 'item',
+            icon: 'circle',
+            url: 'EmploymentOffices'
+          },
+          {
+            id: 'WaitingList',
+            title: 'Waiting List',
+            translate: 'MENU.WaitingList',
+            type: 'item',
+            icon: 'circle',
+            url: 'WaitingList'
+          },
+          {
+            id: 'CompleteEmployee',
+            title: 'Complete Employee',
+            translate: 'MENU.CompleteEmployee',
+            type: 'item',
+            icon: 'circle',
+            url: 'CompleteEmployee'
           }
         ]
       },
@@ -112,8 +136,7 @@ export const menu: CoreMenu[] = [
             type: 'item',
             icon: 'circle',
             url: 'ExitRequest'
-          },
-
+          }
         ]
       },
       {
@@ -124,36 +147,52 @@ export const menu: CoreMenu[] = [
         type: 'collapsible',
         children: [
           {
-            id: 'AttendanceAndDeparture',
+            id: 'Attendance',
             title: 'Attendance and Departure',
-            translate: 'MENU.AttendanceAndDeparture',
+            translate: 'MENU.Attendance',
             type: 'item',
             icon: 'circle',
-            url: 'AttendanceAndDeparture'
+            url: 'Attendance'
           },
           {
-            id: 'RequestEmergencyLeave',
-            title: 'Request emergency leave',
-            translate: 'MENU.RequestEmergencyLeave',
+            id: 'vacationRequest',
+            title: 'vacation Request',
+            translate: 'MENU.vacationRequest',
             type: 'item',
             icon: 'circle',
-            url: 'RequestEmergencyLeave'
+            url: 'vacationRequest'
           },
           {
-            id: 'AnnualLeaveQequest',
-            title: 'Annual Leave Qequest',
-            translate: 'MENU.AnnualLeaveQequest',
+            id: 'employeeExistRequest',
+            title: 'Employees Exist Request',
+            translate: 'MENU.employeeExistRequest',
             type: 'item',
             icon: 'circle',
-            url: 'AnnualLeaveQequest'
+            url: 'employeeExistRequest'
           },
           {
-            id: 'SickLeaveQequest',
-            title: 'Sick leave request',
-            translate: 'MENU.SickLeaveQequest',
+            id: 'AbsentEmpoyees',
+            title: 'Absent Empoyees',
+            translate: 'MENU.AbsentEmpoyees',
             type: 'item',
             icon: 'circle',
-            url: 'SickLeaveQequest'
+            url: 'AbsentEmpoyees'
+          },
+          {
+            id: 'RunAwayEmployees',
+            title: 'Run Away Employees',
+            translate: 'MENU.RunAwayEmployees',
+            type: 'item',
+            icon: 'circle',
+            url: 'RunAwayEmployees'
+          },
+          {
+            id: 'EmployeesRefusingWork',
+            title: 'Employees Refusing Work',
+            translate: 'MENU.EmployeesRefusingWork',
+            type: 'item',
+            icon: 'circle',
+            url: 'EmployeesRefusingWork'
           }
         ]
       },

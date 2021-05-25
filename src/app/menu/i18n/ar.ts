@@ -24,7 +24,16 @@ export const locale = {
       AttendanceAndDeparture:"الحضور والانصراف",
       RequestEmergencyLeave:"طلب ايجازه اطراريه",
       AnnualLeaveQequest:"طلب ايجازه سنوية ",
-      SickLeaveQequest:"طلب ايجازه مرضية "
+      SickLeaveQequest:"طلب ايجازه مرضية ",
+      EmploymentOffices:"مكاتب التوظيف",
+      WaitingList:"قائمة الانتظار",
+      CompleteEmployee:"اكمال بيانات الموظف",
+      Attendance:"الحضور والانصراف",
+      vacationRequest:"طلب اجازة",
+      employeeExistRequest:"موظفين طلب خروج نهائي",
+      AbsentEmpoyees:"الموظفين المتغيبين",
+      RunAwayEmployees:"الموظفين الهاربين",
+      EmployeesRefusingWork:"موظفين رافضي العمل",
 
     }
   }

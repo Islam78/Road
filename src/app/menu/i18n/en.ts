@@ -25,8 +25,16 @@ export const locale = {
       AttendanceAndDeparture:"Attendance and Departure",
       RequestEmergencyLeave:"Request emergency leave",
       AnnualLeaveQequest:"Annual leave request",
-      SickLeaveQequest:"Sick leave request"
-      
+      SickLeaveQequest:"Sick leave request",
+      EmploymentOffices:"Employment Offices",
+      WaitingList:"WaitingList",
+      CompleteEmployee:"CompleteEmployee",
+      Attendance:"Attendance",
+      vacationRequest:"vacation Request",
+      employeeExistRequest:"employees Exist Request",
+      AbsentEmpoyees:"Absent Empoyees",
+      RunAwayEmployees:"Run Away Employees",
+      EmployeesRefusingWork:"Employees Refusing Work",
     }
   }
 }

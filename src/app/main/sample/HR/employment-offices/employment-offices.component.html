@@ -1,0 +1,186 @@
+<div class="content-wrapper">
+    <div class="content-body">
+        <!-- content-header component -->
+        <app-content-header [contentHeader]="contentHeader"></app-content-header>
+        <!-- Table Basic -->
+        <div class="row" id="basic-table">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">{{'Employment offices' | translate}}</h4>
+                    </div>
+                    <div class="card-body">
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th> {{'Name' | translate}}</th>
+                                    <th> {{'OfficesName' | translate}} </th>
+                                    <th> {{'Date' | translate}} </th>
+                                    <th> {{'JobTybe' | translate}} </th>
+                                    <th> {{'Action' | translate}} </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="font-weight-bold">Islam</span>
+                                    </td>
+                                    <td>Islam@test</td>
+                                    <td>
+                                        <div class="avatar-group">
+                                            test
+                                        </div>
+                                    </td>
+                                    <td><span class="badge badge-pill badge-light-primary mr-1">sales</span></td>
+                                    <td>
+                                        <button (click)="showEditModalDialog()" type="button" class="btn btn-primary"
+                                            rippleEffect>{{'مراجعه البيانات'}}</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="font-weight-bold">Islam</span>
+                                    </td>
+                                    <td>Islam@test</td>
+                                    <td>
+                                        <div class="avatar-group">
+                                            test
+                                        </div>
+                                    </td>
+                                    <td><span class="badge badge-pill badge-light-primary mr-1">sales</span></td>
+                                    <td class="overflow-hidden">
+                                        <button (click)="showEditModalDialog()" type="button" class="btn btn-primary"
+                                            rippleEffect>{{'مراجعه البيانات'}}</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="font-weight-bold">Islam</span>
+                                    </td>
+                                    <td>Islam@test</td>
+                                    <td>
+                                        <div class="avatar-group">
+                                            test
+                                        </div>
+                                    </td>
+                                    <td><span class="badge badge-pill badge-light-primary mr-1">sales</span></td>
+                                    <td class="overflow-hidden">
+                                        <button (click)="showEditModalDialog()" type="button" class="btn btn-primary"
+                                            rippleEffect>{{'مراجعه البيانات'}}</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ Table Basic -->
+        <!-- dialog -->
+        <p-dialog header="Edit" [(visible)]="editDisplayModal" [modal]="true" [style]="{width: '50vw'}"
+            [baseZIndex]="10000" [draggable]="false" [resizable]="false">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-contol">
+
+                        <form class="form">
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="first-name-column">{{'اسم الموظف' | translate}}</label>
+                                        <input type="text" id="first-name-column" class="form-control"
+                                            placeholder="islam" disabled name="fname-column" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="last-name-column">{{'الجنسية' | translate}}</label>
+                                        <input type="text" id="last-name-column" class="form-control"
+                                            placeholder="مصري" disabled name="lname-column" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="city-column">{{'الجنس' | translate}}</label>
+                                        <input type="text" id="city-column" class="form-control" placeholder="ذكر" disabled
+                                            name="city-column" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="country-floating">{{'المهنه في التاشيره' | translate}}</label>
+                                        <input type="text" id="country-floating" class="form-control"
+                                            name="country-floating" placeholder="مهندس" disabled />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="company-column">{{'المهنه الفعليه' | translate}}</label>
+                                        <input type="text" id="company-column" class="form-control"
+                                            name="company-column" placeholder="مهندس برمجيات" disabled />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="email-id-column">{{'العمر' | translate}}</label>
+                                        <input type="email" id="email-id-column" class="form-control"
+                                            name="email-id-column" placeholder="24" disabled />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="email-id-column">{{'نوع الموظف' | translate}}</label>
+                                        <input type="email" id="email-id-column" class="form-control"
+                                            name="email-id-column" placeholder="مبرمج" disabled />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="email-id-column">{{'الراتب الاساسي' | translate}}</label>
+                                        <input type="email" id="email-id-column" class="form-control"
+                                            name="email-id-column" placeholder="9000" disabled />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="email-id-column">{{'بدل السكن' | translate}}</label>
+                                        <input type="email" id="email-id-column" class="form-control"
+                                            name="email-id-column" placeholder="2000" disabled />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="email-id-column">{{'بدل الانتقال' | translate}}</label>
+                                        <input type="email" id="email-id-column" class="form-control"
+                                            name="email-id-column" placeholder="500" disabled />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="email-id-column">{{'اجمالي الراتب' | translate}}</label>
+                                        <input type="email" id="email-id-column" class="form-control"
+                                            name="email-id-column" placeholder="11500" disabled />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="email-id-column">{{'موعد السفر' | translate}}</label>
+                                        <input type="email" id="email-id-column" class="form-control"
+                                            name="email-id-column" placeholder="1/2/2021" disabled />
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <button type="button" style="float: right;" (click)="UpdateEmployeeOffices()"
+                            class="btn btn-gradient-success mt-1">{{'Agree'|translate}}</button>
+                        <button type="button" style="float: right;" (click)="this.editDisplayModal = false"
+                            class="btn btn-gradient-danger mt-1 mr-1">{{'Reject'|translate}}</button>
+                    </div>
+                </div>
+            </div>
+        </p-dialog>
+    </div>
+</div>
