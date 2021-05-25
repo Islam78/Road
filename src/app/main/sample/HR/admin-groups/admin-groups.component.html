@@ -2,7 +2,6 @@
     <div class="content-body">
         <!-- content-header component -->
         <app-content-header [contentHeader]="contentHeader"></app-content-header>
-
         <!-- Basic Alerts start -->
         <section id="sample-page">
             <!-- header-navbar navbar navbar-expand-lg align-items-center navbar-shadow navbar-light floating-nav -->
@@ -23,16 +22,13 @@
                             </ng-template>
                         </p-dialog>
                         <button (click)="showAddModalDialog()" type="button" class="btn btn-outline-primary mt-1 ml-1" rippleEffect>
-                            <span [data-feather]="'plus'" [class]="'mr-25'"></span> {{'ADD' | translate}}
+                            <span [data-feather]="'plus'" [class]="'mr-25'"></span> {{'Add' | translate}}
                         </button>
-
                         <!-- <button (click)="showAddModalDialog()" class="btn btn-primary btn-next"> <i
                                 class="pi pi-plus-circle" style="font-size: 2rem"></i>
                             <span class="icon-span">{{'ADD' | translate}}</span> </button> -->
                     </div>
                     <div class="form-group col-md-12">
-
-
                         <p-table [value]="groups" [paginator]="true" [lazy]="true" [loading]="loading" [rows]="7">
                             <ng-template pTemplate="header">
                                 <tr>

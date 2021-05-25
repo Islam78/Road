@@ -10,10 +10,12 @@ import { AuthenticationService } from 'app/auth/service'
 import { CoreSidebarService } from '@core/components/core-sidebar/core-sidebar.service'
 import { CoreConfigService } from '@core/services/config.service'
 import { CoreMediaService } from '@core/services/media.service'
-
+import { locale as en } from './../../../main/sample/i18n/en'
+import { locale as ar } from './../../../main/sample/i18n/ar'
 import { User } from 'app/auth/models'
 
 import { Router } from '@angular/router'
+import { CoreTranslationService } from '@core/services/translation.service'
 
 @Component({
   selector: 'app-navbar',
@@ -72,6 +74,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
    * @param {MediaObserver} _mediaObserver
    * @param {TranslateService} _translateService
    */
+
   constructor(
     private _router: Router,
     private _authenticationService: AuthenticationService,
@@ -79,8 +82,10 @@ export class NavbarComponent implements OnInit, OnDestroy {
     private _coreMediaService: CoreMediaService,
     private _coreSidebarService: CoreSidebarService,
     private _mediaObserver: MediaObserver,
-    public _translateService: TranslateService
+    public _translateService: TranslateService,
+    private _coreTranslationService: CoreTranslationService
   ) {
+    
     
     this._authenticationService.currentUser.subscribe(x => (this.currentUser = x))
       
@@ -93,21 +98,12 @@ export class NavbarComponent implements OnInit, OnDestroy {
         title: 'العربية',
         flag: 'Ar'
       }
-      // ,
-      // de: {
-      //   title: 'German',
-      //   flag: 'de'
-      // },
-      // pt: {
-      //   title: 'Portuguese',
-      //   flag: 'pt'
-      // }
     }
 
     // Set the private defaults
     this._unsubscribeAll = new Subject()
 
-    
+    this._coreTranslationService.translate(en, ar)
   }
 
   // Public Methods
@@ -128,15 +124,34 @@ export class NavbarComponent implements OnInit, OnDestroy {
    * @param language
    */
   setLanguage(language): void {
+    debugger
     // Set the selected language for the navbar on change
     this.selectedLanguage = language
-
     // Use the selected language id for translations
     this._translateService.use(language)
-    console.log(language);
-    
-    if (language == 'ar') {
-      // alert('s')
+
+    this.Header()
+  }
+  contentHeader: object
+
+  Header() {
+    this.contentHeader = {
+      headerTitle: 'Admin Groups',
+      actionButton: true,
+      breadcrumb: {
+        type: '',
+        links: [
+          {
+            name: 'Home',
+            isLink: true,
+            link: '/'
+          },
+          {
+            name: 'Groups',
+            isLink: false
+          }
+        ]
+      }
     }
   }
 

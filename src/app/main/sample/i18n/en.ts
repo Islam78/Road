@@ -47,16 +47,16 @@ export const locale = {
     PhoneNumber:"Phone Number",
     nationality:"nationality",
     gender:"gender",
-    BirthDate:"BirthDate",
+    BirthDate:"Birth Date",
     Age:"Age",
-    JobInvisa:"JobInvisa",
-    RealJob:"RealJob",
-    EmployeeType:"EmployeeType",
-    HousingAllowance:"HousingAllowance",
-    SubsistenceAllowance:"SubsistenceAllowance",
+    JobInvisa:"Job In visa",
+    RealJob:"Real Job",
+    EmployeeType:"Employee Type",
+    HousingAllowance:"Housing Allowance",
+    SubsistenceAllowance:"Subsistence Allowance",
     BasicSalary:"Basic Salary",
     TotalSalary:"Total Salary",
-    RelocationAllowance:"RelocationAllowance",
+    RelocationAllowance:"Relocation Allowance",
     PassportNumber:"Passport Number",
     StartDataPassport:"Date of issuance of the passport",
     EndDataPassport:"Passport expiration date",
@@ -96,7 +96,12 @@ export const locale = {
     Notes:"notes",
     reason:"reason",
     Add: "Add",
-    Location:"Location"
+    Location:"Location",
+    DataReview:" Data Review",
+    Next:"next",
+    CompleteData:"Complete Data",
+    IssueContract:"Issue a Contract",
+    PrintDraftContract:"Print the draft contract"
 
   }
 }

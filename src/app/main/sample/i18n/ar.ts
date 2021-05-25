@@ -97,6 +97,15 @@ export const locale = {
     TotalSalary:"اجمالي المرتب",
     Add: "اضافة",
     Location:"الموقع",
+    DataReview:" مراجعه البيانات",
+    Next:"التالي",
+    CompleteData:"اكمال البيانات",
+    IssueContract:"اصدار عقد",
+    PrintDraftContract:"طباعه مسودة العقد"
+
+
+
+    
 
   }
 }

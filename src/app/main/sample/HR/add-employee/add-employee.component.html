@@ -119,7 +119,7 @@
                                     <div class="form-group col-md-6">
                                         <label class="form-label" for="user_name">{{'EmplpyeeName'| translate}} </label>
                                         <!--   -->
-                                        <input [(ngModel)]="TDNameVar" #TDNameRef="ngModel" required type="text" name="user_name" id="user_name" class="form-control" [class.error]="!TDNameRef.valid && accountDetailsForm.submitted" placeholder="johndoe" />
+                                        <input [(ngModel)]="TDNameVar" #TDNameRef="ngModel" required type="text" name="user_name" id="user_name" class="form-control" [class.error]="!TDNameRef.valid && accountDetailsForm.submitted" />
                                         <span *ngIf="accountDetailsForm.submitted && TDNameRef.invalid" class="invalid-form">
                                             <small class="form-text text-danger" *ngIf="TDNameRef.errors.required">This
                                                 field is required!</small>
@@ -236,7 +236,7 @@
                                         <span class="align-middle d-sm-inline-block d-none">Previous</span>
                                     </button>
                                     <button (click)="horizontalWizardStepperNext(accountDetailsForm)" type="submit" class="btn btn-primary btn-next" rippleEffect>
-                                        <span class="align-middle d-sm-inline-block d-none">Next</span>
+                                        <span class="align-middle d-sm-inline-block d-none">{{'Next' | translate}}</span>
                                         <i data-feather="arrow-right" class="align-middle ml-sm-25 ml-0"></i>
                                     </button>
                                 </div>
@@ -328,7 +328,7 @@
                                         <span class="align-middle d-sm-inline-block d-none">Previous</span>
                                     </button>
                                     <button (click)="horizontalWizardStepperNext(personalInfoForm)" class="btn btn-primary btn-next" rippleEffect>
-                                        <span class="align-middle d-sm-inline-block d-none">Next</span>
+                                        <span class="align-middle d-sm-inline-block d-none">{{'Next' | translate}}</span>
                                         <i data-feather="arrow-right" class="align-middle ml-sm-25 ml-0"></i>
                                     </button>
                                 </div>
@@ -548,7 +548,7 @@
                                         <span class="align-middle d-sm-inline-block d-none">Previous</span>
                                     </button>
                                     <button (click)="horizontalWizardStepperNext(addressForm)" class="btn btn-primary btn-next" rippleEffect>
-                                        <span class="align-middle d-sm-inline-block d-none">Next</span>
+                                        <span class="align-middle d-sm-inline-block d-none">{{'Next' | translate}}</span>
                                         <i data-feather="arrow-right" class="align-middle ml-sm-25 ml-0"></i>
                                     </button>
                                 </div>

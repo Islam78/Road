@@ -4,8 +4,8 @@ import { CoreTranslationService } from '@core/services/translation.service';
 import { Groups } from 'app/auth/models/Groups';
 import { GroupsPermissions } from 'app/auth/models/GroupsPermissions';
 import { MessageService } from 'primeng/api';
-import { locale as en } from '../../i18n/en'
-import { locale as ar } from '../../i18n/ar'
+import { locale as en } from './../../i18n/en'
+import { locale as ar } from './../../i18n/ar'
 @Component({
   selector: 'app-admin-groups',
   templateUrl: './admin-groups.component.html',
@@ -44,7 +44,7 @@ export class AdminGroupsComponent implements OnInit {
   }
 
   add(i) {
-    console.log(i.value);
+    // console.log(i.value);
     this._serv.addGroup({ "group_name": i.value }).subscribe(
       (res: any) => {
         if (res.status === true) {
@@ -81,11 +81,11 @@ export class AdminGroupsComponent implements OnInit {
   SaveNewPerm(item) {
     if (item.permission_name) item.edit = false
     if (item.add = true) {
-      console.log('add');
+      // console.log('add');
       item.action = "s"
       this._serv.addGroupPermissions(item).subscribe(res => { item.add = false })
     } else {
-      console.log('edit');
+      // console.log('edit');
       this._serv.editGroupPermissions(item).subscribe()
     }
   }
@@ -104,7 +104,7 @@ export class AdminGroupsComponent implements OnInit {
     this._serv.editGroupPermissions(role).subscribe(fun => this.editDisplayModal = false)
   }
   remove(item: Groups) {
-    console.log(item);
+    // console.log(item);
     this._serv.removeGroups({ "id": item.id }).subscribe((res: any) => {
       if (res.status === true) {
         this.getGroups();
