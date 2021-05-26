@@ -98,10 +98,22 @@ export const locale = {
     Add: "اضافة",
     Location:"الموقع",
     DataReview:" مراجعه البيانات",
-    Next:"التالي",
+    Next:"حفظ ومتابعه",
     CompleteData:"اكمال البيانات",
     IssueContract:"اصدار عقد",
-    PrintDraftContract:"طباعه مسودة العقد"
+    PrintDraftContract:"طباعه مسودة العقد",
+    EmployeeRe_registration:"اعادة قيد موظف",
+    RunAwayEmployees:"موظفين هاربين",
+    EmployeesRefusingWork:"موظفين رافضي العمل",
+    Accept:"موافقه",
+    TransfertDeVacances:"تحويل الاجازة",
+    Révision:"مراجعة",
+    DemandeDeTransfert:"طلب نقل",
+    ExaminerTransfert:"مراجعه طلب النقل",
+    demandeDeDémission:"طلب استقالة",
+    PrintDeDémission:"طباعه طلب الاستقالة",
+    Previous:"الخطوة السابقة"
+
 
 
 

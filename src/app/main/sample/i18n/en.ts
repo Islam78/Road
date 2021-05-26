@@ -101,7 +101,18 @@ export const locale = {
     Next:"next",
     CompleteData:"Complete Data",
     IssueContract:"Issue a Contract",
-    PrintDraftContract:"Print the draft contract"
+    PrintDraftContract:"Print the draft contract",
+    EmployeeRe_registration:"Employee re-registration",
+    RunAwayEmployees:"ِRun Away Employees",
+    EmployeesRefusingWork:"Employees Refusing Work",
+    Accept:"Accept",
+    TransfertDeVacances:"Transfert de vacances",
+    Révision:"Révision",
+    DemandeDeTransfert:"Demande de transfert",
+    ExaminerTransfert:"Examiner une demande de transfert",
+    demandeDeDémission:"demande De Démission",
+    PrintDeDémission:"print de démission"
+
 
   }
 }

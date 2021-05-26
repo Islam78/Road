@@ -85,10 +85,14 @@ export class NavbarComponent implements OnInit, OnDestroy {
     public _translateService: TranslateService,
     private _coreTranslationService: CoreTranslationService
   ) {
-    
-    
+
+
     this._authenticationService.currentUser.subscribe(x => (this.currentUser = x))
-      
+    this.LanguageSetUp()
+
+  }
+  LanguageSetUp() {
+
     this.languageOptions = {
       en: {
         title: 'En',
@@ -104,6 +108,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this._unsubscribeAll = new Subject()
 
     this._coreTranslationService.translate(en, ar)
+
   }
 
   // Public Methods
@@ -124,36 +129,35 @@ export class NavbarComponent implements OnInit, OnDestroy {
    * @param language
    */
   setLanguage(language): void {
-    debugger
     // Set the selected language for the navbar on change
     this.selectedLanguage = language
     // Use the selected language id for translations
     this._translateService.use(language)
-
-    this.Header()
-  }
-  contentHeader: object
-
-  Header() {
-    this.contentHeader = {
-      headerTitle: 'Admin Groups',
-      actionButton: true,
-      breadcrumb: {
-        type: '',
-        links: [
-          {
-            name: 'Home',
-            isLink: true,
-            link: '/'
-          },
-          {
-            name: 'Groups',
-            isLink: false
-          }
-        ]
-      }
+    if (language == 'ar') {
+      document.body.style.direction = "rtl";
+      document.getElementById('AppContent').style.marginRight = '260px'
+      document.getElementById('AppContent').style.marginLeft = '0px'
+      document.getElementById('mdRight').style.textAlign = 'left'
+      document.getElementById('navbarHead').style.left = '0'
+      document.getElementById('navbarHead').style.right = '260px'
+      document.getElementById('navbarIcon').style.marginLeft = 'inherit'
+      document.getElementById('navbarIcon').style.marginRight = 'auto'
+      
+      
+      // navbarHead
+      // doc
+      // alert('')
+    }else{
+      document.body.style.direction = "ltr";
+      document.getElementById('AppContent').style.marginRight = '0'
+      document.getElementById('AppContent').style.marginLeft = '260px'
+      document.getElementById('mdRight').style.textAlign = 'right'
+      document.getElementById('navbarHead').style.right = '0'
+      document.getElementById('navbarIcon').style.marginLeft = 'auto'
+      document.getElementById('navbarIcon').style.marginRight = 'inherit'
     }
   }
+
 
   /**
    * Toggle Dark Skin
@@ -196,6 +200,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
    * On init
    */
   ngOnInit(): void {
+
     // get the currentUser details from localStorage
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'))
 
@@ -228,13 +233,14 @@ export class NavbarComponent implements OnInit, OnDestroy {
         }
       })
     }
-    // this.setLanguage('fr');
-    // this._translateService.use('fr')
+
+
     // Set the selected language from default languageOptions
     this.selectedLanguage = _.find(this.languageOptions, {
       id: this._translateService.currentLang
     })
-    
+    this.setLanguage('en');
+    this._translateService.use('en')
   }
 
   /**

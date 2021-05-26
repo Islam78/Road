@@ -7,7 +7,7 @@
 <!--/ MENU -->
 
 <!-- APP-CONTENT -->
-<div class="app-content content">
+<div id="AppContent" class="app-content content">
   <div class="content-overlay"></div>
   <div class="header-navbar-shadow" *ngIf="!coreConfig.layout.navbar.hidden"></div>
   <!-- CONTENT -->
@@ -24,7 +24,7 @@
 
 <!-- NAVBAR -->
 <ng-template #navbar>
-  <app-navbar
+  <app-navbar id="navbarHead"
     *ngIf="!coreConfig.layout.navbar.hidden"
     [ngClass]="
       coreConfig.layout.navbar.customBackgroundColor === true

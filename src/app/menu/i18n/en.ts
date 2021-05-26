@@ -21,7 +21,6 @@ export const locale = {
       TransferRequestDepartment:"Transfer request department",
       TransferRequestProjects: "Transfer Request Projects",
       ExitRequest:"Exit Request",
-      
       AttendanceAndDeparture:"Attendance and Departure",
       RequestEmergencyLeave:"Request emergency leave",
       AnnualLeaveQequest:"Annual leave request",
@@ -35,6 +34,7 @@ export const locale = {
       AbsentEmpoyees:"Absent Empoyees",
       RunAwayEmployees:"Run Away Employees",
       EmployeesRefusingWork:"Employees Refusing Work",
+      Previous:"Previous"
     }
   }
 }

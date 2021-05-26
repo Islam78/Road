@@ -59,7 +59,7 @@ const routes = [
   },
   {
     path: 'NewEmployee',
-    component: AddEmployeeComponent
+    component: AddEmployeeComponent,
   },
   {
     path: 'EditEmployee/:id',

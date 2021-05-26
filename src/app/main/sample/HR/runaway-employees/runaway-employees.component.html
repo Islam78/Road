@@ -7,11 +7,14 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">{{'ِRun Away Employees' | translate}}</h4>
-                        <button type="button" style="float: right;" (click)="showEditModalDialog()"
-                        class="btn btn-gradient-success mt-1">{{'Add'|translate}}</button>
-                        <button type="button" style="float: right;position: absolute; right: 110px;" (click)="showEditModalDialog()"
-                            class="btn btn-gradient-info mt-1">{{'اعادة قيد موظف'|translate}}</button>
+                        <h4 class="card-title">{{'RunAwayEmployees' | translate}}</h4>
+                        <div class="text-right">
+                            <button type="button" (click)="showEditModalDialog()"
+                                class="btn btn-gradient-info mt-1 mr-1">{{'EmployeeRe_registration'|translate}}</button>
+                            <button type="button" (click)="showEditModalDialog()"
+                                class="btn btn-gradient-success mt-1 mr-1">{{'Add'|translate}}</button>
+                        </div>
+                       
                     </div>
                     <div class="card-body">
                     </div>

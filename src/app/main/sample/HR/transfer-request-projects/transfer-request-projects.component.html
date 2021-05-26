@@ -9,7 +9,7 @@
                     <div class="card-header">
                         <h4 class="card-title">{{'Transfer Request project' | translate}}</h4>
                         <button type="button" class="btn btn-info mr-1" (click)="NewDisplayModal = true"
-                            rippleEffect>{{'طلب نقل'}}</button>
+                            rippleEffect>{{'DemandeDeTransfert'|translate}}</button>
                     </div>
                     <div class="card-body">
                     </div>
@@ -38,7 +38,7 @@
                                     <td><span class="badge badge-pill badge-light-primary mr-1">sales</span></td>
                                     <td class="overflow-hidden">
                                         <button type="button" class="btn btn-danger" (click)="showEditModalDialog()"
-                                            rippleEffect>{{'مراجعة طلب النقل'}}</button>
+                                            rippleEffect>{{'ExaminerTransfert'|translate}}</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -86,7 +86,7 @@
                 </div>
             </div>
         </p-dialog>
-       
+
         <!-- dialog -->
         <p-dialog [(visible)]="editDisplayModal" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
             [draggable]="false" [resizable]="false">
@@ -98,43 +98,43 @@
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="first-name-column">اسم الموظف</label>
-                                        <input disabled ngModel="اسلام" type="text" id="first-name-column" class="form-control"
-                                            placeholder="اسلام" name="fname-column" />
+                                        <input disabled ngModel="اسلام" type="text" id="first-name-column"
+                                            class="form-control" placeholder="اسلام" name="fname-column" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="last-name-column">الجنسية</label>
-                                        <input disabled ngModel="مصري"  type="text" id="last-name-column" class="form-control"
-                                            placeholder="مصري" name="lname-column" />
+                                        <input disabled ngModel="مصري" type="text" id="last-name-column"
+                                            class="form-control" placeholder="مصري" name="lname-column" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="city-column">المهنه الفعليه</label>
-                                        <input disabled ngModel="مهندس" type="text" id="city-column" class="form-control" placeholder="مهندس"
-                                            name="city-column" />
+                                        <input disabled ngModel="مهندس" type="text" id="city-column"
+                                            class="form-control" placeholder="مهندس" name="city-column" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="country-floating">عدد مرات النقل</label>
-                                        <input disabled ngModel="3" type="text" id="country-floating" class="form-control"
-                                            name="country-floating" placeholder="3" />
+                                        <input disabled ngModel="3" type="text" id="country-floating"
+                                            class="form-control" name="country-floating" placeholder="3" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="company-column">المشروع الحالي</label>
-                                        <input disabled ngModel="مصر" type="text" id="company-column" class="form-control"
-                                            name="company-column" placeholder="مصر" />
+                                        <input disabled ngModel="مصر" type="text" id="company-column"
+                                            class="form-control" name="company-column" placeholder="مصر" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="email-id-column">المشروع التي سيتم نقله اليه</label>
-                                        <input disabled ngModel="السعودية" type="email" id="email-id-column" class="form-control"
-                                            name="email-id-column" placeholder="السعودية" />
+                                        <input disabled ngModel="السعودية" type="email" id="email-id-column"
+                                            class="form-control" name="email-id-column" placeholder="السعودية" />
                                     </div>
                                 </div>
                             </div>
