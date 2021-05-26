@@ -133,29 +133,29 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.selectedLanguage = language
     // Use the selected language id for translations
     this._translateService.use(language)
-    if (language == 'ar') {
-      document.body.style.direction = "rtl";
-      document.getElementById('AppContent').style.marginRight = '260px'
-      document.getElementById('AppContent').style.marginLeft = '0px'
-      document.getElementById('mdRight').style.textAlign = 'left'
-      document.getElementById('navbarHead').style.left = '0'
-      document.getElementById('navbarHead').style.right = '260px'
-      document.getElementById('navbarIcon').style.marginLeft = 'inherit'
-      document.getElementById('navbarIcon').style.marginRight = 'auto'
+    // if (language == 'ar') {
+    //   document.body.style.direction = "rtl";
+    //   document.getElementById('AppContent').style.marginRight = '260px'
+    //   document.getElementById('AppContent').style.marginLeft = '0px'
+    //   document.getElementById('mdRight').style.textAlign = 'left'
+    //   document.getElementById('navbarHead').style.left = '0'
+    //   document.getElementById('navbarHead').style.right = '260px'
+    //   document.getElementById('navbarIcon').style.marginLeft = 'inherit'
+    //   document.getElementById('navbarIcon').style.marginRight = 'auto'
       
       
-      // navbarHead
-      // doc
-      // alert('')
-    }else{
-      document.body.style.direction = "ltr";
-      document.getElementById('AppContent').style.marginRight = '0'
-      document.getElementById('AppContent').style.marginLeft = '260px'
-      document.getElementById('mdRight').style.textAlign = 'right'
-      document.getElementById('navbarHead').style.right = '0'
-      document.getElementById('navbarIcon').style.marginLeft = 'auto'
-      document.getElementById('navbarIcon').style.marginRight = 'inherit'
-    }
+    //   // navbarHead
+    //   // doc
+    //   // alert('')
+    // }else{
+    //   document.body.style.direction = "ltr";
+    //   document.getElementById('AppContent').style.marginRight = '0'
+    //   document.getElementById('AppContent').style.marginLeft = '260px'
+    //   document.getElementById('mdRight').style.textAlign = 'right'
+    //   document.getElementById('navbarHead').style.right = '0'
+    //   document.getElementById('navbarIcon').style.marginLeft = 'auto'
+    //   document.getElementById('navbarIcon').style.marginRight = 'inherit'
+    // }
   }
 
 
