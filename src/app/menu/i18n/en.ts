@@ -34,7 +34,11 @@ export const locale = {
       AbsentEmpoyees:"Absent Empoyees",
       RunAwayEmployees:"Run Away Employees",
       EmployeesRefusingWork:"Employees Refusing Work",
-      Previous:"Previous"
+      Previous:"Previous",
+      NewOfficWork:"Add Offic Work",
+      SalesAdminstration:"SalesAdminstration",
+      ManageClint:"Manage Clint",
+      AddClint:"Add new Clint"
     }
   }
 }

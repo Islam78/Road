@@ -34,6 +34,7 @@ export class AdminGroupsComponent implements OnInit {
       this.loading = false;
     })
   }
+
   addDisplayModal: boolean;
   editDisplayModal: boolean
   showAddModalDialog() {
@@ -132,4 +133,13 @@ export class AdminGroupsComponent implements OnInit {
     }
   }
 
+  SearchArr
+  SearchHeader
+  MakeSearchArr() {
+    this.SearchHeader= 'Admin Group'
+    this.SearchArr = [
+      { label: "Admin Name", Type: "text" },
+      { label: "Code", Type: "text" },
+    ]
+  }
 }

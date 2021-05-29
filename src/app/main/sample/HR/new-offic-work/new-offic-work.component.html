@@ -1,0 +1,70 @@
+<div class="content-wrapper">
+    <div class="content-body">
+        <!-- content-header component -->
+        <app-search></app-search>
+        <app-content-header [contentHeader]="contentHeader"></app-content-header>
+
+        <!-- Table Basic -->
+        <div class="row" id="basic-table">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">{{'NewOffice' | translate}}</h4>
+                    </div>
+                    <div class="card-body">
+                        <form class="form">
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="first-name-column">{{'OfficeName' | translate}}</label>
+                                        <input  type="text" id="first-name-column"
+                                            class="form-control"  name="fname-column" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="last-name-column">{{'AdminOfficeName' | translate}}</label>
+                                        <input  type="text" id="last-name-column"
+                                            class="form-control"  name="lname-column" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="city-column">{{'EmployeesNumToWork' | translate}}</label>
+                                        <input  type="text" id="city-column"
+                                            class="form-control"  name="city-column" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="country-floating">{{'OfficeCategory' | translate}}</label>
+                                        <input  type="text" id="country-floating"
+                                            class="form-control" name="country-floating"  />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="company-column">{{'StartDate' | translate}}</label>
+                                        <input  type="date" id="company-column"
+                                            class="form-control" name="company-column"  />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="email-id-column">{{'Notes' | translate}}</label>
+                                        <textarea  class="form-control"  name="" id="" cols="30" rows="10"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="table-responsive text-right">
+                        <button type="button" class="btn btn-info mr-1 mb-1" 
+                        rippleEffect>{{'Save'}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ Table Basic -->
+    </div>
+</div>

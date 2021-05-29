@@ -17,7 +17,7 @@ import { CoreDirectivesModule } from '@core/directives/directives'
 import { CardSnippetModule } from '@core/components/card-snippet/card-snippet.module'
 import { Ng2FlatpickrModule } from 'ng2-flatpickr';
 import { FileUploadModule } from 'ng2-file-upload';
-import { EmployeesComponent } from './HR/employees/employees.component';
+// import { EmployeesComponent } from './HR/employees/employees.component';
 import { CsvModule } from '@ctrl/ngx-csv';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { NgxBarcodeModule } from 'ngx-barcode'
@@ -29,6 +29,8 @@ import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { MessagesModule } from 'primeng/messages';
 import { DialogModule } from 'primeng/dialog';
+import {SidebarModule} from 'primeng/sidebar';
+
 // component
 import { IssuanceContractsComponent } from './HR/issuance-contracts/issuance-contracts.component';
 import { IssuingActionComponent } from './HR/issuing-action/issuing-action.component';
@@ -47,6 +49,11 @@ import { EmployeeExistRequestComponent } from './HR/employee-exist-request/emplo
 import { AbsenteeEmployeesComponent } from './HR/absentee-employees/absentee-employees.component';
 import { RunawayEmployeesComponent } from './HR/runaway-employees/runaway-employees.component';
 import { EmployeesRefusingWorkComponent } from './HR/employees-refusing-work/employees-refusing-work.component';
+
+
+import { EmployeesComponent } from './HR/employees/employees.component';
+import { NewOfficWorkComponent } from './HR/new-offic-work/new-offic-work.component';
+import { SearchComponent } from './search/search.component'
 
 const routes = [
   {
@@ -140,13 +147,17 @@ const routes = [
   {
     path: 'EmployeesRefusingWork',
     component: EmployeesRefusingWorkComponent
+  },
+  {
+    path: 'NewOfficWork',
+    component: NewOfficWorkComponent
   }
   //Employees-refusing-work
 ]
 
 
 @NgModule({
-  declarations: [SampleComponent, HomeComponent, AddEmployeeComponent, EmployeesComponent, AdminGroupsComponent, IssuanceContractsComponent, IssuingActionComponent, WorkDefinitionComponent, ResignationRequestsComponent, EndingServicesComponent, TransferRequestDepartmentComponent, TransferRequestProjectsComponent, ExitRequestComponent, EmploymentOfficesComponent, WaitingListComponent, CompleteEmployeeComponent, AttendanceComponent, VacationRequestComponent, EmployeeExistRequestComponent, AbsenteeEmployeesComponent, RunawayEmployeesComponent, EmployeesRefusingWorkComponent],
+  declarations: [SampleComponent, HomeComponent, AddEmployeeComponent, EmployeesComponent, AdminGroupsComponent, IssuanceContractsComponent, IssuingActionComponent, WorkDefinitionComponent, ResignationRequestsComponent, EndingServicesComponent, TransferRequestDepartmentComponent, TransferRequestProjectsComponent, ExitRequestComponent, EmploymentOfficesComponent, WaitingListComponent, CompleteEmployeeComponent, AttendanceComponent, VacationRequestComponent, EmployeeExistRequestComponent, AbsenteeEmployeesComponent, RunawayEmployeesComponent, EmployeesRefusingWorkComponent, NewOfficWorkComponent, SearchComponent],
   imports: [
     RouterModule.forChild(routes),
     ContentHeaderModule,
@@ -171,7 +182,7 @@ const routes = [
     DialogModule,
     ButtonModule,
     MessagesModule,
-
+    SidebarModule
 
   ],
   exports: [SampleComponent, HomeComponent]

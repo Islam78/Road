@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AddEmployeeService } from '@core/services/addEmployee/add-employee.service';
@@ -16,7 +16,6 @@ const URL = 'https://your-url.com';
 })
 
 export class AddEmployeeComponent implements OnInit {
-
   // public
   public contentHeader: object;
   public basicDPdata: NgbDateStruct;
@@ -96,6 +95,13 @@ export class AddEmployeeComponent implements OnInit {
       this.employeeService.getById(this.id)
     }
   }
+  SearchArr
+  MakeSearchArr() {
+    this.SearchArr = [
+      { label: "Name", Type: "text" },
+      { label: "Id", Type: "text" }
+    ]
+  }
   ngOnInit() {
     this._serv.khayalGroups().subscribe(res => { })
     this._serv.khayal_jobs().subscribe((res: any) => {
@@ -103,7 +109,7 @@ export class AddEmployeeComponent implements OnInit {
     })
     this.StartUp()
   }
-  StartUp(){
+  StartUp() {
     this.horizontalWizardStepper = new Stepper(document.querySelector('#stepper1'), {});
     // content header
     this.contentHeader = {
@@ -130,7 +136,7 @@ export class AddEmployeeComponent implements OnInit {
       }
     };
   }
-  
+
   ActualprofessionArr
   Actualprofession(event) {
     console.log(event);
@@ -158,7 +164,7 @@ export class AddEmployeeComponent implements OnInit {
       }
     )
   }
- 
+
   GForm: FormGroup
   GenrateForm() {
     this.GForm = this.gf.group({

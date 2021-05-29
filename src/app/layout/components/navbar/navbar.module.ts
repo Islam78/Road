@@ -1,3 +1,4 @@
+import { AddEmployeeComponent } from './../../../main/sample/HR/add-employee/add-employee.component';
 import { NgModule } from '@angular/core'
 import { RouterModule } from '@angular/router'
 

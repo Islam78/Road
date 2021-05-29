@@ -111,8 +111,13 @@ export const locale = {
     DemandeDeTransfert:"Demande de transfert",
     ExaminerTransfert:"Examiner une demande de transfert",
     demandeDeDémission:"demande De Démission",
-    PrintDeDémission:"print de démission"
-
+    PrintDeDémission:"print de démission",
+    NewOffice:"New Office",
+    OfficeName:"Office Name",
+    AdminOfficeName:"Admin Office Name",
+    EmployeesNumToWork:"Employees Need To Work",
+    OfficeCategory:"Office Category",
+    StartDate:"Start Date",
 
   }
 }

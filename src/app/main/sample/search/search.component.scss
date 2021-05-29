@@ -1,0 +1,14 @@
+#mdRight{
+    float: right;
+    
+    position: absolute;
+    right: 25px;
+
+    // margin-top: -50px;
+}
+
+@media (max-width:'900px') {
+   #mdRight{
+       display: contents !important;
+   } 
+}

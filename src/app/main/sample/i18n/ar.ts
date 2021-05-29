@@ -112,11 +112,13 @@ export const locale = {
     ExaminerTransfert:"مراجعه طلب النقل",
     demandeDeDémission:"طلب استقالة",
     PrintDeDémission:"طباعه طلب الاستقالة",
-    Previous:"الخطوة السابقة"
-
-
-
-
+    Previous:"الخطوة السابقة",
+    OfficeName:"اسم مكتب العمل",
+    AdminOfficeName:"اسم مدير مكتب العمل",
+    EmployeesNumToWork:"العدد الازم للتشغيل",
+    OfficeCategory:"نشاط المكتب",
+    StartDate:"تاريخ البدء",
+    NewOffice:"مكتب جديد"
     
 
   }

@@ -8,7 +8,6 @@ export const menu: CoreMenu[] = [
     translate: 'MENU.HR',
     icon: 'box',
     children: [
-
       {
         id: 'ManageEmployee',
         title: 'Manage Employee',
@@ -16,6 +15,7 @@ export const menu: CoreMenu[] = [
         icon: 'users',
         type: 'collapsible',
         children: [
+          // NewOfficWork
           {
             id: 'addEmployee',
             title: 'Add Employee',
@@ -23,6 +23,14 @@ export const menu: CoreMenu[] = [
             type: 'item',
             icon: 'circle',
             url: 'NewEmployee'
+          },
+          {
+            id: 'NewOfficWork',
+            title: 'Add Office Work ',
+            translate: 'MENU.NewOfficWork',
+            type: 'item',
+            icon: 'circle',
+            url: 'NewOfficWork'
           },
           {
             id: 'Employees',
@@ -262,6 +270,50 @@ export const menu: CoreMenu[] = [
           }
         ]
       }
+    ],
+
+  },
+  {
+    id: 'others',
+    type: 'section',
+    title: 'Sales Adminstration',
+    translate: 'MENU.SalesAdminstration',
+    icon: 'box',
+    children: [
+      {
+        id: 'ManageClint',
+        title: 'Manage Clint',
+        translate: 'MENU.ManageClint',
+        icon: 'users',
+        type: 'collapsible',
+        children: [
+          {
+            id: 'addClint',
+            title: 'Add Clint',
+            translate: 'MENU.AddClint',
+            type: 'item',
+            icon: 'circle',
+            url: 'NewClint'
+          }
+        ]
+      },
+      {
+        id: 'Contracts',
+        title: 'Contracts',
+        translate: 'MENU.Contracts',
+        icon: 'clipboard',
+        type: 'collapsible',
+        children: [
+          {
+            id: 'ExitRequest',
+            title: 'Exit Request',
+            translate: 'MENU.ExitRequest',
+            type: 'item',
+            icon: 'circle',
+            url: 'ExitRequest'
+          }
+        ]
+      },
     ],
 
   },
