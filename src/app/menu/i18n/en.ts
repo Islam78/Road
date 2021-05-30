@@ -38,7 +38,8 @@ export const locale = {
       NewOfficWork:"Add Offic Work",
       SalesAdminstration:"SalesAdminstration",
       ManageClint:"Manage Clint",
-      AddClint:"Add new Clint"
+      AddClint:"Add new Clint",
+      RecommendEmployee:"Recommend Employee"
     }
   }
 }

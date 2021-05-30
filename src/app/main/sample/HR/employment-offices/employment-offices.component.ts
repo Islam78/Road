@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./employment-offices.component.scss']
 })
 export class EmploymentOfficesComponent implements OnInit {
-  public contentHeader: object
+  contentHeader: object
   editDisplayModal: boolean
   constructor() { }
   

@@ -34,10 +34,11 @@ export const locale = {
       AbsentEmpoyees:"الموظفين المتغيبين",
       RunAwayEmployees:"الموظفين الهاربين",
       EmployeesRefusingWork:"موظفين رافضي العمل",
-      NewOfficWork:"اضافة",
+      NewOfficWork:" اضافة مكتب",
       SalesAdminstration:"ادارة المبيعات",
       ManageClint:"ادارة العملاء",
-      AddClint:"اضافه عميل جديد"
+      AddClint:"اضافه عميل جديد",
+      RecommendEmployee:"الموظفين المقترحين"
     }
   }
 }

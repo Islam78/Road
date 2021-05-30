@@ -1,26 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-new-offic-work',
-  templateUrl: './new-offic-work.component.html',
-  styleUrls: ['./new-offic-work.component.scss']
+  selector: 'app-recommend-employee',
+  templateUrl: './recommend-employee.component.html',
+  styleUrls: ['./recommend-employee.component.scss']
 })
-export class NewOfficWorkComponent implements OnInit {
-
+export class RecommendEmployeeComponent implements OnInit {
 
   contentHeader: object
-  ReviewDisplayModal: boolean
-  NewDisplayModal :boolean
+  editDisplayModal: boolean
   constructor() { }
 
-  showReviewModalDialog() {
-    this.ReviewDisplayModal = true;
+  showEditModalDialog() {
+    this.editDisplayModal = true;
   }
-  AddDisplayModal
-  showAddModalDialog(){
-    this.AddDisplayModal = true
+  UpdateEmployeeOffices() {
+    this.editDisplayModal = false
   }
-  DeleteModalDialog(){}
   ngOnInit(): void {
     this.contentHeader = {
       headerTitle: 'Hr',
@@ -34,7 +30,7 @@ export class NewOfficWorkComponent implements OnInit {
             link: '/'
           },
           {
-            name: 'Transfer Request project',
+            name: 'Employment offices',
             isLink: false
           }
         ]

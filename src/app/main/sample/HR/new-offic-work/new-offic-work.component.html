@@ -3,68 +3,296 @@
         <!-- content-header component -->
         <app-search></app-search>
         <app-content-header [contentHeader]="contentHeader"></app-content-header>
-
         <!-- Table Basic -->
         <div class="row" id="basic-table">
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">{{'NewOffice' | translate}}</h4>
+                        <h4 class="card-title">{{'Employment offices' | translate}}</h4>
+                        <button type="button" class="btn btn-info mr-1" (click)="showAddModalDialog()"
+                            rippleEffect>{{'Add'|translate}}</button>
                     </div>
                     <div class="card-body">
-                        <form class="form">
-                            <div class="row">
-                                <div class="col-md-6 col-12">
-                                    <div class="form-group">
-                                        <label for="first-name-column">{{'OfficeName' | translate}}</label>
-                                        <input  type="text" id="first-name-column"
-                                            class="form-control"  name="fname-column" />
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-12">
-                                    <div class="form-group">
-                                        <label for="last-name-column">{{'AdminOfficeName' | translate}}</label>
-                                        <input  type="text" id="last-name-column"
-                                            class="form-control"  name="lname-column" />
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-12">
-                                    <div class="form-group">
-                                        <label for="city-column">{{'EmployeesNumToWork' | translate}}</label>
-                                        <input  type="text" id="city-column"
-                                            class="form-control"  name="city-column" />
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-12">
-                                    <div class="form-group">
-                                        <label for="country-floating">{{'OfficeCategory' | translate}}</label>
-                                        <input  type="text" id="country-floating"
-                                            class="form-control" name="country-floating"  />
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-12">
-                                    <div class="form-group">
-                                        <label for="company-column">{{'StartDate' | translate}}</label>
-                                        <input  type="date" id="company-column"
-                                            class="form-control" name="company-column"  />
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-12">
-                                    <div class="form-group">
-                                        <label for="email-id-column">{{'Notes' | translate}}</label>
-                                        <textarea  class="form-control"  name="" id="" cols="30" rows="10"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
                     </div>
-                    <div class="table-responsive text-right">
-                        <button type="button" class="btn btn-info mr-1 mb-1" 
-                        rippleEffect>{{'Save'}}</button>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th> {{'Name' | translate}}</th>
+                                    <th> {{'OfficesName' | translate}} </th>
+                                    <th> {{'Date' | translate}} </th>
+                                    <th> {{'JobTybe' | translate}} </th>
+                                    <th> {{'Action' | translate}} </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="font-weight-bold">Islam</span>
+                                    </td>
+                                    <td>Islam@test</td>
+                                    <td>
+                                        <div class="avatar-group">
+                                            test
+                                        </div>
+                                    </td>
+                                    <td><span class="badge badge-pill badge-light-primary mr-1">sales</span></td>
+                                    <td>
+                                        <button (click)="showReviewModalDialog()" type="button"
+                                            class="btn btn-primary mr-2" rippleEffect>{{'Edit' |
+                                            translate}}</button>
+                                        <button (click)="DeleteModalDialog()" type="button" class="btn btn-danger"
+                                            rippleEffect>{{'Delete' | translate}}</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="font-weight-bold">Islam</span>
+                                    </td>
+                                    <td>Islam@test</td>
+                                    <td>
+                                        <div class="avatar-group">
+                                            test
+                                        </div>
+                                    </td>
+                                    <td><span class="badge badge-pill badge-light-primary mr-1">sales</span></td>
+                                    <td class="overflow-hidden">
+                                        <button (click)="showReviewModalDialog()" type="button"
+                                            class="btn btn-primary mr-2" rippleEffect>{{'Edit' |
+                                            translate}}</button>
+                                        <button (click)="DeleteModalDialog()" type="button" class="btn btn-danger"
+                                            rippleEffect>{{'Delete' | translate}}</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="font-weight-bold">Islam</span>
+                                    </td>
+                                    <td>Islam@test</td>
+                                    <td>
+                                        <div class="avatar-group">
+                                            test
+                                        </div>
+                                    </td>
+                                    <td><span class="badge badge-pill badge-light-primary mr-1">sales</span></td>
+                                    <td class="overflow-hidden">
+                                        <button (click)="showReviewModalDialog()" type="button"
+                                            class="btn btn-primary mr-2" rippleEffect>{{'Edit' |
+                                            translate}}</button>
+                                        <button (click)="DeleteModalDialog()" type="button" class="btn btn-danger"
+                                            rippleEffect>{{'Delete' | translate}}</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
         <!--/ Table Basic -->
+        <!-- add dialog -->
+        <p-dialog [(visible)]="AddDisplayModal" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+            [draggable]="false" [resizable]="false">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-contol">
+                        <form class="form">
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="first-name-column">{{'OfficeName' | translate}}</label>
+                                        <input type="text" id="first-name-column" class="form-control"
+                                            name="fname-column" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="first-name-column">{{'Email' | translate}}</label>
+                                        <input type="email" id="first-name-column" class="form-control"
+                                            name="fname-column" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="first-name-column">{{'password' | translate}}</label>
+                                        <input type="password" placeholder="******" id="first-name-column" class="form-control"
+                                            name="fname-column" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="last-name-column">{{'AdminOfficeName' | translate}}</label>
+                                        <input type="text" id="last-name-column" class="form-control"
+                                            name="lname-column" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="city-column">{{'EmployeesNumToWork' | translate}}</label>
+                                        <input type="text" id="city-column" class="form-control" name="city-column" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="country-floating">{{'OfficeCategory' | translate}}</label>
+                                        <input type="text" id="country-floating" class="form-control"
+                                            name="country-floating" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="company-column">{{'StartDate' | translate}}</label>
+                                        <input type="date" id="company-column" class="form-control"
+                                            name="company-column" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="company-column">{{'اضافه السجل التجاري' | translate}}</label>
+                                        <input type="file" id="company-column" class="form-control"
+                                            name="company-column" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="company-column">{{'صورة المكتب' | translate}}</label>
+                                        <input type="file" id="company-column" class="form-control"
+                                            name="company-column" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="company-column">{{'صورة صاحب المكتب' | translate}}</label>
+                                        <input type="file" id="company-column" class="form-control"
+                                            name="company-column" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="company-column">{{'اضافه رخصه المكتب' | translate}}</label>
+                                        <input type="file" id="company-column" class="form-control"
+                                            name="company-column" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="company-column">{{' ملف اضافي' | translate}}</label>
+                                        <input type="file" id="company-column" class="form-control"
+                                            name="company-column" />
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-12">
+                                    <div class="form-group">
+                                        <label for="email-id-column">{{'Notes' | translate}}</label>
+                                        <textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <button type="button" style="float: right;" (click)="showReviewModalDialog()"
+                            class="btn btn-gradient-success mt-1">{{'Add'|translate}}</button>
+                        <button type="button" style="float: right;" (click)="this.ReviewDisplayModal = false"
+                            class="btn btn-gradient-danger mt-1 mr-1">{{'Close'|translate}}</button>
+                    </div>
+                </div>
+            </div>
+        </p-dialog>
+        <!-- Review dialog -->
+        <p-dialog [(visible)]="ReviewDisplayModal" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+            [draggable]="false" [resizable]="false">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-contol">
+                        <form class="form">
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="first-name-column">{{'OfficeName' | translate}}</label>
+                                        <input type="text" id="first-name-column" class="form-control"
+                                            name="fname-column" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="last-name-column">{{'AdminOfficeName' | translate}}</label>
+                                        <input type="text" id="last-name-column" class="form-control"
+                                            name="lname-column" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="city-column">{{'EmployeesNumToWork' | translate}}</label>
+                                        <input type="text" id="city-column" class="form-control" name="city-column" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="country-floating">{{'OfficeCategory' | translate}}</label>
+                                        <input type="text" id="country-floating" class="form-control"
+                                            name="country-floating" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="company-column">{{'StartDate' | translate}}</label>
+                                        <input type="date" id="company-column" class="form-control"
+                                            name="company-column" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="company-column">{{'Status' | translate}}</label>
+
+                                        <div class="custom-control custom-control-primary custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="colorCheck1"
+                                                checked />
+                                            <label class="custom-control-label" for="colorCheck1"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="company-column">{{'اضافه السجل التجاري' | translate}}</label>
+                                        <input type="file" id="company-column" class="form-control"
+                                            name="company-column" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="company-column">{{'صورة المكتب' | translate}}</label>
+                                        <input type="file" id="company-column" class="form-control"
+                                            name="company-column" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="company-column">{{'صورة صاحب المكتب' | translate}}</label>
+                                        <input type="file" id="company-column" class="form-control"
+                                            name="company-column" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="company-column">{{'اضافه رخصه المكتب' | translate}}</label>
+                                        <input type="file" id="company-column" class="form-control"
+                                            name="company-column" />
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-12">
+                                    <div class="form-group">
+                                        <label for="email-id-column">{{'Notes' | translate}}</label>
+                                        <textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <button type="button" style="float: right;" (click)="showReviewModalDialog()"
+                            class="btn btn-gradient-success mt-1">{{'Add'|translate}}</button>
+                        <button type="button" style="float: right;" (click)="this.ReviewDisplayModal = false"
+                            class="btn btn-gradient-danger mt-1 mr-1">{{'Close'|translate}}</button>
+                    </div>
+                </div>
+            </div>
+        </p-dialog>
     </div>
 </div>

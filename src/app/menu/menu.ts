@@ -49,12 +49,12 @@ export const menu: CoreMenu[] = [
             url: 'AdminGroups'
           },
           {
-            id: 'EmploymentOffices',
+            id: 'RecommendEmployee',
             title: 'Employment Offices',
-            translate: 'MENU.EmploymentOffices',
+            translate: 'MENU.RecommendEmployee',
             type: 'item',
             icon: 'circle',
-            url: 'EmploymentOffices'
+            url: 'RecommendEmployee'
           },
           {
             id: 'WaitingList',

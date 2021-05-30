@@ -53,7 +53,8 @@ import { EmployeesRefusingWorkComponent } from './HR/employees-refusing-work/emp
 
 import { EmployeesComponent } from './HR/employees/employees.component';
 import { NewOfficWorkComponent } from './HR/new-offic-work/new-offic-work.component';
-import { SearchComponent } from './search/search.component'
+import { SearchComponent } from './search/search.component';
+import { RecommendEmployeeComponent } from './HR/recommend-employee/recommend-employee.component'
 
 const routes = [
   {
@@ -151,13 +152,16 @@ const routes = [
   {
     path: 'NewOfficWork',
     component: NewOfficWorkComponent
+  },
+  {
+    path: 'RecommendEmployee',
+    component: RecommendEmployeeComponent
   }
-  //Employees-refusing-work
 ]
 
 
 @NgModule({
-  declarations: [SampleComponent, HomeComponent, AddEmployeeComponent, EmployeesComponent, AdminGroupsComponent, IssuanceContractsComponent, IssuingActionComponent, WorkDefinitionComponent, ResignationRequestsComponent, EndingServicesComponent, TransferRequestDepartmentComponent, TransferRequestProjectsComponent, ExitRequestComponent, EmploymentOfficesComponent, WaitingListComponent, CompleteEmployeeComponent, AttendanceComponent, VacationRequestComponent, EmployeeExistRequestComponent, AbsenteeEmployeesComponent, RunawayEmployeesComponent, EmployeesRefusingWorkComponent, NewOfficWorkComponent, SearchComponent],
+  declarations: [SampleComponent, HomeComponent, AddEmployeeComponent, EmployeesComponent, AdminGroupsComponent, IssuanceContractsComponent, IssuingActionComponent, WorkDefinitionComponent, ResignationRequestsComponent, EndingServicesComponent, TransferRequestDepartmentComponent, TransferRequestProjectsComponent, ExitRequestComponent, EmploymentOfficesComponent, WaitingListComponent, CompleteEmployeeComponent, AttendanceComponent, VacationRequestComponent, EmployeeExistRequestComponent, AbsenteeEmployeesComponent, RunawayEmployeesComponent, EmployeesRefusingWorkComponent, NewOfficWorkComponent, SearchComponent,  RecommendEmployeeComponent],
   imports: [
     RouterModule.forChild(routes),
     ContentHeaderModule,
