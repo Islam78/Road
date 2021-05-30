@@ -16,61 +16,61 @@ const URL = 'https://your-url.com';
 })
 
 export class AddEmployeeComponent implements OnInit {
-  // public
-  public contentHeader: object;
-  public basicDPdata: NgbDateStruct;
-  public TDNameVar;
-  public TDPhoneVar;
-  public TDNationalityVar;
-  public TDTypeVar = [{ "name": "male" }, { "name": "female" }];
-  public TDType;
-  public TypeselectBasicLoading = true;
-  public TDAgeVar;
-  public TDVisaprofessionVar;
-  public TDActualprofessionVar;
-  public TDEmployeeTypeVar
-  public TDSalaryVar
-  public TDSubsistenceVar
-  public TDHousingAllowanceVar
-  public TDRelocationAllowanceVar
-  public TDTotalSalaryVar
-  public PassportNumberVar
-  public T_shirtSizeVar
-  public PantsSizeVar
-  public shoeSizeVar
-  public PhoneTypeVar
-  public BorderNumberVar
-  public EntryPortVar
-  public JobNumberVar
-  public TDPasswordVar
-  public TDsubsistence_allowanceVar
-  public TDvisa_numberVar
-  public TDcarrier_companyVar
-  public barcode;
-  public TDDateOfBirthVar: NgbDateStruct;
-  public PassportDateVar: NgbDateStruct
-  public PassportEndDateVar: NgbDateStruct
-  public EnterDatekVar: NgbDateStruct
-  public TDtravel_dateVar: NgbDateStruct
-  private horizontalWizardStepper: Stepper;
+  // 
+  contentHeader: object;
+  basicDPdata: NgbDateStruct;
+  TDNameVar;
+  TDPhoneVar;
+  TDNationalityVar;
+  TDTypeVar = [{ "name": "male" }, { "name": "female" }];
+  TDType;
+  TypeselectBasicLoading = true;
+  TDAgeVar;
+  TDVisaprofessionVar;
+  TDActualprofessionVar;
+  TDEmployeeTypeVar
+  TDSalaryVar
+  TDSubsistenceVar
+  TDHousingAllowanceVar
+  TDRelocationAllowanceVar
+  TDTotalSalaryVar
+  PassportNumberVar
+  T_shirtSizeVar
+  PantsSizeVar
+  shoeSizeVar
+  PhoneTypeVar
+  BorderNumberVar
+  EntryPortVar
+  JobNumberVar
+  TDPasswordVar
+  TDsubsistence_allowanceVar
+  TDvisa_numberVar
+  TDcarrier_companyVar
+  barcode;
+  TDDateOfBirthVar: NgbDateStruct;
+  PassportDateVar: NgbDateStruct
+  PassportEndDateVar: NgbDateStruct;
+  EnterDatekVar: NgbDateStruct;
+  TDtravel_dateVar: NgbDateStruct;
+  horizontalWizardStepper: Stepper;
   // upload Files
-  public passportuploader: FileUploader = new FileUploader({
+  passportuploader: FileUploader = new FileUploader({
     url: URL,
     isHTML5: true
   });
-  public visauploader: FileUploader = new FileUploader({
+  visauploader: FileUploader = new FileUploader({
     url: URL,
     isHTML5: true
   });
-  public ticketuploader: FileUploader = new FileUploader({
+  ticketuploader: FileUploader = new FileUploader({
     url: URL,
     isHTML5: true
   });
-  public selfieuploader: FileUploader = new FileUploader({
+  selfieuploader: FileUploader = new FileUploader({
     url: URL,
     isHTML5: true
   });
-  public Handprintuploader: FileUploader = new FileUploader({
+  Handprintuploader: FileUploader = new FileUploader({
     url: URL,
     isHTML5: true
   });
@@ -83,7 +83,7 @@ export class AddEmployeeComponent implements OnInit {
   sub: any;
   id: number = 0
   constructor(private gf: FormBuilder, private _serv: AddEmployeeService, private toastr: ToastrService,
-    private route: ActivatedRoute, public router: Router, private employeeService: EmployeeService
+    private route: ActivatedRoute, router: Router, private employeeService: EmployeeService
   ) {
 
     this.sub = this.route.params.subscribe(
