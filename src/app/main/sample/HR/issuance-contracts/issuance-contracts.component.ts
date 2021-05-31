@@ -12,23 +12,33 @@ export class IssuanceContractsComponent implements OnInit {
 
   ngOnInit(): void {
     this.contentHeader = {
-      headerTitle: 'Hr',
+      headerTitle: '',
       actionButton: true,
       breadcrumb: {
         type: '',
         links: [
           {
-            name: 'Contract',
+            name: '',
             isLink: true,
             link: '/'
           },
           {
-            name: 'Issuance Contracts',
+            name: '',
             isLink: false
           }
         ]
       }
     }
+  }
+  SearchArr
+  SearchHeader
+  MakeSearchArr() {
+    this.SearchHeader= 'Issuing Contract'
+    this.SearchArr = [
+      { label: "Office Name", Type: "text" },
+      { label: "Employee Name", Type: "text" },
+      { label: "Employee Id", Type: "number" },
+    ]
   }
 
 }

@@ -114,18 +114,18 @@ export class AdminGroupsComponent implements OnInit {
   }
   Header() {
     this.contentHeader = {
-      headerTitle: 'Admin Groups',
+      headerTitle: '',
       actionButton: true,
       breadcrumb: {
         type: '',
         links: [
           {
-            name: 'Home',
+            name: '',
             isLink: true,
             link: '/'
           },
           {
-            name: 'Groups',
+            name: '',
             isLink: false
           }
         ]

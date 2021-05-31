@@ -23,18 +23,18 @@ export class NewOfficWorkComponent implements OnInit {
   DeleteModalDialog(){}
   ngOnInit(): void {
     this.contentHeader = {
-      headerTitle: 'Hr',
+      headerTitle: '',
       actionButton: true,
       breadcrumb: {
         type: '',
         links: [
           {
-            name: 'Contract',
+            name: '',
             isLink: true,
             link: '/'
           },
           {
-            name: 'Transfer Request project',
+            name: '',
             isLink: false
           }
         ]

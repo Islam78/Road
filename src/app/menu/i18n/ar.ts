@@ -39,7 +39,9 @@ export const locale = {
       SalesAdminstration:"ادارة المبيعات",
       ManageClint:"ادارة العملاء",
       AddClint:"اضافه عميل جديد",
-      RecommendEmployee:"الموظفين المقترحين"
+      RecommendEmployee:"الموظفين المقترحين",
+      AdminOffices:"ادارة المكاتب",
+
     }
   }
 }

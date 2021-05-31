@@ -20,18 +20,18 @@ export class AbsenteeEmployeesComponent implements OnInit {
   }
   ngOnInit(): void {
     this.contentHeader = {
-      headerTitle: 'Hr',
+      headerTitle: '',
       actionButton: true,
       breadcrumb: {
         type: '',
         links: [
           {
-            name: 'Contract',
+            name: '',
             isLink: true,
             link: '/'
           },
           {
-            name: 'ِAbsent Empoyees',
+            name: '',
             isLink: false
           }
         ]

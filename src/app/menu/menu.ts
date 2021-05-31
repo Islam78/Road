@@ -15,7 +15,6 @@ export const menu: CoreMenu[] = [
         icon: 'users',
         type: 'collapsible',
         children: [
-          // NewOfficWork
           {
             id: 'addEmployee',
             title: 'Add Employee',
@@ -25,36 +24,12 @@ export const menu: CoreMenu[] = [
             url: 'NewEmployee'
           },
           {
-            id: 'NewOfficWork',
-            title: 'Office Work ',
-            translate: 'MENU.OfficWork',
-            type: 'item',
-            icon: 'circle',
-            url: 'NewOfficWork'
-          },
-          {
             id: 'Employees',
             title: 'Employees',
             translate: 'MENU.EMPLOYEES',
             type: 'item',
             icon: 'circle',
             url: 'Employees'
-          },
-          {
-            id: 'AdminGroups',
-            title: 'Admin Groups',
-            translate: 'MENU.ADMINGROUPS',
-            type: 'item',
-            icon: 'circle',
-            url: 'AdminGroups'
-          },
-          {
-            id: 'RecommendEmployee',
-            title: 'Employment Offices',
-            translate: 'MENU.RecommendEmployee',
-            type: 'item',
-            icon: 'circle',
-            url: 'RecommendEmployee'
           },
           {
             id: 'WaitingList',
@@ -72,6 +47,40 @@ export const menu: CoreMenu[] = [
             icon: 'circle',
             url: 'CompleteEmployee'
           }
+        ]
+      },
+      {
+        id: 'AdminOffices',
+        title: 'Manage Offices',
+        translate: 'MENU.AdminOffices',
+        icon: 'briefcase',
+        type: 'collapsible',
+        children: [
+          
+          {
+            id: 'NewOfficWork',
+            title: 'Office Work ',
+            translate: 'MENU.OfficWork',
+            type: 'item',
+            icon: 'circle',
+            url: 'NewOfficWork'
+          },
+          {
+            id: 'AdminGroups',
+            title: 'Admin Groups',
+            translate: 'MENU.ADMINGROUPS',
+            type: 'item',
+            icon: 'circle',
+            url: 'AdminGroups'
+          },
+          {
+            id: 'RecommendEmployee',
+            title: 'Employment Offices',
+            translate: 'MENU.RecommendEmployee',
+            type: 'item',
+            icon: 'circle',
+            url: 'RecommendEmployee'
+          },
         ]
       },
       {

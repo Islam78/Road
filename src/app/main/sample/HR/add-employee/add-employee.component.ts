@@ -113,23 +113,23 @@ export class AddEmployeeComponent implements OnInit {
     this.horizontalWizardStepper = new Stepper(document.querySelector('#stepper1'), {});
     // content header
     this.contentHeader = {
-      headerTitle: 'Khayal',
+      headerTitle: '',
       actionButton: true,
       breadcrumb: {
         type: '',
         links: [
           {
-            name: 'Home',
+            name: '',
             isLink: true,
             link: '/'
           },
           {
-            name: 'Employee',
+            name: '',
             isLink: true,
             link: '/'
           },
           {
-            name: 'Add',
+            name: '',
             isLink: false
           }
         ]

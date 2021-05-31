@@ -32,18 +32,18 @@ export class EmployeesComponent implements OnInit {
   }
   ngOnInit(): void {
     this.contentHeader = {
-      headerTitle: 'Hr',
+      headerTitle: '',
       actionButton: true,
       breadcrumb: {
         type: '',
         links: [
           {
-            name: 'Contract',
+            name: '',
             isLink: true,
             link: '/'
           },
           {
-            name: 'Employment offices',
+            name: '',
             isLink: false
           }
         ]
