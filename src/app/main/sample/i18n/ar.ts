@@ -122,6 +122,9 @@ export const locale = {
     StartDate:"تاريخ البدء",
     NewOffice:"مكتب جديد",
     RecommendEmployee:"الموظفين المقترحين",
+    MainSalary:"الراتب الاساسي",
+    TravelTime:"موعد السفر",
+    carriercompany:"الشركة الناقلة"
     // RecommendEmployee:" "
 
 
