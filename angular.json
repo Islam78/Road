@@ -35,7 +35,7 @@
               "ng2-flatpickr"
             ],
             "aot": true,
-            "outputPath": "dist/khaya",
+            "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
