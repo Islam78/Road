@@ -33,7 +33,7 @@
         </li> -->
         <!--/ Toggle skin -->
     </div>
-    <ul class="nav navbar-nav align-items-center">
+    <!-- <ul class="nav navbar-nav align-items-center">
         <li ngbDropdown class="nav-item dropdown dropdown-language">
             <a class="nav-link dropdown-toggle" id="dropdown-flag" ngbDropdownToggle>
                 <span class="selected-language">{{ languageOptions[_translateService.currentLang]?.title }}</span></a>
@@ -43,10 +43,23 @@
                 </a>
             </div>
         </li>
-    </ul>
+    </ul> -->
   
     <ul class="nav navbar-nav align-items-center ml-auto">
-        <!-- ? Language selection | Uncomment if needed-->
+         <!-- Language selection -->
+    <li ngbDropdown class="nav-item dropdown dropdown-language">
+        <a class="nav-link dropdown-toggle" id="dropdown-flag" ngbDropdownToggle>
+          <i class="flag-icon flag-icon-{{ languageOptions[_translateService.currentLang].flag }}"></i
+          ><span class="selected-language">{{ languageOptions[_translateService.currentLang].title }}</span></a
+        >
+        <div ngbDropdownMenu aria-labelledby="dropdown-flag">
+          <a *ngFor="let lang of _translateService.getLangs()" ngbDropdownItem (click)="setLanguage(lang)">
+            <i class="flag-icon flag-icon-{{ languageOptions[lang].flag }}"></i> {{ languageOptions[lang].title }}
+          </a>
+        </div>
+      </li>
+      <!--/ Language selection -->
+  
         <!-- User Dropdown -->
         <li ngbDropdown class="nav-item dropdown-user">
 
