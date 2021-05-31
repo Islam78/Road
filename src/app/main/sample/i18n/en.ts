@@ -28,6 +28,7 @@ export const locale = {
     WaitingList:"WaitingList",
     CompleteEmployee:"Complete Employee",
     // 
+
     AbsentEmpoyees:"ِAbsent Empoyees",
     OfficesName:"Offices Name",
     AttendTime:"AttendTime",
@@ -118,6 +119,7 @@ export const locale = {
     EmployeesNumToWork:"Employees Need To Work",
     OfficeCategory:"Office Category",
     StartDate:"Start Date",
+    RecommendEmployee:"Recommend Employees",
 
   }
 }

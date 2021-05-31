@@ -26,8 +26,8 @@ export const menu: CoreMenu[] = [
           },
           {
             id: 'NewOfficWork',
-            title: 'Add Office Work ',
-            translate: 'MENU.NewOfficWork',
+            title: 'Office Work ',
+            translate: 'MENU.OfficWork',
             type: 'item',
             icon: 'circle',
             url: 'NewOfficWork'

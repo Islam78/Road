@@ -36,6 +36,8 @@ export const locale = {
       EmployeesRefusingWork:"Employees Refusing Work",
       Previous:"Previous",
       NewOfficWork:"Add Offic Work",
+      OfficWork:"Offics Work",
+
       SalesAdminstration:"SalesAdminstration",
       ManageClint:"Manage Clint",
       AddClint:"Add new Clint",

@@ -35,6 +35,7 @@ export const locale = {
       RunAwayEmployees:"الموظفين الهاربين",
       EmployeesRefusingWork:"موظفين رافضي العمل",
       NewOfficWork:" اضافة مكتب",
+      OfficWork:"مكاتب التوظيف",
       SalesAdminstration:"ادارة المبيعات",
       ManageClint:"ادارة العملاء",
       AddClint:"اضافه عميل جديد",

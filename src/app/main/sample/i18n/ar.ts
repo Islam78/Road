@@ -118,7 +118,8 @@ export const locale = {
     EmployeesNumToWork:"العدد الازم للتشغيل",
     OfficeCategory:"نشاط المكتب",
     StartDate:"تاريخ البدء",
-    NewOffice:"مكتب جديد"
+    NewOffice:"مكتب جديد",
+    RecommendEmployee:"الموظفين المقترحين"
     
 
   }

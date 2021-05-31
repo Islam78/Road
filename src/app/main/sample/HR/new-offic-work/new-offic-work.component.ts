@@ -42,4 +42,13 @@ export class NewOfficWorkComponent implements OnInit {
     }
   }
 
+  SearchArr
+  SearchHeader
+  MakeSearchArr() {
+    this.SearchHeader= 'Admin Group'
+    this.SearchArr = [
+      { label: "Office Name", Type: "text" },
+    ]
+  }
+
 }
