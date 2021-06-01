@@ -121,8 +121,12 @@ export const locale = {
     OfficeCategory:"نشاط المكتب",
     StartDate:"تاريخ البدء",
     NewOffice:"مكتب جديد",
-    RecommendEmployee:"الموظفين المقترحين"
-    
+    RecommendEmployee:"الموظفين المقترحين",
+    MainSalary:"الراتب الاساسي",
+    TravelTime:"موعد السفر",
+    carriercompany:"الشركة الناقلة"
+    // RecommendEmployee:" "
+
 
   }
 }

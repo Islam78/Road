@@ -122,6 +122,10 @@ export const locale = {
     OfficeCategory:"Office Category",
     StartDate:"Start Date",
     RecommendEmployee:"Recommend Employees",
+    MainSalary:"Main Salary",
+    TravelTime:"TravelTime",
+    carriercompany:"carriercompany",
+
 
   }
 }
