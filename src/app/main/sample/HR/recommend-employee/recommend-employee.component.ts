@@ -37,5 +37,14 @@ export class RecommendEmployeeComponent implements OnInit {
       }
     }
   }
+  SearchArr
+  SearchHeader
+  MakeSearchArr() {
+    this.SearchHeader= 'Recommend Employee'
+    this.SearchArr = [
+      { label: "empolyeee name", Type: "text" },
+      { label: "office name ", Type: "text" },
+    ]
+  }
 
 }

@@ -93,10 +93,17 @@
                                 </div>
                             </div>
                         </form>
-                        <button type="button" style="float: right;" (click)="UpdateEmployeeOffices()"
-                            class="btn btn-gradient-success mt-1">{{'Agree'|translate}}</button>
-                        <button type="button" style="float: right;" (click)="this.editDisplayModal = false"
-                            class="btn btn-gradient-danger mt-1 mr-1">{{'Reject'|translate}}</button>
+                        <div class="DialogBtnRight">
+                            <button type="button" (click)="UpdateEmployeeOffices()"
+                                class="btn btn-gradient-success mt-1">{{'Agree'|translate}}</button>
+                            <button type="button" (click)="this.editDisplayModal = false"
+                                class="btn btn-gradient-danger mt-1 ml-1">{{'Reject'|translate}}</button>
+                        </div>
+                        <div class="DialogBtnLeft">
+                            <button type="button" (click)="this.editDisplayModal = false"
+                                class="btn btn-gradient-danger mt-1 text-left">{{'Close'|translate}}</button>
+                        </div>
+                        
                     </div>
                 </div>
             </div>

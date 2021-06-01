@@ -16,10 +16,6 @@ export class NewOfficWorkComponent implements OnInit {
   showReviewModalDialog() {
     this.ReviewDisplayModal = true;
   }
-  AddDisplayModal
-  showAddModalDialog(){
-    this.AddDisplayModal = true
-  }
   DeleteModalDialog(){}
   ngOnInit(): void {
     this.contentHeader = {
@@ -45,7 +41,7 @@ export class NewOfficWorkComponent implements OnInit {
   SearchArr
   SearchHeader
   MakeSearchArr() {
-    this.SearchHeader= 'Admin Group'
+    this.SearchHeader= 'Offic Work'
     this.SearchArr = [
       { label: "Office Name", Type: "text" },
     ]
