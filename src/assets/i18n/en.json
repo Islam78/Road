@@ -1,0 +1,11 @@
+ {
+   "MENU": {
+     "DASHBOARD": {
+       "COLLAPSIBLE": "DASHBOARD",
+       "BADGE": "2",
+       "ANALYTICS": "Analytics",
+       "ECOMMERCE": "eCommerce"
+     }
+
+   }
+ }
