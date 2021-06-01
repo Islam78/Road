@@ -135,8 +135,9 @@ export const locale = {
     TravelTime:"موعد السفر",
     carriercompany:"الشركة الناقلة",
     Archive:"أرشيف",
-
-    // RecommendEmployee:" "
+    Active:"نشط",
+    // Gina
+    gina:""
 
 
   }

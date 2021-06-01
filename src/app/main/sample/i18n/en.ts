@@ -133,6 +133,7 @@ export const locale = {
     ViewDraftContract:"View Draft Contract",
     Refuse:"Refuse",
     Archive:"Archive",
+    Active:"Active",
 
 
   }
