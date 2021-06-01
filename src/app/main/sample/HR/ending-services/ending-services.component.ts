@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Stepper from 'bs-stepper';
 
 @Component({
   selector: 'app-ending-services',
@@ -8,16 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class EndingServicesComponent implements OnInit {
 
   public contentHeader: object
-  editDisplayModal: boolean
   NewDisplayModal:boolean
   constructor() { }
-
-  showEditModalDialog() {
-    this.editDisplayModal = true;
-  }
-  UpdateEmployeeOffices() {
-    this.editDisplayModal = false
-  }
   ngOnInit(): void {
     this.contentHeader = {
       headerTitle: 'Hr',
@@ -39,4 +32,22 @@ export class EndingServicesComponent implements OnInit {
     }
   }
 
+  
+  editDisplayModal :boolean = false;
+  ReviewDialog() {
+    this.editDisplayModal =true
+    setTimeout( () => {
+      this.horizontalWizardStepper = new Stepper(document.querySelector('#stepper1'), {});
+    }, 100);
+  }  
+  horizontalWizardStepper: Stepper;
+  horizontalWizardStepperPrevious() {
+    this.horizontalWizardStepper.previous();
+  }
+  horizontalWizardStepperNext(data) {
+    this.horizontalWizardStepper.next();
+    if (data.form.valid === true) {
+      // this.horizontalWizardStepper.next();
+    }
+  }
 }

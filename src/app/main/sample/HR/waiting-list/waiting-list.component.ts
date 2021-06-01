@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Stepper from 'bs-stepper';
 
 @Component({
   selector: 'app-waiting-list',
@@ -29,4 +30,23 @@ export class WaitingListComponent implements OnInit {
       }
     }
   }
+
+  editDisplayModal :boolean = false;
+  ReviewDialog() {
+    this.editDisplayModal =true
+    setTimeout( () => {
+      this.horizontalWizardStepper = new Stepper(document.querySelector('#stepper1'), {});
+    }, 100);
+  }
+  horizontalWizardStepper: Stepper;
+  horizontalWizardStepperPrevious() {
+    this.horizontalWizardStepper.previous();
+  }
+  horizontalWizardStepperNext(data) {
+    this.horizontalWizardStepper.next();
+    if (data.form.valid === true) {
+      // this.horizontalWizardStepper.next();
+    }
+  }
+
 }

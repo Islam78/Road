@@ -57,6 +57,7 @@ export const locale = {
     SubsistenceAllowance:"Subsistence Allowance",
     BasicSalary:"Basic Salary",
     TotalSalary:"Total Salary",
+    NextReviwe:"Next Reviwe",
     RelocationAllowance:"Relocation Allowance",
     PassportNumber:"Passport Number",
     StartDataPassport:"Date of issuance of the passport",
@@ -68,6 +69,9 @@ export const locale = {
     CarrierCompany:"CarrierCompany",
     TravelDate:"Travel Date",
     UploadPhotoTicket:"Upload Photo Ticket",
+    PhotoTicket: "Photo Ticket",
+    PhotoVisa: "Photo Visa",
+    CopyPassport: "Copy Passport",
     TshirtSize:"T-shirt Size",
     PantsSize:"Pants Size",
     ShoeSize:"Shoe Size",
@@ -125,6 +129,10 @@ export const locale = {
     MainSalary:"Main Salary",
     TravelTime:"TravelTime",
     carriercompany:"carriercompany",
+    OurOfficeEmployees:"Our Office Employees",
+    ViewDraftContract:"View Draft Contract",
+    Refuse:"Refuse",
+    Archive:"Archive",
 
 
   }

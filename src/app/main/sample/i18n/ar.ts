@@ -62,12 +62,17 @@ export const locale = {
     StartDataPassport: "تاريخ اصدار الجواز",
     EndDataPassport: "تاريخ انتهاء الجواز",
     UploadCopyPassport: "قم بتحميل نسخة من جواز السفر",
+    
     ChooseFile: "اختر ملف",
     UploadPhotoVisa: "قم بتحميل صورة التأشيرة",
+    
     VisaNumber: "رقم الفيزا",
     CarrierCompany: "شركة توظيف",
     TravelDate: "تاريخ السفر",
-    UploadPhotoTicket: "تحميل تذكرة الصورة",
+    UploadPhotoTicket: "تحميل صورة التذكرة ",
+    PhotoTicket: "صورة تذكرة ",
+    PhotoVisa: " صورة التأشيرة",
+    CopyPassport: "جواز السفر ",
     TshirtSize: "مقاس التيشيرت",
     PantsSize: "مقاس البنطلون",
     ShoeSize: "مقاس الحذاء",
@@ -100,13 +105,17 @@ export const locale = {
     Add: "اضافة",
     Location:"الموقع",
     DataReview:" مراجعه البيانات",
+    OurOfficeEmployees:"موظفين المكتب الحالي",
     Next:"حفظ ومتابعه",
+    NextReviwe:"مشاهدة التالي",
     CompleteData:"اكمال البيانات",
     IssueContract:"اصدار عقد",
     PrintDraftContract:"طباعه مسودة العقد",
+    ViewDraftContract:"عرض مسودة العقد",
     EmployeeRe_registration:"اعادة قيد موظف",
     RunAwayEmployees:"موظفين هاربين",
     EmployeesRefusingWork:"موظفين رافضي العمل",
+    Refuse:"رفض",
     Accept:"موافقه",
     TransfertDeVacances:"تحويل الاجازة",
     Révision:"مراجعة",
@@ -124,7 +133,9 @@ export const locale = {
     RecommendEmployee:"الموظفين المقترحين",
     MainSalary:"الراتب الاساسي",
     TravelTime:"موعد السفر",
-    carriercompany:"الشركة الناقلة"
+    carriercompany:"الشركة الناقلة",
+    Archive:"أرشيف",
+
     // RecommendEmployee:" "
 
 

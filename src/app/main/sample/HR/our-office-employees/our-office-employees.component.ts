@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import Stepper from 'bs-stepper';
 
 @Component({
-  selector: 'app-recommend-employee',
-  templateUrl: './recommend-employee.component.html',
-  styleUrls: ['./recommend-employee.component.scss']
+  selector: 'app-our-office-employees',
+  templateUrl: './our-office-employees.component.html',
+  styleUrls: ['./our-office-employees.component.scss']
 })
-export class RecommendEmployeeComponent implements OnInit {
+export class OurOfficeEmployeesComponent implements OnInit {
 
   contentHeader: object
   editDisplayModal: boolean
@@ -14,16 +13,11 @@ export class RecommendEmployeeComponent implements OnInit {
 
   showEditModalDialog() {
     this.editDisplayModal = true;
-    setTimeout(() => {
-      this.horizontalWizardStepper = new Stepper(document.querySelector('#stepper1'), {});
-    }, 100);
-
   }
   UpdateEmployeeOffices() {
     this.editDisplayModal = false
   }
   ngOnInit(): void {
-
     this.contentHeader = {
       headerTitle: '',
       actionButton: true,
@@ -42,7 +36,6 @@ export class RecommendEmployeeComponent implements OnInit {
         ]
       }
     }
-
   }
   SearchArr
   SearchHeader
@@ -53,19 +46,5 @@ export class RecommendEmployeeComponent implements OnInit {
       { label: "office name ", Type: "text" },
     ]
   }
-  
-  horizontalWizardStepper: Stepper;
-  horizontalWizardStepperPrevious() {
-    this.horizontalWizardStepper.previous();
-  }
-  horizontalWizardStepperNext(data) {
-    this.horizontalWizardStepper.next();
-    if (data.form.valid === true) {
-      // this.horizontalWizardStepper.next();
-    }
-  }
-
-  
- 
 
 }

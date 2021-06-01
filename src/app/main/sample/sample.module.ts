@@ -29,7 +29,7 @@ import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { MessagesModule } from 'primeng/messages';
 import { DialogModule } from 'primeng/dialog';
-import {SidebarModule} from 'primeng/sidebar';
+import { SidebarModule } from 'primeng/sidebar';
 
 // component
 import { IssuanceContractsComponent } from './HR/issuance-contracts/issuance-contracts.component';
@@ -54,7 +54,9 @@ import { EmployeesRefusingWorkComponent } from './HR/employees-refusing-work/emp
 import { EmployeesComponent } from './HR/employees/employees.component';
 import { NewOfficWorkComponent } from './HR/new-offic-work/new-offic-work.component';
 import { SearchComponent } from './search/search.component';
-import { RecommendEmployeeComponent } from './HR/recommend-employee/recommend-employee.component'
+import { RecommendEmployeeComponent } from './HR/recommend-employee/recommend-employee.component';
+import { OurOfficeEmployeesComponent } from './HR/our-office-employees/our-office-employees.component';
+import { ArchiveComponent } from './HR/archive/archive.component'
 
 const routes = [
   {
@@ -156,12 +158,49 @@ const routes = [
   {
     path: 'RecommendEmployee',
     component: RecommendEmployeeComponent
+  },
+  {
+    path: 'OurOfficeEmployees',
+    component: OurOfficeEmployeesComponent
+  },
+  {
+    path: 'Archive',
+    component: ArchiveComponent
   }
+  // Archive
 ]
 
 
 @NgModule({
-  declarations: [SampleComponent, HomeComponent, AddEmployeeComponent, EmployeesComponent, AdminGroupsComponent, IssuanceContractsComponent, IssuingActionComponent, WorkDefinitionComponent, ResignationRequestsComponent, EndingServicesComponent, TransferRequestDepartmentComponent, TransferRequestProjectsComponent, ExitRequestComponent, EmploymentOfficesComponent, WaitingListComponent, CompleteEmployeeComponent, AttendanceComponent, VacationRequestComponent, EmployeeExistRequestComponent, AbsenteeEmployeesComponent, RunawayEmployeesComponent, EmployeesRefusingWorkComponent, NewOfficWorkComponent, SearchComponent,  RecommendEmployeeComponent],
+  declarations: [
+    SampleComponent,
+    HomeComponent,
+    AddEmployeeComponent,
+    EmployeesComponent,
+    AdminGroupsComponent,
+    IssuanceContractsComponent,
+    IssuingActionComponent,
+    WorkDefinitionComponent,
+    ResignationRequestsComponent,
+    EndingServicesComponent,
+    TransferRequestDepartmentComponent,
+    TransferRequestProjectsComponent,
+    ExitRequestComponent,
+    EmploymentOfficesComponent,
+    WaitingListComponent,
+    CompleteEmployeeComponent,
+    AttendanceComponent,
+    VacationRequestComponent,
+    EmployeeExistRequestComponent,
+    AbsenteeEmployeesComponent,
+    RunawayEmployeesComponent,
+    EmployeesRefusingWorkComponent,
+    NewOfficWorkComponent,
+    SearchComponent,
+    RecommendEmployeeComponent,
+    OurOfficeEmployeesComponent,
+    ArchiveComponent
+  ],
   imports: [
     RouterModule.forChild(routes),
     ContentHeaderModule,
@@ -186,8 +225,8 @@ const routes = [
     DialogModule,
     ButtonModule,
     MessagesModule,
-    SidebarModule
-
+    SidebarModule,
+    
   ],
   exports: [SampleComponent, HomeComponent]
 })

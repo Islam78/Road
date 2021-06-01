@@ -41,6 +41,8 @@ export const locale = {
       AddClint:"اضافه عميل جديد",
       RecommendEmployee:"الموظفين المقترحين",
       AdminOffices:"ادارة المكاتب",
+      OurOfficeEmployees:"موظفون المكتب",
+      Archive:"الأرشيف",
 
     }
   }

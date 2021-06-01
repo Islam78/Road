@@ -2,45 +2,34 @@ import { Component, OnInit } from '@angular/core';
 import Stepper from 'bs-stepper';
 
 @Component({
-  selector: 'app-issuance-contracts',
-  templateUrl: './issuance-contracts.component.html',
-  styleUrls: ['./issuance-contracts.component.scss']
+  selector: 'app-archive',
+  templateUrl: './archive.component.html',
+  styleUrls: ['./archive.component.scss']
 })
-export class IssuanceContractsComponent implements OnInit {
+export class ArchiveComponent implements OnInit {
 
   public contentHeader: object
   constructor() { }
 
   ngOnInit(): void {
     this.contentHeader = {
-      headerTitle: '',
+      headerTitle: 'Hr',
       actionButton: true,
       breadcrumb: {
         type: '',
         links: [
           {
-            name: '',
+            name: 'Contract',
             isLink: true,
             link: '/'
           },
           {
-            name: '',
+            name: 'work definition',
             isLink: false
           }
         ]
       }
     }
-  }
-
-  SearchArr
-  SearchHeader
-  MakeSearchArr() {
-    this.SearchHeader= 'Issuing Contract'
-    this.SearchArr = [
-      { label: "Office Name", Type: "text" },
-      { label: "Employee Name", Type: "text" },
-      { label: "Employee Id", Type: "number" },
-    ]
   }
 
   editDisplayModal :boolean = false;
@@ -49,7 +38,8 @@ export class IssuanceContractsComponent implements OnInit {
     setTimeout( () => {
       this.horizontalWizardStepper = new Stepper(document.querySelector('#stepper1'), {});
     }, 100);
-  }  
+  }
+  
   horizontalWizardStepper: Stepper;
   horizontalWizardStepperPrevious() {
     this.horizontalWizardStepper.previous();
