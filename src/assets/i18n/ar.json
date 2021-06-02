@@ -5,7 +5,6 @@
      "title": "بيانات الموظف",
      "waitingList": "قائمة الانتظار",
      "completeEmployee": "اكمال بيانات الموظف",
-
      "DetailsSalaryAndJob": "تفاصيل الراتب والوظيفة",
      "PassportDetail": "تفاصيل جواز السفر",
      "uniformDetail": "تفاصيل الزي الموحد",
@@ -44,12 +43,13 @@
      "selfiPic": "صورة سيلفي",
      "JobNumber": "رقم الوظيفة",
      "TotalSalary":"اجمالي المرتب"
-    
    },
    "adminOffices": {
      "title": "ادارة المكاتب",
      "officeWork": "مكاتب التوظيف",
-     "recommendEmployee": "الموظفين المقترحين"
+     "recommendEmployee": "الموظفين المقترحين",
+     "OurOfficeEmployees":"موظفون المكتب",
+     "Archive":"الارشيف"
    },
    "contracts": {
      "title": "إدارة عقود العمل",

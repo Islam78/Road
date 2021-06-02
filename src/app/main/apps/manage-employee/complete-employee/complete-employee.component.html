@@ -2,7 +2,7 @@
     <div class="content-body">
         <!-- content-header component -->
         <app-search></app-search>
-        <app-content-header [contentHeader]="contentHeader"></app-content-header>
+        <!-- <app-content-header [contentHeader]="contentHeader"></app-content-header> -->
 
         <!-- Table Basic -->
         <div class="row" id="basic-table">
@@ -81,130 +81,170 @@
         </div>
         <!--/ Table Basic -->
         <!-- dialog -->
-        <p-dialog  [(visible)]="editDisplayModal" [modal]="true" [style]="{width: '50vw'}"
-            [baseZIndex]="10000" [draggable]="false" [resizable]="false">
+        <p-dialog [(visible)]="editDisplayModal" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+            [draggable]="false" [resizable]="false">
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-contol">
-
                         <form class="form">
                             <div class="row">
+                                <div class="col-12">
+                                    <div class="divider divider-Primary">
+                                        <div class="divider-text">{{'HealthInsuranceInformation' | translate}}</div>
+                                    </div>
+                                </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="first-name-column"> {{'InsuranceNumber' | translate}} </label>
                                         <input type="text" id="first-name-column" class="form-control"
-                                             name="fname-column" />
+                                            name="fname-column" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="last-name-column">{{'StartDataPassport' | translate}}</label>
                                         <input type="date" id="last-name-column" class="form-control"
-                                             name="lname-column" />
+                                            name="lname-column" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="city-column">{{'EndDataPassport' | translate}}</label>
-                                        <input type="date" id="city-column" class="form-control" 
-                                            name="city-column" />
+                                        <input type="date" id="city-column" class="form-control" name="city-column" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="country-floating">{{'CopyTheInsurance' | translate}}</label>
-                                        <input type="file" id="country-floating" class="form-control"
-                                            name="country-floating"  />
+                                        <fieldset class="form-group">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" ng2FileSelect
+                                                    id="file-upload-single" />
+                                                <label class="custom-file-label">{{'SelectFile'| translate}}</label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="divider divider-Primary">
+                                        <div class="divider-text">{{'AccommodationInformation' | translate}}</div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="company-column">{{'ResidenceNumber' | translate}} </label>
                                         <input type="number" id="company-column" class="form-control"
-                                            name="company-column"  />
+                                            name="company-column" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="email-id-column"> {{'DateIssuanceResidency' | translate}}</label>
                                         <input type="date" id="email-id-column" class="form-control"
-                                            name="email-id-column"  />
+                                            name="email-id-column" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
-                                        <label for="email-id-column"> {{'ResidenceExpirationDate ' | translate}}</label>
+                                        <label for="email-id-column"> {{'ResidenceExpirationDate' | translate}}</label>
                                         <input type="text" id="email-id-column" class="form-control"
-                                            name="email-id-column"  />
+                                            name="email-id-column" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
-                                        <label for="email-id-column">{{'ResidencePic ' | translate}}</label>
-                                        <input type="file" id="email-id-column" class="form-control"
-                                            name="email-id-column"  />
+                                        <label for="email-id-column">{{'ResidencePic' | translate}}</label>
+                                        <fieldset class="form-group">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" ng2FileSelect
+                                                    id="file-upload-single" />
+                                                <label class="custom-file-label">{{'SelectFile'| translate}}</label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="divider divider-Primary">
+                                        <div class="divider-text">{{'ContactInformation' | translate}}</div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="email-id-column">{{'SaudiMobileNumber' |translate}}</label>
                                         <input type="number" id="email-id-column" class="form-control"
-                                            name="email-id-column"  />
+                                            name="email-id-column" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
-                                        <label for="email-id-column">{{'Email'}}</label>
+                                        <label for="email-id-column">{{'Email'|translate}}</label>
                                         <input type="email" id="email-id-column" class="form-control"
-                                            name="email-id-column"  />
+                                            name="email-id-column" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="email-id-column">{{'PhonenumberEmergency' | translate}}</label>
                                         <input type="number" id="email-id-column" class="form-control"
-                                            name="email-id-column"  />
+                                            name="email-id-column" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="email-id-column">{{'DateEnteringKingdom' | translate}}</label>
                                         <input type="date" id="email-id-column" class="form-control"
-                                            name="email-id-column"  />
+                                            name="email-id-column" />
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-12">
+                               
+                                <!-- <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="email-id-column">{{'EntryPortKingdom' | translate}}</label>
                                         <input type="number" id="email-id-column" class="form-control"
-                                            name="email-id-column"  />
+                                            name="email-id-column" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="email-id-column">{{'selfiPic' | translate}}</label>
-                                        <input type="file" id="email-id-column" class="form-control"
-                                            name="email-id-column"  />
+                                        <fieldset class="form-group">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" ng2FileSelect
+                                                    id="file-upload-single" />
+                                                <label class="custom-file-label">{{'SelectFile'| translate}}</label>
+                                            </div>
+                                        </fieldset>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="email-id-column">{{'UploadCopyPassport' | translate}}</label>
-                                        <input type="file" id="email-id-column" class="form-control"
-                                            name="email-id-column"  />
+                                        <fieldset class="form-group">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" ng2FileSelect
+                                                    id="file-upload-single" />
+                                                <label class="custom-file-label">{{'SelectFile'| translate}}</label>
+                                            </div>
+                                        </fieldset>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="email-id-column">{{'JobNumber' | translate}}</label>
                                         <input type="number" id="email-id-column" class="form-control"
-                                            name="email-id-column"  />
+                                            name="email-id-column" />
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </form>
-                        <button type="button" style="float: right;" (click)="UpdateEmployeeOffices()"
-                            class="btn btn-gradient-success mt-1">{{'Save'|translate}}</button>
+                        <div class="DialogBtnRight">
+                            <button type="button" (click)="UpdateEmployeeOffices()"
+                                class="btn btn-gradient-success mt-1">{{'Save'|translate}}</button>
+                        </div>
+                        <div class="DialogBtnLeft">
+                            <button type="button" (click)="this.editDisplayModal = false"
+                                class="btn btn-gradient-danger mt-1 text-left">{{'Cancel'|translate}}</button>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AddEmployeeService } from '@core/services/addEmployee/add-employee.service';
 import { SelectionType, ColumnMode } from '@swimlane/ngx-datatable';
+import Stepper from 'bs-stepper';
 import { Subject } from 'rxjs';
 
 @Component({
@@ -23,17 +24,43 @@ export class EmployeesComponent implements OnInit {
   constructor(private _serv: AddEmployeeService, public router: Router) { }
   public contentHeader: object
   editDisplayModal: boolean
-
   showEditModalDialog() {
     this.editDisplayModal = true;
+    setTimeout( () => {
+      this.horizontalWizardStepper = new Stepper(document.querySelector('#stepper1'), {});
+    }, 100);
   }
   UpdateEmployeeOffices() {
     this.editDisplayModal = false
   }
   ngOnInit(): void {
     this.contentHeader = {
-      headerTitle: 'common.employees',
-      actionButton: false
+      headerTitle: '',
+      actionButton: true,
+      breadcrumb: {
+        type: '',
+        links: [
+          {
+            name: '',
+            isLink: true,
+            link: '/'
+          },
+          {
+            name: '',
+            isLink: false
+          }
+        ]
+      }
+    }
+  }
+  horizontalWizardStepper: Stepper;
+  horizontalWizardStepperPrevious() {
+    this.horizontalWizardStepper.previous();
+  }
+  horizontalWizardStepperNext(data) {
+    this.horizontalWizardStepper.next();
+    if (data.form.valid === true) {
+      // this.horizontalWizardStepper.next();
     }
   }
 

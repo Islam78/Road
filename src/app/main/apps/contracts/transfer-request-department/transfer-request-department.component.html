@@ -1,0 +1,164 @@
+<div class="content-wrapper">
+    <div class="content-body">
+        <!-- content-header component -->
+        <app-search></app-search>
+
+        <!-- Table Basic -->
+        <div class="row" id="basic-table">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">{{'TransferRequestDepartment' | translate}}</h4>
+                        <button type="button" class="btn btn-info mr-1" (click)="NewDisplayModal = true"
+                            rippleEffect>{{'DemandeDeTransfert'|translate}}</button>
+                    </div>
+                    <div class="card-body">
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th> {{'Name' | translate}}</th>
+                                    <th> {{'Email' | translate}} </th>
+                                    <th> {{'Date' | translate}} </th>
+                                    <th> {{'JobTybe' | translate}} </th>
+                                    <th> {{'Action' | translate}} </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="font-weight-bold">Islam</span>
+                                    </td>
+                                    <td>Islam@test</td>
+                                    <td>
+                                        <div class="avatar-group">
+                                            test
+                                        </div>
+                                    </td>
+                                    <td><span class="badge badge-pill badge-light-primary mr-1">sales</span></td>
+                                    <td class="overflow-hidden">
+                                        <button type="button" class="btn btn-danger" (click)="showEditModalDialog()"
+                                            rippleEffect>{{'ExaminerTransfert' |translate}}</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ Table Basic -->
+        <!-- dialog طلب -->
+        <p-dialog [(visible)]="NewDisplayModal" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+            [draggable]="false" [resizable]="false">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-contol">
+                        <form class="form">
+                            <div class="row">
+                                <div class="col-md-12 col-12">
+                                    <div class="form-group">
+                                        <label for="company-column">{{'SelectEmployee'|translate}}</label>
+                                        <select class="form-control" name="" id="">
+                                            <option value="">islam</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-12">
+                                    <div class="form-group">
+                                        <label for="company-column">{{'TransferToManagement'|translate}}</label>
+                                        <select class="form-control" name="" id="">
+                                            <option value="">القاهره</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-12">
+                                    <div class="form-group">
+                                        <label for="email-id-column">{{'reason'|translate}}</label>
+                                        <textarea class="form-control" cols="30" rows="10"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="DialogBtnRight">
+                            <button type="button" (click)="UpdateEmployeeOffices()"
+                                class="btn btn-gradient-success mt-1">{{'Add'|translate}}</button>
+                        </div>
+                        <div class="DialogBtnLeft">
+                            <button type="button" (click)="this.editDisplayModal = false"
+                                class="btn btn-gradient-danger mt-1 text-left">{{'Cancel'|translate}}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </p-dialog>
+
+        <!-- dialog -->
+        <p-dialog [(visible)]="editDisplayModal" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+            [draggable]="false" [resizable]="false">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-contol">
+                        <form class="form">
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="first-name-column">{{'EmployeeName'|translate}}</label>
+                                        <input disabled ngModel="اسلام" type="text" id="first-name-column"
+                                            class="form-control" placeholder="اسلام" name="fname-column" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="last-name-column">{{'nationality'|translate}}</label>
+                                        <input disabled ngModel="مصري" type="text" id="last-name-column"
+                                            class="form-control" placeholder="مصري" name="lname-column" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="city-column">{{'RealJob'|translate}}</label>
+                                        <input disabled ngModel="مهندس" type="text" id="city-column"
+                                            class="form-control" placeholder="مهندس" name="city-column" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="country-floating">{{'TransferTimes'|translate}}</label>
+                                        <input disabled ngModel="3" type="text" id="country-floating"
+                                            class="form-control" name="country-floating" placeholder="3" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="company-column">{{'CurrentAdministration'|translate}}</label>
+                                        <input disabled ngModel="مصر" type="text" id="company-column"
+                                            class="form-control" name="company-column" placeholder="مصر" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="email-id-column">{{'AdministrationTransferredTo'|translate}}</label>
+                                        <input disabled ngModel="السعودية" type="email" id="email-id-column"
+                                            class="form-control" name="email-id-column" placeholder="السعودية" />
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="DialogBtnRight">
+                            <button type="button" (click)="UpdateEmployeeOffices()"
+                                class="btn btn-gradient-success mt-1">{{'Accept'|translate}}</button>
+                            <button type="button" (click)="this.editDisplayModal = false"
+                                class="btn btn-gradient-danger mt-1 ml-1">{{'Refuse'|translate}}</button>
+                        </div>
+                        <div class="DialogBtnLeft">
+                            <button type="button" (click)="this.editDisplayModal = false"
+                                class="btn btn-gradient-danger mt-1 text-left">{{'Cancel'|translate}}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </p-dialog>
+    </div>
+</div>

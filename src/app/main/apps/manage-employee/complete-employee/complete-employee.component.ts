@@ -17,25 +17,6 @@ export class CompleteEmployeeComponent implements OnInit {
   UpdateEmployeeOffices() {
     this.editDisplayModal = false
   }
-  ngOnInit(): void {
-    this.contentHeader = {
-      headerTitle: 'Hr',
-      actionButton: true,
-      breadcrumb: {
-        type: '',
-        links: [
-          {
-            name: 'Contract',
-            isLink: true,
-            link: '/'
-          },
-          {
-            name: 'Employment offices',
-            isLink: false
-          }
-        ]
-      }
-    }
-  }
+  ngOnInit(): void {}
 
 }

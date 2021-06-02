@@ -6,46 +6,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-offic-work.component.scss']
 })
 export class NewOfficWorkComponent implements OnInit {
-
-
-  contentHeader: object
-  ReviewDisplayModal: boolean
-  NewDisplayModal :boolean
   constructor() { }
 
-  showReviewModalDialog() {
+  DeleteModalDialog() { }
+  ngOnInit(): void { }
+  ReviewDisplayModal: boolean
+  ShowData: boolean
+  showReviewModalDialog(event) {
     this.ReviewDisplayModal = true;
-  }
-  AddDisplayModal
-  showAddModalDialog(){
-    this.AddDisplayModal = true
-  }
-  DeleteModalDialog(){}
-  ngOnInit(): void {
-    this.contentHeader = {
-      headerTitle: '',
-      actionButton: true,
-      breadcrumb: {
-        type: '',
-        links: [
-          {
-            name: '',
-            isLink: true,
-            link: '/'
-          },
-          {
-            name: '',
-            isLink: false
-          }
-        ]
-      }
+    if (event == 'Show') {
+      this.ShowData = true
+      return
     }
+    this.ShowData = false
   }
-
   SearchArr
   SearchHeader
   MakeSearchArr() {
-    this.SearchHeader= 'Admin Group'
+    this.SearchHeader = 'Offic Work'
     this.SearchArr = [
       { label: "Office Name", Type: "text" },
     ]

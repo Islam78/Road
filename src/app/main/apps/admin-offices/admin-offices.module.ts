@@ -10,11 +10,18 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { FileUploadModule } from 'ng2-file-upload';
 import { NewOfficWorkComponent } from './new-offic-work/new-offic-work.component';
 import { SharedModule } from '../shared/shared.module';
-
+import { AdminGroupsComponent } from './admin-groups/admin-groups.component';
+import { RecommendEmployeeComponent } from './recommend-employee/recommend-employee.component';
+import { OurOfficeEmployeesComponent } from './our-office-employees/our-office-employees.component';
+import { ArchiveComponent } from './archive/archive.component';
 
 @NgModule({
   declarations: [
-    NewOfficWorkComponent
+    NewOfficWorkComponent,
+    AdminGroupsComponent,
+    RecommendEmployeeComponent,
+    OurOfficeEmployeesComponent,
+    ArchiveComponent
   ],
   imports: [
     CommonModule,
@@ -27,6 +34,8 @@ import { SharedModule } from '../shared/shared.module';
     NgbModule,
     FileUploadModule,
     SharedModule
-  ]
+  ],
+  // providers:[PagerService]
+  
 })
 export class AdminOfficesModule { }

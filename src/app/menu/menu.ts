@@ -82,6 +82,22 @@ export const menu: CoreMenu[] = [
             icon: 'circle',
             url: 'admin-offices/recommend-employee'
           },
+          {
+            id: 'OurOfficeEmployees',
+            title: 'Our Office Employees',
+            translate: 'adminOffices.OurOfficeEmployees',
+            type: 'item',
+            icon: 'circle',
+            url: 'admin-offices/our-office-employees'
+          },
+          {
+            id: 'Archive',
+            title: 'Archive',
+            translate: 'adminOffices.Archive',
+            type: 'item',
+            icon: 'circle',
+            url: 'admin-offices/Archive'
+          },
         ]
       },
       {
