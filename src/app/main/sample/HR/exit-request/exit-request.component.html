@@ -9,7 +9,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">{{'exist request' | translate}}</h4>
+                        <h4 class="card-title">{{'EmployeeExistRequest' | translate}}</h4>
                         <button type="button" style="float: right;" (click)="NewDisplayModal = true"
                             class="btn btn-gradient-success mt-1">{{'Add'|translate}}</button>
                     </div>
@@ -94,7 +94,7 @@
 
                                 <div class="col-md-12 col-12">
                                     <div class="form-group">
-                                        <label for="company-column">Select Employee</label>
+                                        <label for="company-column">{{'SelectEmployee'|translate}}</label>
                                         <select class="form-control" name="" id="">
                                             <option value="">islam</option>
                                         </select>
@@ -102,7 +102,7 @@
                                 </div>
                                 <div class="col-md-12 col-12">
                                     <div class="form-group">
-                                        <label for="email-id-column">Reason</label>
+                                        <label for="email-id-column">{{'reason'|translate}}</label>
                                         <textarea class="form-control" cols="30" rows="10"></textarea>
                                     </div>
                                 </div>
@@ -115,7 +115,7 @@
                         </div>
                         <div class="DialogBtnLeft">
                             <button type="button" (click)="this.editDisplayModal = false"
-                                class="btn btn-gradient-danger mt-1 text-left">{{'Close'|translate}}</button>
+                                class="btn btn-gradient-danger mt-1 text-left">{{'Cancel'|translate}}</button>
                         </div>
                     </div>
                 </div>
@@ -132,21 +132,21 @@
                             <div class="row">
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
-                                        <label for="first-name-column">اسم الموظف</label>
+                                        <label for="first-name-column">{{'EmployeeName'| translate}}</label>
                                         <input disabled ngModel="اسلام" type="text" id="first-name-column"
                                             class="form-control" placeholder="اسلام" name="fname-column" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
-                                        <label for="last-name-column">الجنسية</label>
+                                        <label for="last-name-column">{{'gender'| translate}}</label>
                                         <input disabled ngModel="مصري" type="text" id="last-name-column"
                                             class="form-control" placeholder="مصري" name="lname-column" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
-                                        <label for="city-column">المهنه الفعليه</label>
+                                        <label for="city-column">{{'RealJob'| translate}}</label>
                                         <input disabled ngModel="مهندس" type="text" id="city-column"
                                             class="form-control" placeholder="مهندس" name="city-column" />
                                     </div>
@@ -154,14 +154,14 @@
 
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
-                                        <label for="company-column">الادارة الحاليه</label>
+                                        <label for="company-column">{{'CurrentAdministration'| translate}}</label>
                                         <input disabled ngModel="مصر" type="text" id="company-column"
                                             class="form-control" name="company-column" placeholder="مصر" />
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-12">
                                     <div class="form-group">
-                                        <label for="email-id-column">السبب</label>
+                                        <label for="email-id-column">{{'reason'| translate}}</label>
                                         <textarea disabled class="form-control" name="" id="" cols="30"
                                             rows="10"></textarea>
                                     </div>
@@ -170,13 +170,13 @@
                         </form>
                         <div class="DialogBtnRight">
                             <button type="button" (click)="UpdateEmployeeOffices()"
-                                class="btn btn-gradient-success mt-1">{{'Agree'|translate}}</button>
+                                class="btn btn-gradient-success mt-1">{{'Accept'|translate}}</button>
                             <button type="button" (click)="this.editDisplayModal = false"
-                                class="btn btn-gradient-danger mt-1 ml-1">{{'Reject'|translate}}</button>
+                                class="btn btn-gradient-danger mt-1 ml-1">{{'Refuse'|translate}}</button>
                         </div>
                         <div class="DialogBtnLeft">
                             <button type="button" (click)="this.editDisplayModal = false"
-                                class="btn btn-gradient-danger mt-1 text-left">{{'Close'|translate}}</button>
+                                class="btn btn-gradient-danger mt-1 text-left">{{'Cancel'|translate}}</button>
                         </div>
                         
                     </div>

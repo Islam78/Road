@@ -25,7 +25,7 @@ export const locale = {
     TransferRequestDepartment: "Transfer request department",
     TransferRequestProjects: "Transfer Request Projects",
     ExitRequest: "Exit Request",
-    WaitingList:"WaitingList",
+    WaitingList:"Waiting List",
     CompleteEmployee:"Complete Employee",
     // 
 
@@ -126,14 +126,32 @@ export const locale = {
     OfficeCategory:"Office Category",
     StartDate:"Start Date",
     RecommendEmployee:"Recommend Employees",
-    MainSalary:"Main Salary",
-    TravelTime:"TravelTime",
-    carriercompany:"carriercompany",
     OurOfficeEmployees:"Our Office Employees",
     ViewDraftContract:"View Draft Contract",
     Refuse:"Refuse",
     Archive:"Archive",
     Active:"Active",
+    // Gina
+   Type:"Type",
+   transferCompany:"Transfer company",
+   AddCommercialRegister:"Add Commercial Register",
+   OfficePhoto:"Office photo",
+   officeOwnerPhoto:"office owner photo",
+   AddOfficeLicense:"Add office license",
+   Password:"Password",
+   officeStatus:"office Status",
+   SelectEmployee:"Select Employee",
+   TransferToManagement:"Transfer To Management",
+   TransferTimes:"Transfer Times",
+   AdministrationTransferredTo:"Administration Transferred To",
+   currentProject:"current Project",
+   ProjectTransferredTo:"Project Transferred To",
+   vacationRequest:"vacation Request",
+   Sales:"Sales"
+
+
+
+
 
 
   }

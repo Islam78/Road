@@ -131,14 +131,25 @@ export const locale = {
     StartDate:"تاريخ البدء",
     NewOffice:"مكتب جديد",
     RecommendEmployee:"الموظفين المقترحين",
-    MainSalary:"الراتب الاساسي",
-    TravelTime:"موعد السفر",
-    carriercompany:"الشركة الناقلة",
     Archive:"أرشيف",
     Active:"نشط",
     // Gina
-    gina:""
-
+    transferCompany:"الشركة الناقلة",
+    Type:"النوع",
+    AddCommercialRegister:"اضافة السجل التجاري",
+    OfficePhoto:"صورة المكتب",
+    officeOwnerPhoto:"صورة صاحب المكتب",
+    AddOfficeLicense:"اضافة رخصة المكتب",
+    Password:"كلمه السر",
+    officeStatus:"حالة المكتب",
+    SelectEmployee:"اختر موظف",
+    TransferToManagement:"نقل الى ادارة",
+    TransferTimes:"عدد مرات النقل",
+    AdministrationTransferredTo:"الادارة التي سيتم نقله اليها",
+    currentProject:"المشروع الحالي",
+    ProjectTransferredTo:"المشروع الذي سيتم نقله الية",
+    vacationRequest:"طلب اجازة",
+    Sales:"مبيعات"
 
   }
 }
