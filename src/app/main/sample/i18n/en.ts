@@ -17,7 +17,12 @@ export const locale = {
     Cancel: "Cancel",
     Reports: "Reports",
     HR: "HR",
+    printContract:"print Contract",
+    StartWork:"Start Work",
+    FieldRequired:"This field is required!",
     IssuanceContracts: "Issuance contracts",
+    IssueDraftContract:"Issue Draft Contract",
+    ExpectedArrivalDate:"Expected arrival date",
     IssuingAction: "Issuing action",
     WorkDefinition: "Work definition",
     ResignationRequests: "Resignation Requests",
@@ -26,6 +31,8 @@ export const locale = {
     TransferRequestProjects: "Transfer Request Projects",
     ExitRequest: "Exit Request",
     WaitingList:"Waiting List",
+    HaveBeenReached:"reached",
+
     CompleteEmployee:"Complete Employee",
     // 
 
@@ -131,6 +138,13 @@ export const locale = {
     Refuse:"Refuse",
     Archive:"Archive",
     Active:"Active",
+    Job:"Job",
+    Previous:"Previous",
+    employeestatus:"employee status",
+    HealthInsuranceInformation:"Health insurance information",
+    AccommodationInformation:"Accommodation information",
+    ContactInformation:"Contact Information",
+
     // Gina
    Type:"Type",
    transferCompany:"Transfer company",

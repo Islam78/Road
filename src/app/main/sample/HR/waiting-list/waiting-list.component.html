@@ -19,7 +19,8 @@
                                 <tr>
                                     <th> {{'Name' | translate}}</th>
                                     <th> {{'Email' | translate}} </th>
-                                    <th> {{'Date' | translate}} </th>
+                                    <th> {{'Phone' | translate}} </th>
+                                    <th> {{'ExpectedArrivalDate' | translate}} </th>
                                     <th> {{'JobTybe' | translate}} </th>
                                     <th> {{'Action' | translate}} </th>
                                 </tr>
@@ -30,15 +31,16 @@
                                         <span class="font-weight-bold">Islam</span>
                                     </td>
                                     <td>Islam@test</td>
+                                    <td>0123456789</td>
                                     <td>
                                         <div class="avatar-group">
-                                            test
+                                        1/2/2021
                                         </div>
                                     </td>
                                     <td><span class="badge badge-pill badge-light-primary mr-1">sales</span></td>
                                     <td class="overflow-hidden">
-                                        <button type="button" class="btn btn-primary mr-1" rippleEffect>
-                                            {{'IssueContract' | translate}}
+                                        <button type="button" class="btn btn-danger mr-1" rippleEffect>
+                                            {{'HaveBeenReached' | translate}}
                                         </button>
                                         <button  (click)="ReviewDialog()" type="button" class="btn btn-success" rippleEffect>
                                             {{'DataReview' | translate}}
@@ -50,15 +52,16 @@
                                         <span class="font-weight-bold">Islam</span>
                                     </td>
                                     <td>Islam@test</td>
+                                    <td>0123456789</td>
                                     <td>
                                         <div class="avatar-group">
-                                            test
+                                        1/2/2021
                                         </div>
                                     </td>
                                     <td><span class="badge badge-pill badge-light-primary mr-1">sales</span></td>
                                     <td class="overflow-hidden">
-                                        <button type="button" class="btn btn-primary mr-1" rippleEffect>
-                                            {{'IssueContract' | translate}}
+                                        <button type="button" class="btn btn-danger mr-1" rippleEffect>
+                                            {{'HaveBeenReached' | translate}}
                                         </button>
                                         <button (click)="ReviewDialog()" type="button" class="btn btn-success" rippleEffect>
                                             {{'DataReview' | translate}}
@@ -73,7 +76,7 @@
         </div>
         <!--/ Table Basic -->
 
-        <p-dialog header="Edit" [(visible)]="editDisplayModal" [modal]="true" [style]="{width: '50vw'}"
+        <p-dialog header="{{'Edit' | translate}}" [(visible)]="editDisplayModal" [modal]="true" [style]="{width: '50vw'}"
             [baseZIndex]="10000" [draggable]="false" [resizable]="false">
             <div class="row">
                 <div class="col-md-12">
@@ -365,7 +368,7 @@
                         <!--/ Horizontal Wizard --> 
                         <div class="DialogBtnRight">
                             <button type="button" (click)="ReviewDialog()"
-                                class="btn btn-gradient-success mt-1">{{'Add'|translate}}</button>
+                                class="btn btn-gradient-success mt-1">{{'Accept'|translate}}</button>
                             <button type="button" (click)="this.editDisplayModal = false"
                                 class="btn btn-gradient-danger mt-1 ml-1">{{'Refuse'|translate}}</button>
                         </div>

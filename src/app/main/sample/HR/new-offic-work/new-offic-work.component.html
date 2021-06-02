@@ -10,7 +10,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title">{{'EmploymentOffices' | translate}}</h4>
-                        <button type="button" class="btn btn-info mr-1" (click)="showReviewModalDialog()"
+                        <button type="button" class="btn btn-info mr-1" (click)="showReviewModalDialog('')"
                             rippleEffect>{{'Add'|translate}}</button>
                     </div>
                     <div class="card-body">
@@ -38,15 +38,15 @@
                                         </div>
                                     </td>
                                     <td><span class="badge badge-pill badge-light-primary mr-1">sales</span></td>
-                                    <td>
-                                        <button (click)="showReviewModalDialog()" type="button"
+                                    <td class="overflow-hidden">
+                                        <button (click)="showReviewModalDialog('')" type="button"
                                             class="btn btn-primary mr-2" rippleEffect>{{'Edit' |
                                             translate}}</button>
-                                        <button (click)="DeleteModalDialog()" type="button" class="btn btn-danger"
-                                            rippleEffect>{{'Delete' | translate}}</button>
-                                        <button (click)="showReviewModalDialog()" type="button"
-                                            class="btn btn-success ml-2" rippleEffect>{{'DataReview' |
+                                        <button (click)="showReviewModalDialog('Show')" type="button"
+                                            class="btn btn-success " rippleEffect>{{'DataReview' |
                                             translate}}</button>
+                                        <button (click)="DeleteModalDialog()" type="button" class="btn btn-danger ml-2"
+                                            rippleEffect>{{'Delete' | translate}}</button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -61,14 +61,14 @@
                                     </td>
                                     <td><span class="badge badge-pill badge-light-primary mr-1">sales</span></td>
                                     <td class="overflow-hidden">
-                                        <button (click)="showReviewModalDialog()" type="button"
+                                        <button (click)="showReviewModalDialog('')" type="button"
                                             class="btn btn-primary mr-2" rippleEffect>{{'Edit' |
                                             translate}}</button>
-                                        <button (click)="DeleteModalDialog()" type="button" class="btn btn-danger"
-                                            rippleEffect>{{'Delete' | translate}}</button>
-                                        <button (click)="showReviewModalDialog()" type="button"
-                                            class="btn btn-success ml-2" rippleEffect>{{'DataReview' |
+                                        <button (click)="showReviewModalDialog('Show')" type="button"
+                                            class="btn btn-success " rippleEffect>{{'DataReview' |
                                             translate}}</button>
+                                        <button (click)="DeleteModalDialog()" type="button" class="btn btn-danger ml-2"
+                                            rippleEffect>{{'Delete' | translate}}</button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -83,14 +83,14 @@
                                     </td>
                                     <td><span class="badge badge-pill badge-light-primary mr-1">sales</span></td>
                                     <td class="overflow-hidden">
-                                        <button (click)="showReviewModalDialog()" type="button"
+                                        <button (click)="showReviewModalDialog('')" type="button"
                                             class="btn btn-primary mr-2" rippleEffect>{{'Edit' |
                                             translate}}</button>
-                                        <button (click)="DeleteModalDialog()" type="button" class="btn btn-danger"
-                                            rippleEffect>{{'Delete' | translate}}</button>
-                                        <button (click)="showReviewModalDialog()" type="button"
-                                            class="btn btn-success ml-2" rippleEffect>{{'DataReview' |
+                                        <button (click)="showReviewModalDialog('Show');" type="button"
+                                            class="btn btn-success " rippleEffect>{{'DataReview' |
                                             translate}}</button>
+                                        <button (click)="DeleteModalDialog()" type="button" class="btn btn-danger ml-2"
+                                            rippleEffect>{{'Delete' | translate}}</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -100,7 +100,6 @@
             </div>
         </div>
         <!--/ Table Basic -->
-
         <!-- Review dialog -->
         <p-dialog [(visible)]="ReviewDisplayModal" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
             [draggable]="false" [resizable]="false">
@@ -112,64 +111,67 @@
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="first-name-column">{{'OfficeName' | translate}}</label>
-                                        <input type="text" id="first-name-column" class="form-control"
-                                            name="fname-column" />
+                                        <input [disabled]="ShowData" type="text" id="first-name-column"
+                                            class="form-control" name="fname-column" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="last-name-column">{{'AdminOfficeName' | translate}}</label>
-                                        <input type="text" id="last-name-column" class="form-control"
-                                            name="lname-column" />
+                                        <input [disabled]="ShowData" type="text" id="last-name-column"
+                                            class="form-control" name="lname-column" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="last-name-column">{{'Email' | translate}}</label>
-                                        <input type="text" id="last-name-column" class="form-control"
-                                            name="lname-column" />
+                                        <input [disabled]="ShowData" type="text" id="last-name-column"
+                                            class="form-control" name="lname-column" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="last-name-column">{{'Password' | translate}}</label>
-                                        <input type="password" id="last-name-column" class="form-control"
-                                            name="lname-column" />
+                                        <input [disabled]="ShowData" type="password" id="last-name-column"
+                                            class="form-control" name="lname-column" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="last-name-column">{{'PhoneNumber' | translate}}</label>
-                                        <input type="text" id="last-name-column" class="form-control"
-                                            name="lname-column" />
+                                        <input [disabled]="ShowData" type="text" id="last-name-column"
+                                            class="form-control" name="lname-column" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="city-column">{{'EmployeesNumToWork' | translate}}</label>
-                                        <input type="text" id="city-column" class="form-control" name="city-column" />
+                                        <input [disabled]="ShowData" type="text" id="city-column" class="form-control"
+                                            name="city-column" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="country-floating">{{'OfficeCategory' | translate}}</label>
-                                        <input type="text" id="country-floating" class="form-control"
-                                            name="country-floating" />
+                                        <input [disabled]="ShowData" type="text" id="country-floating"
+                                            class="form-control" name="country-floating" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="company-column">{{'StartDate' | translate}}</label>
-                                        <input type="date" id="company-column" class="form-control"
-                                            name="company-column" />
+                                        <input [disabled]="ShowData" type="date" id="company-column"
+                                            class="form-control" name="company-column" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="company-column">{{'officeStatus' | translate}}</label>
                                         <div class="custom-control custom-switch custom-control-inline col-12">
-                                            <input type="checkbox" class="custom-control-input" id="customSwitch1" />
-                                            <label class="custom-control-label" for="customSwitch1">{{'Active' | translate}}</label>
+                                            <input [disabled]="ShowData" type="checkbox" class="custom-control-input"
+                                                id="customSwitch1" />
+                                            <label class="custom-control-label" for="customSwitch1">{{'Active' |
+                                                translate}}</label>
                                         </div>
                                     </div>
                                 </div>
@@ -178,8 +180,8 @@
                                         <label for="company-column">{{'AddCommercialRegister' | translate}}</label>
                                         <fieldset class="form-group">
                                             <div class="custom-file">
-                                                <input type="file" class="custom-file-input" ng2FileSelect
-                                                    id="file-upload-single" />
+                                                <input [disabled]="ShowData" type="file" class="custom-file-input"
+                                                    ng2FileSelect id="file-upload-single" />
                                                 <label class="custom-file-label">{{'SelectFile'| translate}}</label>
                                             </div>
                                         </fieldset>
@@ -190,8 +192,8 @@
                                         <label for="company-column">{{'OfficePhoto' | translate}}</label>
                                         <fieldset class="form-group">
                                             <div class="custom-file">
-                                                <input type="file" class="custom-file-input" ng2FileSelect
-                                                    id="file-upload-single" />
+                                                <input [disabled]="ShowData" type="file" class="custom-file-input"
+                                                    ng2FileSelect id="file-upload-single" />
                                                 <label class="custom-file-label">{{'SelectFile'| translate}}</label>
                                             </div>
                                         </fieldset>
@@ -202,8 +204,8 @@
                                         <label for="company-column">{{'officeOwnerPhoto' | translate}}</label>
                                         <fieldset class="form-group">
                                             <div class="custom-file">
-                                                <input type="file" class="custom-file-input" ng2FileSelect
-                                                    id="file-upload-single" />
+                                                <input [disabled]="ShowData" type="file" class="custom-file-input"
+                                                    ng2FileSelect id="file-upload-single" />
                                                 <label class="custom-file-label">{{'SelectFile'| translate}}</label>
                                             </div>
                                         </fieldset>
@@ -214,8 +216,8 @@
                                         <label for="company-column">{{'AddOfficeLicense' | translate}}</label>
                                         <fieldset class="form-group">
                                             <div class="custom-file">
-                                                <input type="file" class="custom-file-input" ng2FileSelect
-                                                    id="file-upload-single" />
+                                                <input [disabled]="ShowData" type="file" class="custom-file-input"
+                                                    ng2FileSelect id="file-upload-single" />
                                                 <label class="custom-file-label">{{'SelectFile'| translate}}</label>
                                             </div>
                                         </fieldset>
@@ -224,13 +226,14 @@
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="email-id-column">{{'Notes' | translate}}</label>
-                                        <textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+                                        <textarea [disabled]="ShowData" class="form-control" name="" id="" cols="30"
+                                            rows="10"></textarea>
                                     </div>
                                 </div>
                             </div>
                         </form>
                         <div class="DialogBtnRight">
-                            <button type="button" (click)="showReviewModalDialog()"
+                            <button type="button" (click)="showReviewModalDialog('')"
                                 class="btn btn-gradient-success mt-1 ">{{'Add'|translate}}</button>
                         </div>
                         <div class="DialogBtnLeft">

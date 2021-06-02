@@ -1,8 +1,8 @@
-
 <div class="content-wrapper">
     <div class="content-body">
         <!-- content-header component -->
-        <app-search [Show]="true" [SearchArr]="SearchArr" [SearchHeader]="SearchHeader" (click)="MakeSearchArr()"></app-search>
+        <app-search [Show]="true" [SearchArr]="SearchArr" [SearchHeader]="SearchHeader" (click)="MakeSearchArr()">
+        </app-search>
         <app-content-header [contentHeader]="contentHeader"></app-content-header>
         <!-- Table Basic -->
         <div class="row" id="basic-table">
@@ -19,8 +19,8 @@
                                 <tr>
                                     <th> {{'Name' | translate}}</th>
                                     <th> {{'Email' | translate}} </th>
-                                    <th> {{'job' | translate}} </th>
-                                    <th> {{'employee status' | translate}} </th>
+                                    <th> {{'Job' | translate}} </th>
+                                    <th> {{'employeestatus' | translate}} </th>
                                     <th> {{'Action' | translate}} </th>
                                 </tr>
                             </thead>
@@ -37,8 +37,11 @@
                                         </div>
                                     </td>
                                     <td>
+                                        <button  type="button"
+                                            class="btn btn-info mr-1" rippleEffect>{{'printContract' |
+                                            translate}}</button>
                                         <button (click)="showEditModalDialog()" type="button" class="btn btn-primary"
-                                            rippleEffect>{{'Action' | translate}}</button>
+                                            rippleEffect>{{'EmployeeDetails' | translate}}</button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -53,24 +56,11 @@
                                         </div>
                                     </td>
                                     <td class="overflow-hidden">
+                                        <button  type="button"
+                                            class="btn btn-info mr-1" rippleEffect>{{'printContract' |
+                                            translate}}</button>
                                         <button (click)="showEditModalDialog()" type="button" class="btn btn-primary"
-                                            rippleEffect>{{'Action' | translate}}</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="font-weight-bold">Islam</span>
-                                    </td>
-                                    <td>Islam@test</td>
-                                    <td><span class="badge badge-pill badge-light-primary mr-1">sales</span></td>
-                                    <td>
-                                        <div class="avatar-group">
-                                            test
-                                        </div>
-                                    </td>
-                                    <td class="overflow-hidden">
-                                        <button (click)="showEditModalDialog()" type="button" class="btn btn-primary"
-                                            rippleEffect>{{'Action' | translate}}</button>
+                                            rippleEffect>{{'EmployeeDetails' | translate}}</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -83,8 +73,8 @@
     </div>
 </div>
 <!-- dialog -->
-<p-dialog header="Edit" [(visible)]="editDisplayModal" [modal]="true" [style]="{width: '50vw'}"
-    [baseZIndex]="10000" [draggable]="false" [resizable]="false">
+<p-dialog header="{{'Edit' | translate}}" [(visible)]="editDisplayModal" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+    [draggable]="false" [resizable]="false">
     <div class="row">
         <div class="col-md-12">
             <div class="form-contol">
@@ -174,18 +164,16 @@
 
                                         <div class="d-flex justify-content-between">
                                             <button (click)="horizontalWizardStepperPrevious()"
-                                                class="btn btn-outline-secondary btn-prev" disabled
-                                                rippleEffect>
-                                                <i data-feather="arrow-left"
-                                                    class="align-middle mr-sm-25 mr-0"></i>
-                                                <span
-                                                    class="align-middle d-sm-inline-block d-none">{{'Previous' | translate}}</span>
+                                                class="btn btn-outline-secondary btn-prev" disabled rippleEffect>
+                                                <i data-feather="arrow-left" class="align-middle mr-sm-25 mr-0"></i>
+                                                <span class="align-middle d-sm-inline-block d-none">{{'Previous' |
+                                                    translate}}</span>
                                             </button>
                                             <button (click)="horizontalWizardStepperNext(accountDetailsForm)"
                                                 type="submit" class="btn btn-primary btn-next" rippleEffect>
-                                                <span class="align-middle d-sm-inline-block d-none">{{'NextReviwe' | translate}}</span>
-                                                <i data-feather="arrow-right"
-                                                    class="align-middle ml-sm-25 ml-0"></i>
+                                                <span class="align-middle d-sm-inline-block d-none">{{'NextReviwe' |
+                                                    translate}}</span>
+                                                <i data-feather="arrow-right" class="align-middle ml-sm-25 ml-0"></i>
                                             </button>
                                         </div>
                                     </form>
@@ -209,8 +197,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="form-group col-md-6">
-                                                <label class="form-label"
-                                                    for="country">{{'SubsistenceAllowance'|
+                                                <label class="form-label" for="country">{{'SubsistenceAllowance'|
                                                     translate}}</label>
                                                 <input disabled type="text" class="form-control" />
                                             </div>
@@ -233,16 +220,15 @@
                                         <div class="d-flex justify-content-between">
                                             <button (click)="horizontalWizardStepperPrevious()"
                                                 class="btn btn-primary btn-prev" rippleEffect>
-                                                <i data-feather="arrow-left"
-                                                    class="align-middle mr-sm-25 mr-0"></i>
-                                                <span
-                                                    class="align-middle d-sm-inline-block d-none">{{'Previous' | translate}}</span>
+                                                <i data-feather="arrow-left" class="align-middle mr-sm-25 mr-0"></i>
+                                                <span class="align-middle d-sm-inline-block d-none">{{'Previous' |
+                                                    translate}}</span>
                                             </button>
                                             <button (click)="horizontalWizardStepperNext(personalInfoForm)"
                                                 class="btn btn-primary btn-next" rippleEffect>
-                                                <span class="align-middle d-sm-inline-block d-none">{{'NextReviwe' | translate}}</span>
-                                                <i data-feather="arrow-right"
-                                                    class="align-middle ml-sm-25 ml-0"></i>
+                                                <span class="align-middle d-sm-inline-block d-none">{{'NextReviwe' |
+                                                    translate}}</span>
+                                                <i data-feather="arrow-right" class="align-middle ml-sm-25 ml-0"></i>
                                             </button>
                                         </div>
                                     </form>
@@ -260,22 +246,19 @@
                                                 <input disabled type="text" class="form-control" />
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <label class="form-label"
-                                                    for="PassportDate">{{'StartDataPassport'|
+                                                <label class="form-label" for="PassportDate">{{'StartDataPassport'|
                                                     translate}}</label>
                                                 <input disabled type="text" class="form-control" />
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="form-group col-md-6">
-                                                <label class="form-label"
-                                                    for="PassportEndDate">{{'EndDataPassport'|
+                                                <label class="form-label" for="PassportEndDate">{{'EndDataPassport'|
                                                     translate}}</label>
                                                 <input disabled type="text" class="form-control" />
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <label class="form-label"
-                                                    for="PassportEndDate">{{'CopyPassport'|
+                                                <label class="form-label" for="PassportEndDate">{{'CopyPassport'|
                                                     translate}}</label>
                                                 <input disabled type="text" class="form-control" />
                                             </div>
@@ -302,8 +285,7 @@
                                                 <input disabled type="text" class="form-control" />
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <label class="form-label"
-                                                    for="PassportEndDate">{{'PhotoTicket'|
+                                                <label class="form-label" for="PassportEndDate">{{'PhotoTicket'|
                                                     translate}}</label>
                                                 <input disabled type="text" class="form-control" />
                                             </div>
@@ -312,16 +294,15 @@
                                         <div class="d-flex justify-content-between">
                                             <button (click)="horizontalWizardStepperPrevious()"
                                                 class="btn btn-primary btn-prev" rippleEffect>
-                                                <i data-feather="arrow-left"
-                                                    class="align-middle mr-sm-25 mr-0"></i>
-                                                <span
-                                                    class="align-middle d-sm-inline-block d-none">{{'Previous' | translate}}</span>
+                                                <i data-feather="arrow-left" class="align-middle mr-sm-25 mr-0"></i>
+                                                <span class="align-middle d-sm-inline-block d-none">{{'Previous' |
+                                                    translate}}</span>
                                             </button>
                                             <button (click)="horizontalWizardStepperNext(addressForm)"
                                                 class="btn btn-primary btn-next" rippleEffect>
-                                                <span class="align-middle d-sm-inline-block d-none">{{'NextReviwe' | translate}}</span>
-                                                <i data-feather="arrow-right"
-                                                    class="align-middle ml-sm-25 ml-0"></i>
+                                                <span class="align-middle d-sm-inline-block d-none">{{'NextReviwe' |
+                                                    translate}}</span>
+                                                <i data-feather="arrow-right" class="align-middle ml-sm-25 ml-0"></i>
                                             </button>
                                         </div>
                                     </form>
@@ -358,10 +339,9 @@
                                         <div class="d-flex justify-content-between">
                                             <button (click)="horizontalWizardStepperPrevious()"
                                                 class="btn btn-primary btn-prev" rippleEffect>
-                                                <i data-feather="arrow-left"
-                                                    class="align-middle mr-sm-25 mr-0"></i>
-                                                <span
-                                                    class="align-middle d-sm-inline-block d-none">{{'Previous' | translate}}</span>
+                                                <i data-feather="arrow-left" class="align-middle mr-sm-25 mr-0"></i>
+                                                <span class="align-middle d-sm-inline-block d-none">{{'Previous' |
+                                                    translate}}</span>
                                             </button>
                                             <button class="btn btn-success btn-submit" disabled
                                                 rippleEffect>{{'NextReviwe' | translate}}</button>
@@ -372,7 +352,7 @@
                         </div>
                     </div>
                 </section>
-                <!--/ Horizontal Wizard --> 
+                <!--/ Horizontal Wizard -->
                 <div class="DialogBtnRight">
                     <button type="button" (click)="UpdateEmployeeOffices()"
                         class="btn btn-gradient-success mt-1">{{'Add'|translate}}</button>

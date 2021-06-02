@@ -75,13 +75,13 @@
                                 <div class="row">
                                     <div class="form-group col-md-6">
                                         <label class="form-label" for="user_name">{{'EmployeeName'| translate}} </label>
-                                        <input required [(ngModel)]="TDNameVar" #TDNameRef="ngModel" type="text" name="user_name"
-                                            id="user_name" class="form-control"
+                                        <input required [(ngModel)]="TDNameVar" #TDNameRef="ngModel" type="text"
+                                            name="user_name" id="user_name" class="form-control"
                                             [class.error]="!TDNameRef.valid && accountDetailsForm.submitted" />
                                         <span *ngIf="accountDetailsForm.submitted && TDNameRef.invalid"
                                             class="invalid-form">
-                                            <small class="form-text text-danger" *ngIf="TDNameRef.errors.required">This
-                                                field is required!</small>
+                                            <small class="form-text text-danger" *ngIf="TDNameRef.errors.required">{{'FieldRequired' |
+                                                translate}}</small>
                                         </span>
                                     </div>
                                     <div class="form-group col-md-6">
@@ -93,8 +93,8 @@
                                         <!-- required -->
                                         <span *ngIf="accountDetailsForm.submitted && TDPhoneRef.invalid"
                                             class="invalid-form">
-                                            <small class="form-text text-danger" *ngIf="TDPhoneRef.errors.required">This
-                                                field is required!</small>
+                                            <small class="form-text text-danger" *ngIf="TDPhoneRef.errors.required">{{'FieldRequired' |
+                                                translate}}</small>
                                         </span>
                                     </div>
                                 </div>
@@ -136,8 +136,8 @@
                                         <span *ngIf="accountDetailsForm.submitted && TDNationalityRef.invalid"
                                             class="invalid-form">
                                             <small class="form-text text-danger"
-                                                *ngIf="TDNationalityRef.errors.required">This
-                                                field is required!</small>
+                                                *ngIf="TDNationalityRef.errors.required">{{'FieldRequired' |
+                                                translate}}</small>
                                         </span>
                                     </div>
                                     <div class="form-group col-md-6">
@@ -149,8 +149,8 @@
                                         <!-- <input [(ngModel)]="TDTypeVar" #TDTypeRef="ngModel" type="text" name="Type" id="Type" class="form-control" [class.error]="!TDTypeRef.valid && accountDetailsForm.submitted" /> -->
                                         <span *ngIf="accountDetailsForm.submitted && TDTypeRef.invalid"
                                             class="invalid-form">
-                                            <small class="form-text text-danger" *ngIf="TDTypeRef.errors.required">This
-                                                field is required!</small>
+                                            <small class="form-text text-danger" *ngIf="TDTypeRef.errors.required">{{'FieldRequired' |
+                                                translate}}</small>
                                         </span>
                                     </div>
                                 </div>
@@ -159,7 +159,19 @@
                                     <div class="form-group col-md-6">
                                         <!-- DateOfBirth -->
                                         <label class="form-label" for="DateOfBirth">{{'BirthDate'| translate}}</label>
-                                        <div class="input-group">
+
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                              <input class="form-control" placeholder="yyyy-mm-dd" name="Basic Date Picker" [(ngModel)]="basicDPdata"
+                                                ngbDatepicker #basicDP="ngbDatepicker">
+                                              <div class="input-group-append">
+                                                <button class="btn btn-outline-secondary feather icon-calendar" (click)="basicDP.toggle()"
+                                                  type="button" rippleEffect></button>
+                                              </div>
+                                            </div>
+                                          </div>
+
+                                        <!-- <div class="input-group">
                                             <input class="form-control" name="Basic Date Picker"
                                                 [(ngModel)]="TDDateOfBirthVar" ngbDatepicker
                                                 #DateOfBirth="ngbDatepicker">
@@ -167,7 +179,7 @@
                                                 <button class="btn btn-outline-secondary feather icon-calendar"
                                                     (click)="DateOfBirth.toggle()" type="button" rippleEffect></button>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label class="form-label" for="Age"> {{'Age'| translate}}</label>
@@ -176,8 +188,8 @@
                                             [class.error]="!TDAgeRef.valid && accountDetailsForm.submitted" />
                                         <span *ngIf="accountDetailsForm.submitted && TDAgeRef.invalid"
                                             class="invalid-form">
-                                            <small class="form-text text-danger" *ngIf="TDAgeRef.errors.required">This
-                                                field is required!</small>
+                                            <small class="form-text text-danger" *ngIf="TDAgeRef.errors.required">{{'FieldRequired' |
+                                                translate}}</small>
                                         </span>
                                     </div>
                                 </div>
@@ -193,8 +205,8 @@
                                         <span *ngIf="accountDetailsForm.submitted && TDVisaprofessionRef.invalid"
                                             class="invalid-form">
                                             <small class="form-text text-danger"
-                                                *ngIf="TDVisaprofessionRef.errors.required">This
-                                                field is required!</small>
+                                                *ngIf="TDVisaprofessionRef.errors.required">{{'FieldRequired' |
+                                                translate}}</small>
                                         </span>
                                     </div>
                                     <div class="form-group col-md-6">
@@ -207,8 +219,8 @@
                                         <span *ngIf="accountDetailsForm.submitted && TDActualprofessionRef.invalid"
                                             class="invalid-form">
                                             <small class="form-text text-danger"
-                                                *ngIf="TDActualprofessionRef.errors.required">This
-                                                field is required!</small>
+                                                *ngIf="TDActualprofessionRef.errors.required">{{'FieldRequired' |
+                                                translate}}!</small>
                                         </span>
                                     </div>
                                 </div>
@@ -216,7 +228,8 @@
                                     <button (click)="horizontalWizardStepperPrevious()"
                                         class="btn btn-outline-secondary btn-prev" disabled rippleEffect>
                                         <i data-feather="arrow-left" class="align-middle mr-sm-25 mr-0"></i>
-                                        <span class="align-middle d-sm-inline-block d-none">{{'Previous' | translate}}</span>
+                                        <span class="align-middle d-sm-inline-block d-none">{{'Previous' |
+                                            translate}}</span>
                                     </button>
                                     <button (click)="horizontalWizardStepperNext(accountDetailsForm)" type="submit"
                                         class="btn btn-primary btn-next" rippleEffect>
@@ -243,8 +256,8 @@
                                         <span *ngIf="personalInfoForm.submitted && TDEmployeeTypeRef.invalid"
                                             class="invalid-form">
                                             <small class="form-text text-danger"
-                                                *ngIf="TDEmployeeTypeRef.errors.required">This field is
-                                                required!</small>
+                                                *ngIf="TDEmployeeTypeRef.errors.required">{{'FieldRequired' |
+                                                translate}}</small>
                                         </span>
                                     </div>
                                     <div class="form-group col-md-6">
@@ -257,8 +270,8 @@
                                         <span *ngIf="personalInfoForm.submitted && TDsubsistence_allowanceRef.invalid"
                                             class="invalid-form">
                                             <small class="form-text text-danger"
-                                                *ngIf="TDsubsistence_allowanceRef.errors.required">This field is
-                                                required!</small>
+                                                *ngIf="TDsubsistence_allowanceRef.errors.required">{{'FieldRequired' |
+                                                translate}}</small>
                                         </span>
                                     </div>
                                 </div>
@@ -273,7 +286,8 @@
                                         <span *ngIf="personalInfoForm.submitted && TDSubsistenceRef.invalid"
                                             class="invalid-form">
                                             <small class="form-text text-danger"
-                                                *ngIf="TDSubsistenceRef.errors.required">This field is required!</small>
+                                                *ngIf="TDSubsistenceRef.errors.required">{{'FieldRequired' |
+                                                translate}}</small>
                                         </span>
                                     </div>
                                     <div class="form-group col-md-6">
@@ -285,8 +299,8 @@
                                         <span *ngIf="personalInfoForm.submitted && TDTDSalaryVarRef.invalid"
                                             class="invalid-form">
                                             <small class="form-text text-danger"
-                                                *ngIf="TDTDSalaryVarRef.errors.required">This field is
-                                                required!</small>
+                                                *ngIf="TDTDSalaryVarRef.errors.required">{{'FieldRequired' |
+                                                translate}}</small>
                                         </span>
                                     </div>
                                 </div>
@@ -302,8 +316,8 @@
                                         <span *ngIf="personalInfoForm.submitted && TDRelocationAllowanceRef.invalid"
                                             class="invalid-form">
                                             <small class="form-text text-danger"
-                                                *ngIf="TDRelocationAllowanceRef.errors.required">This field is
-                                                required!</small>
+                                                *ngIf="TDRelocationAllowanceRef.errors.required">{{'FieldRequired' |
+                                                translate}}</small>
                                         </span>
                                     </div>
                                     <div class="form-group col-md-6">
@@ -314,7 +328,8 @@
                                         <span *ngIf="personalInfoForm.submitted && TDTotalSalaryRef.invalid"
                                             class="invalid-form">
                                             <small class="form-text text-danger"
-                                                *ngIf="TDTotalSalaryRef.errors.required">This field is required!</small>
+                                                *ngIf="TDTotalSalaryRef.errors.required">{{'FieldRequired' |
+                                                translate}}</small>
                                         </span>
                                     </div>
                                 </div>
@@ -322,7 +337,8 @@
                                     <button (click)="horizontalWizardStepperPrevious()" class="btn btn-primary btn-prev"
                                         rippleEffect>
                                         <i data-feather="arrow-left" class="align-middle mr-sm-25 mr-0"></i>
-                                        <span class="align-middle d-sm-inline-block d-none">{{'Previous' | translate}}</span>
+                                        <span class="align-middle d-sm-inline-block d-none">{{'Previous' |
+                                            translate}}</span>
                                     </button>
                                     <button (click)="horizontalWizardStepperNext(personalInfoForm)"
                                         class="btn btn-primary btn-next" rippleEffect>
@@ -347,8 +363,8 @@
                                         <span *ngIf="addressForm.submitted && PassportNumber.invalid"
                                             class="invalid-form">
                                             <small class="form-text text-danger"
-                                                *ngIf="PassportNumber.errors.required">This
-                                                field is required!</small>
+                                                *ngIf="PassportNumber.errors.required">{{'FieldRequired' |
+                                                translate}}</small>
                                         </span>
                                     </div>
                                 </div>
@@ -448,11 +464,13 @@
                                         <span *ngIf="addressForm.submitted && TDvisa_numberRef.invalid"
                                             class="invalid-form">
                                             <small class="form-text text-danger"
-                                                *ngIf="TDvisa_numberRef.errors.required">This field is required!</small>
+                                                *ngIf="TDvisa_numberRef.errors.required">{{'FieldRequired' |
+                                                translate}}</small>
                                         </span>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label class="form-label" for="carrier_company"> {{'transferCompany'| translate}}
+                                        <label class="form-label" for="carrier_company"> {{'transferCompany'|
+                                            translate}}
                                         </label>
                                         <input [(ngModel)]="TDcarrier_companyVar" #carrier_companyRef="ngModel"
                                             type="text" name="carrier_company" id="carrier_company" class="form-control"
@@ -460,8 +478,8 @@
                                         <span *ngIf="addressForm.submitted && carrier_companyRef.invalid"
                                             class="invalid-form">
                                             <small class="form-text text-danger"
-                                                *ngIf="carrier_companyRef.errors.required">This field is
-                                                required!</small>
+                                                *ngIf="carrier_companyRef.errors.required">{{'FieldRequired' |
+                                                translate}}</small>
                                         </span>
                                     </div>
                                 </div>
@@ -496,7 +514,6 @@
                                                         <td *ngIf="ticketuploader.options.isHTML5" nowrap>
                                                             Size: {{ item?.file?.size / 1024 / 1024 | number: '.2' }} MB
                                                         </td>
-
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -507,11 +524,13 @@
                                     <button (click)="horizontalWizardStepperPrevious()" class="btn btn-primary btn-prev"
                                         rippleEffect>
                                         <i data-feather="arrow-left" class="align-middle mr-sm-25 mr-0"></i>
-                                        <span class="align-middle d-sm-inline-block d-none">{{'Previous' | translate}}</span>
+                                        <span class="align-middle d-sm-inline-block d-none">{{'Previous' |
+                                            translate}}</span>
                                     </button>
                                     <button (click)="horizontalWizardStepperNext(addressForm)"
                                         class="btn btn-primary btn-next" rippleEffect>
-                                        <span class="align-middle d-sm-inline-block d-none">{{'Next' | translate}}</span>
+                                        <span class="align-middle d-sm-inline-block d-none">{{'Next' |
+                                            translate}}</span>
                                         <i data-feather="arrow-right" class="align-middle ml-sm-25 ml-0"></i>
                                     </button>
                                 </div>
@@ -532,8 +551,8 @@
                                         <span *ngIf="socialLinkForm.submitted && T_shirtSizeVarkRef.invalid"
                                             class="invalid-form">
                                             <small class="form-text text-danger"
-                                                *ngIf="T_shirtSizeVarkRef.errors.required">This field is
-                                                required!</small>
+                                                *ngIf="T_shirtSizeVarkRef.errors.required">{{'FieldRequired' |
+                                                translate}}</small>
                                         </span>
                                     </div>
                                     <div class="form-group col-md-6 ">
@@ -544,7 +563,8 @@
                                         <span *ngIf="socialLinkForm.submitted && PantsSizeRef.invalid"
                                             class="invalid-form">
                                             <small class="form-text text-danger"
-                                                *ngIf="PantsSizeRef.errors.required">This field is required!</small>
+                                                *ngIf="PantsSizeRef.errors.required">{{'FieldRequired' |
+                                                translate}}</small>
                                         </span>
                                     </div>
                                 </div>
@@ -557,8 +577,8 @@
                                         <span *ngIf="socialLinkForm.submitted && shoeSizeRef.invalid"
                                             class="invalid-form">
                                             <small class="form-text text-danger"
-                                                *ngIf="shoeSizeRef.errors.required">This
-                                                field is required!</small>
+                                                *ngIf="shoeSizeRef.errors.required">{{'FieldRequired' |
+                                                translate}}</small>
                                         </span>
                                     </div>
                                     <div class="form-group col-md-6">
@@ -569,7 +589,8 @@
                                         <span *ngIf="socialLinkForm.submitted && PhoneTypeRef.invalid"
                                             class="invalid-form">
                                             <small class="form-text text-danger"
-                                                *ngIf="PhoneTypeRef.errors.required">This field is required!</small>
+                                                *ngIf="PhoneTypeRef.errors.required">{{'FieldRequired' |
+                                                translate}}</small>
                                         </span>
                                     </div>
                                 </div>
@@ -577,11 +598,13 @@
                                     <button (click)="horizontalWizardStepperPrevious()" class="btn btn-primary btn-prev"
                                         rippleEffect>
                                         <i data-feather="arrow-left" class="align-middle mr-sm-25 mr-0"></i>
-                                        <span class="align-middle d-sm-inline-block d-none">{{'Previous' | translate}}</span>
+                                        <span class="align-middle d-sm-inline-block d-none">{{'Previous' |
+                                            translate}}</span>
                                     </button>
                                     <button (click)="horizontalWizardStepperNext(personalInfoForm)"
                                         class="btn btn-primary btn-next" rippleEffect>
-                                        <span class="align-middle d-sm-inline-block d-none">{{'Next' | translate}}</span>
+                                        <span class="align-middle d-sm-inline-block d-none">{{'Next' |
+                                            translate}}</span>
                                         <i data-feather="arrow-right" class="align-middle ml-sm-25 ml-0"></i>
                                     </button>
                                 </div>
@@ -602,7 +625,8 @@
                                         <span *ngIf="socialLinkForm.submitted && BorderNumberkRef.invalid"
                                             class="invalid-form">
                                             <small class="form-text text-danger"
-                                                *ngIf="BorderNumberkRef.errors.required">This field is required!</small>
+                                                *ngIf="BorderNumberkRef.errors.required">{{'FieldRequired' |
+                                                translate}}</small>
                                         </span>
                                     </div>
                                     <div class="form-group col-md-6">
@@ -709,7 +733,8 @@
                                         <span *ngIf="socialLinkForm.submitted && JobNumberRef.invalid"
                                             class="invalid-form">
                                             <small class="form-text text-danger"
-                                                *ngIf="JobNumberRef.errors.required">This field is required!</small>
+                                                *ngIf="JobNumberRef.errors.required">{{'FieldRequired' |
+                                                translate}}</small>
                                         </span>
                                     </div>
                                     <div class="form-group col-md-6 mt-1">

@@ -10,13 +10,19 @@ export class NewOfficWorkComponent implements OnInit {
 
   contentHeader: object
   ReviewDisplayModal: boolean
-  NewDisplayModal :boolean
+  NewDisplayModal: boolean
   constructor() { }
 
-  showReviewModalDialog() {
+  ShowData: boolean
+  showReviewModalDialog(event) {
     this.ReviewDisplayModal = true;
+    if (event == 'Show') {
+      this.ShowData = true
+      return
+    }
+    this.ShowData = false
   }
-  DeleteModalDialog(){}
+  DeleteModalDialog() { }
   ngOnInit(): void {
     this.contentHeader = {
       headerTitle: '',
@@ -41,7 +47,7 @@ export class NewOfficWorkComponent implements OnInit {
   SearchArr
   SearchHeader
   MakeSearchArr() {
-    this.SearchHeader= 'Offic Work'
+    this.SearchHeader = 'Offic Work'
     this.SearchArr = [
       { label: "Office Name", Type: "text" },
     ]
