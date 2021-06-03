@@ -13,14 +13,26 @@ import { TransferRequestProjectsComponent } from './transfer-request-projects/tr
 import { ExitRequestComponent } from './exit-request/exit-request.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
+import { ContentHeaderModule } from 'app/layout/components/content-header/content-header.module';
 
 
 @NgModule({
-  declarations: [IssuanceContractsComponent, IssuingActionComponent, WorkDefinitionComponent, ResignationRequestsComponent, EndingServicesComponent, TransferRequestDepartmentComponent, TransferRequestProjectsComponent, ExitRequestComponent],
+  declarations: [
+    IssuanceContractsComponent, 
+    IssuingActionComponent, 
+    WorkDefinitionComponent, 
+    ResignationRequestsComponent, 
+    EndingServicesComponent,
+     TransferRequestDepartmentComponent, 
+     
+     TransferRequestProjectsComponent, 
+     ExitRequestComponent
+    ],
   imports: [
     CommonModule,
     ContractsRoutingModule,
-    TranslateModule.forChild(),
+    ContentHeaderModule,
+    TranslateModule,
     ReactiveFormsModule,
     FormsModule,
     SharedModule

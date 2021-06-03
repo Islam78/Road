@@ -35,23 +35,9 @@ export class EmployeesComponent implements OnInit {
   }
   ngOnInit(): void {
     this.contentHeader = {
-      headerTitle: '',
-      actionButton: true,
-      breadcrumb: {
-        type: '',
-        links: [
-          {
-            name: '',
-            isLink: true,
-            link: '/'
-          },
-          {
-            name: '',
-            isLink: false
-          }
-        ]
-      }
-    }
+      headerTitle: 'common.employees',
+      actionButton: false
+    };
   }
   horizontalWizardStepper: Stepper;
   horizontalWizardStepperPrevious() {

@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-offic-work.component.scss']
 })
 export class NewOfficWorkComponent implements OnInit {
+  public contentHeader: object
+
   constructor() { }
 
   DeleteModalDialog() { }
-  ngOnInit(): void { }
+  ngOnInit(): void { 
+    this.contentHeader = {
+      headerTitle: 'adminOffices.officeWork',
+      actionButton: false
+    };
+  }
   ReviewDisplayModal: boolean
   ShowData: boolean
   showReviewModalDialog(event) {

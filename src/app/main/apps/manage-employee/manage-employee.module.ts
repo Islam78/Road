@@ -25,7 +25,7 @@ import { CompleteEmployeeComponent } from './complete-employee/complete-employee
     CommonModule,
     ManageEmployeeRoutingModule,
     ContentHeaderModule,
-    TranslateModule.forChild(),
+    TranslateModule,
     ReactiveFormsModule,
     FormsModule,
     NgSelectModule,

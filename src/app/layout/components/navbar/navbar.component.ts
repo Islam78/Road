@@ -119,6 +119,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   setLanguage(language): void {
     window.location.reload()
     localStorage.setItem('lang',language)
+    this._translateService.use(language)
   }
 
   /**
@@ -162,6 +163,9 @@ export class NavbarComponent implements OnInit, OnDestroy {
    * On init
    */
   ngOnInit(): void {
+    const browserLang = this._translateService.getBrowserLang();
+    this._translateService.setDefaultLang(localStorage.getItem('lang'));
+    this._translateService.use(browserLang.match(/ar|ar/) ?  localStorage.getItem('lang') :  localStorage.getItem('lang'));
     // get the currentUser details from localStorage
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
 

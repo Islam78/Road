@@ -17,6 +17,10 @@ export class CompleteEmployeeComponent implements OnInit {
   UpdateEmployeeOffices() {
     this.editDisplayModal = false
   }
-  ngOnInit(): void {}
-
+  ngOnInit(): void {
+    this.contentHeader = {
+      headerTitle: 'ManageEmployee.completeEmployee',
+      actionButton: false
+    };
+  }
 }

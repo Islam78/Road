@@ -7,10 +7,14 @@ import Stepper from 'bs-stepper';
   styleUrls: ['./waiting-list.component.scss']
 })
 export class WaitingListComponent implements OnInit {
-  constructor() { }
+  public contentHeader: object
 
+  constructor() { }
   ngOnInit(): void {
-    
+    this.contentHeader = {
+      headerTitle: 'ManageEmployee.waitingList',
+      actionButton: false
+    };
   }
 
   editDisplayModal :boolean = false;

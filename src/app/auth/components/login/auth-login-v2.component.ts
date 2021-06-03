@@ -90,7 +90,7 @@ export class AuthLoginV2Component implements OnInit {
       .pipe(first())
       .subscribe(
         data => {
-          this._router.navigate([this.returnUrl]);
+         window.location.reload()
         },
         error => {
           this.error = error;

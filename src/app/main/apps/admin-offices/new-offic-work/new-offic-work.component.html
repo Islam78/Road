@@ -1,15 +1,15 @@
 <div class="content-wrapper">
     <div class="content-body">
         <!-- content-header component -->
+        <app-content-header [contentHeader]="contentHeader"></app-content-header>
+
         <app-search [Show]="true" [SearchArr]="SearchArr" [SearchHeader]="SearchHeader" (click)="MakeSearchArr()">
         </app-search>
-        <!-- <app-content-header [contentHeader]="contentHeader"></app-content-header> -->
         <!-- Table Basic -->
         <div class="row" id="basic-table">
             <div class="col-12">
                 <div class="card">
-                    <div class="card-header">
-                        <h4 class="card-title">{{'EmploymentOffices' | translate}}</h4>
+                    <div class="card-header d-flex flex-row-reverse">
                         <button type="button" class="btn btn-info mr-1" (click)="showReviewModalDialog('')"
                             rippleEffect>{{'Add'|translate}}</button>
                     </div>

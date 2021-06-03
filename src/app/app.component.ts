@@ -68,16 +68,13 @@ export class AppComponent implements OnInit, OnDestroy {
     this._coreMenuService.setCurrentMenu('main');
 
     // Add languages to the translation service
-    this._translateService.addLangs(['en','ar']);
 
     // This language will be used as a fallback when a translation isn't found in the current language
-    this._translateService.setDefaultLang(localStorage.getItem('lang'));
 
     // Set the translations for the menu
 
     // Set application default language.
     // Change application language? Read the ngxTranslate Fix
-    this._translateService.use(localStorage.getItem('lang'));
     // ? OR
     // ? User the current browser lang if available, if undefined use 'en'
     // const browserLang = this._translateService.getBrowserLang();
@@ -114,7 +111,11 @@ export class AppComponent implements OnInit, OnDestroy {
     this._unsubscribeAll = new Subject();
 
     let x = localStorage.getItem('lang') === 'ar' ? 'rtl' : 'ltr';
-    this._translateService.setDefaultLang(localStorage.getItem('lang'))
+    _translateService.addLangs(['en', 'ar']);
+    _translateService.setDefaultLang(localStorage.getItem('lang'));
+
+    const browserLang = _translateService.getBrowserLang();
+    _translateService.use(browserLang.match(/ar|ar/) ?  localStorage.getItem('lang') :  localStorage.getItem('lang'));
     _translateService.onLangChange
       .subscribe((event: LangChangeEvent) => this._document.documentElement.dir = event.lang == 'en' ? 'ltr' : 'rtl');
     this._document.documentElement.dir = x;
@@ -127,6 +128,8 @@ export class AppComponent implements OnInit, OnDestroy {
    * On init
    */
   ngOnInit(): void {
+    this._translateService.setDefaultLang(localStorage.getItem('lang'));
+
     // Init wave effect (Ripple effect)
     Waves.init();
 

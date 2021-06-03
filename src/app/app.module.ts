@@ -56,7 +56,7 @@ const appRoutes: Routes = [
 ];
 
 export function createTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+  return new TranslateHttpLoader(http, '../assets/i18n/', '.json');
 }
 @NgModule({
   declarations: [
@@ -72,14 +72,14 @@ export function createTranslateLoader(http: HttpClient) {
     }),
     RouterModule.forRoot(appRoutes, {
       scrollPositionRestoration: 'enabled', // Add options right here
-      relativeLinkResolution: 'legacy'
+    //  relativeLinkResolution: 'legacy'
     }),
     NgbModule,
     ToastrModule.forRoot(),
     TranslateModule.forRoot({
       loader: {
           provide: TranslateLoader,
-          useFactory: (createTranslateLoader),
+          useFactory:createTranslateLoader,
           deps: [HttpClient]
       }
   }),
