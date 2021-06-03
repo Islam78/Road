@@ -8,7 +8,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">{{'RecommendEmployee' | translate}}</h4>
+                        <h4 class="card-title">{{'adminOffices.recommendEmployee' | translate}}</h4>
                     </div>
                     <div class="card-body">
                     </div>
@@ -16,11 +16,11 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th> {{'EmployeeName' | translate}}</th>
-                                    <th> {{'OfficesName' | translate}} </th>
-                                    <th> {{'Date' | translate}} </th>
-                                    <th> {{'JobTybe' | translate}} </th>
-                                    <th> {{'Action' | translate}} </th>
+                                    <th> {{'common.EmployeeName' | translate}}</th>
+                                    <th> {{'common.OfficesName' | translate}} </th>
+                                    <th> {{'common.Date' | translate}} </th>
+                                    <th> {{'common.JobTybe' | translate}} </th>
+                                    <th> {{'common.Action' | translate}} </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -37,7 +37,7 @@
                                     <td><span class="badge badge-pill badge-light-primary mr-1">sales</span></td>
                                     <td>
                                         <button (click)="showEditModalDialog()" type="button" class="btn btn-success"
-                                            rippleEffect>{{'DataReview' | translate}}</button>
+                                            rippleEffect>{{'common.Review' | translate}}</button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -53,7 +53,7 @@
                                     <td><span class="badge badge-pill badge-light-primary mr-1">sales</span></td>
                                     <td class="overflow-hidden">
                                         <button (click)="showEditModalDialog()" type="button" class="btn btn-success"
-                                            rippleEffect>{{'DataReview' | translate}}</button>
+                                            rippleEffect>{{'common.Review' | translate}}</button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -69,7 +69,7 @@
                                     <td><span class="badge badge-pill badge-light-primary mr-1">sales</span></td>
                                     <td class="overflow-hidden">
                                         <button (click)="showEditModalDialog()" type="button" class="btn btn-success"
-                                            rippleEffect>{{'DataReview' | translate}}</button>
+                                            rippleEffect>{{'common.Review' | translate}}</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -85,300 +85,237 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-contol">
-                        <!-- Horizontal Wizard -->
-                        <section class="horizontal-wizard">
-                            <div id="stepper1" class="bs-stepper horizontal-wizard-example">
-                                <div class="bs-stepper-header">
-                                    <div class="step" data-target="#account-details">
-                                        <button class="step-trigger">
-                                            <span class="bs-stepper-box">1</span>
-                                            <span class="bs-stepper-label">
-                                                <span class="bs-stepper-title">{{'EmployeeDetails'| translate}}</span>
-                                            </span>
-                                        </button>
-                                    </div>
-                                    <div class="line"><i data-feather="chevron-right" class="font-medium-2"></i></div>
-                                    <div class="step" data-target="#personal-info">
-                                        <button class="step-trigger">
-                                            <span class="bs-stepper-box">2</span>
-                                            <span class="bs-stepper-label">
-                                                <span class="bs-stepper-title">{{'DetailsSalaryAndJob'|
-                                                    translate}}</span>
-                                            </span>
-                                        </button>
-                                    </div>
-                                    <div class="line"><i data-feather="chevron-right" class="font-medium-3"></i></div>
-                                    <div class="step" data-target="#address">
-                                        <button class="step-trigger">
-                                            <span class="bs-stepper-box">3</span>
-                                            <span class="bs-stepper-label">
-                                                <span class="bs-stepper-title">{{'PasportDetail'| translate}}</span>
-                                            </span>
-                                        </button>
-                                    </div>
-                                    <div class="line"><i data-feather="chevron-right" class="font-medium-4"></i></div>
-                                    <div class="step" data-target="#uniform">
-                                        <button class="step-trigger">
-                                            <span class="bs-stepper-box">4</span>
-                                            <span class="bs-stepper-label">
-                                                <span class="bs-stepper-title"> {{'uniformDetail'| translate}} </span>
-                                            </span>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="bs-stepper-content">
-                                    <form (ngSubmit)="(HWForm.form.valid)" #HWForm="ngForm">
-                                        <div id="account-details" class="content">
-                                            <form #accountDetailsForm="ngForm">
-                                                <div class="content-header">
-                                                    <h5 class="mb-0"> {{'EmplpyeeDetail'| translate}} </h5>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group col-md-6">
-                                                        <label class="form-label" for="username">{{'EmployeeName' |
-                                                            translate}}</label>
-                                                        <input disabled type="text" class="form-control" />
-
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label class="form-label" for="email">{{'nationality' |
-                                                            translate}}</label>
-                                                        <input disabled type="text" class="form-control" />
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group form-password-toggle col-md-6">
-                                                        <label class="form-label" for="password">{{'gender' |
-                                                            translate}}</label>
-                                                        <input disabled type="text" class="form-control" />
-                                                    </div>
-                                                    <div class="form-group form-password-toggle col-md-6">
-                                                        <label class="form-label" for="confirm-password">{{'BirthDate' |
-                                                            translate}}</label>
-                                                        <input disabled type="text" class="form-control" />
-                                                    </div>
-                                                    <div class="form-group form-password-toggle col-md-6">
-                                                        <label class="form-label" for="confirm-password">{{'JobInvisa' |
-                                                            translate}}</label>
-                                                        <input disabled type="text" class="form-control" />
-                                                    </div>
-                                                    <div class="form-group form-password-toggle col-md-6">
-                                                        <label class="form-label" for="confirm-password">{{'RealJob' |
-                                                            translate}}</label>
-                                                        <input disabled type="text" class="form-control" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="d-flex justify-content-between">
-                                                    <button (click)="horizontalWizardStepperPrevious()"
-                                                        class="btn btn-outline-secondary btn-prev" disabled
-                                                        rippleEffect>
-                                                        <i data-feather="arrow-left"
-                                                            class="align-middle mr-sm-25 mr-0"></i>
-                                                        <span
-                                                            class="align-middle d-sm-inline-block d-none">{{'Previous' | translate}}</span>
-                                                    </button>
-                                                    <button (click)="horizontalWizardStepperNext(accountDetailsForm)"
-                                                        type="submit" class="btn btn-primary btn-next" rippleEffect>
-                                                        <span class="align-middle d-sm-inline-block d-none">{{'NextReviwe' | translate}}</span>
-                                                        <i data-feather="arrow-right"
-                                                            class="align-middle ml-sm-25 ml-0"></i>
-                                                    </button>
-                                                </div>
-                                            </form>
+                        <ul ngbNav #nav="ngbNav" class="nav-tabs">
+                            <li ngbNavItem>
+                                <a ngbNavLink><span
+                                        class="bs-stepper-title">{{'common.EmployeeDetail'|translate}}</span></a>
+                                <ng-template ngbNavContent>
+                                    <form #accountDetailsForm="ngForm">
+                                        <div class="content-header">
+                                            <h5 class="mb-0"> {{'common.EmployeeDetail'| translate}} </h5>
                                         </div>
-                                        <div id="personal-info" class="content">
-                                            <form #personalInfoForm="ngForm">
-                                                <div class="content-header">
-                                                    <h5 class="mb-0">{{'DetailsSalaryAndJob'| translate}}</h5>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group col-md-6">
-                                                        <label class="form-label" for="first-name">{{'JobTybe'|
-                                                            translate}}</label>
-                                                        <input disabled type="text" class="form-control" />
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label class="form-label" for="last-name">{{'BasicSalary'|
-                                                            translate}}</label>
-                                                        <input disabled type="text" class="form-control" />
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group col-md-6">
-                                                        <label class="form-label"
-                                                            for="country">{{'SubsistenceAllowance'|
-                                                            translate}}</label>
-                                                        <input disabled type="text" class="form-control" />
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label class="form-label" for="country">{{'HousingAllowance'|
-                                                            translate}}</label>
-                                                        <input disabled type="text" class="form-control" />
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label class="form-label" for="country">{{'RelocationAllowance'|
-                                                            translate}}</label>
-                                                        <input disabled type="text" class="form-control" />
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label class="form-label" for="country">{{'TotalSalary'|
-                                                            translate}}</label>
-                                                        <input disabled type="text" class="form-control" />
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex justify-content-between">
-                                                    <button (click)="horizontalWizardStepperPrevious()"
-                                                        class="btn btn-primary btn-prev" rippleEffect>
-                                                        <i data-feather="arrow-left"
-                                                            class="align-middle mr-sm-25 mr-0"></i>
-                                                        <span
-                                                            class="align-middle d-sm-inline-block d-none">{{'Previous' | translate}}</span>
-                                                    </button>
-                                                    <button (click)="horizontalWizardStepperNext(personalInfoForm)"
-                                                        class="btn btn-primary btn-next" rippleEffect>
-                                                        <span class="align-middle d-sm-inline-block d-none">{{'NextReviwe' | translate}}</span>
-                                                        <i data-feather="arrow-right"
-                                                            class="align-middle ml-sm-25 ml-0"></i>
-                                                    </button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div id="address" class="content">
-                                            <form #addressForm="ngForm">
-                                                <div class="content-header">
-                                                    <h5 class="mb-0">{{'PasportDetail'| translate}}</h5>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group col-md-6">
-                                                        <label class="form-label" for="PassportNumber">
-                                                            {{'PassportNumber'|
-                                                            translate}}</label>
-                                                        <input disabled type="text" class="form-control" />
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label class="form-label"
-                                                            for="PassportDate">{{'StartDataPassport'|
-                                                            translate}}</label>
-                                                        <input disabled type="text" class="form-control" />
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group col-md-6">
-                                                        <label class="form-label"
-                                                            for="PassportEndDate">{{'EndDataPassport'|
-                                                            translate}}</label>
-                                                        <input disabled type="text" class="form-control" />
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label class="form-label"
-                                                            for="PassportEndDate">{{'CopyPassport'|
-                                                            translate}}</label>
-                                                        <input disabled type="text" class="form-control" />
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label class="form-label" for="PassportEndDate">
-                                                            {{'PhotoVisa'|
-                                                            translate}}</label>
-                                                        <input disabled type="text" class="form-control" />
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label class="form-label" for="TDvisa_number">{{'VisaNumber'|
-                                                            translate}}</label>
-                                                        <input disabled type="text" class="form-control" />
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label class="form-label" for="carrier_company">
-                                                            {{'CarrierCompany'| translate}}
-                                                        </label>
-                                                        <input disabled type="text" class="form-control" />
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label class="form-label" for="travel_date"> {{'TravelDate'|
-                                                            translate}}</label>
-                                                        <input disabled type="text" class="form-control" />
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label class="form-label"
-                                                            for="PassportEndDate">{{'PhotoTicket'|
-                                                            translate}}</label>
-                                                        <input disabled type="text" class="form-control" />
-                                                    </div>
-                                                </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label"
+                                                    for="username">{{'common.EmployeeName'|translate}}:
+                                                </label>
+                                                <br>
+                                                <span class="text-secondary">test</span>
 
-                                                <div class="d-flex justify-content-between">
-                                                    <button (click)="horizontalWizardStepperPrevious()"
-                                                        class="btn btn-primary btn-prev" rippleEffect>
-                                                        <i data-feather="arrow-left"
-                                                            class="align-middle mr-sm-25 mr-0"></i>
-                                                        <span
-                                                            class="align-middle d-sm-inline-block d-none">{{'Previous' | translate}}</span>
-                                                    </button>
-                                                    <button (click)="horizontalWizardStepperNext(addressForm)"
-                                                        class="btn btn-primary btn-next" rippleEffect>
-                                                        <span class="align-middle d-sm-inline-block d-none">{{'NextReviwe' | translate}}</span>
-                                                        <i data-feather="arrow-right"
-                                                            class="align-middle ml-sm-25 ml-0"></i>
-                                                    </button>
-                                                </div>
-                                            </form>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label"
+                                                    for="email">{{'common.nationality'|translate}}:</label>
+                                                <br>
+                                                <span class="text-secondary">test</span>
+                                            </div>
                                         </div>
-                                        <div id="uniform" class="content">
-                                            <form #socialLinkForm="ngForm">
-                                                <div class="content-header">
-                                                    <h5 class="mb-0"> {{'uniformDetail'| translate}} </h5>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group col-md-6">
-                                                        <label class="form-label" for="T_shirtSizeVar">{{'TshirtSize'|
-                                                            translate}}
-                                                        </label>
-                                                        <input disabled type="text" class="form-control" />
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label class="form-label" for="PantsSize"> {{'PantsSize'|
-                                                            translate}} </label>
-                                                        <input disabled type="text" class="form-control" />
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label class="form-label" for="shoeSize">{{'ShoeSize'|
-                                                            translate}}</label>
-                                                        <input disabled type="text" class="form-control" />
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label class="form-label" for="PhoneType">{{'PhoneType'|
-                                                            translate}}</label>
-                                                        <input disabled type="text" class="form-control" />
-                                                    </div>
-
-                                                </div>
-                                                <div class="d-flex justify-content-between">
-                                                    <button (click)="horizontalWizardStepperPrevious()"
-                                                        class="btn btn-primary btn-prev" rippleEffect>
-                                                        <i data-feather="arrow-left"
-                                                            class="align-middle mr-sm-25 mr-0"></i>
-                                                        <span
-                                                            class="align-middle d-sm-inline-block d-none">{{'Previous' | translate}}</span>
-                                                    </button>
-                                                    <button class="btn btn-success btn-submit" disabled
-                                                        rippleEffect>{{'NextReviwe' | translate}}</button>
-                                                </div>
-                                            </form>
+                                        <div class="row">
+                                            <div class="form-group form-password-toggle col-md-6">
+                                                <label class="form-label"
+                                                    for="password">{{'common.gender'|translate}}:</label>
+                                                <br>
+                                                <span class="text-secondary">test</span>
+                                            </div>
+                                            <div class="form-group form-password-toggle col-md-6">
+                                                <label class="form-label"
+                                                    for="confirm-password">{{'common.BirthDate'|translate}}:</label>
+                                                <br>
+                                                <span class="text-secondary">test</span>
+                                            </div>
+                                            <div class="form-group form-password-toggle col-md-6">
+                                                <label class="form-label"
+                                                    for="confirm-password">{{'common.JobInvisa'|translate}}:</label>
+                                                <br>
+                                                <span class="text-secondary">test</span>
+                                            </div>
+                                            <div class="form-group form-password-toggle col-md-6">
+                                                <label class="form-label"
+                                                    for="confirm-password">{{'common.RealJob'|translate}}:</label>
+                                                <br>
+                                                <span class="text-secondary">test</span>
+                                            </div>
                                         </div>
                                     </form>
-                                </div>
+                                </ng-template>
+                            </li>
+                            <li ngbNavItem>
+                                <a ngbNavLink> <span
+                                        class="bs-stepper-title">{{'common.DetailsSalaryAndJob'|translate}}</span></a>
+                                <ng-template ngbNavContent>
+                                    <form #personalInfoForm="ngForm">
+                                        <div class="content-header">
+                                            <h5 class="mb-0">{{'common.DetailsSalaryAndJob'| translate}}
+                                            </h5>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label"
+                                                    for="first-name">{{'common.JobTybe'|translate}}:</label>
+                                                <br>
+                                                <span class="text-secondary">test</span>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label"
+                                                    for="last-name">{{'common.BasicSalary'|translate}}:</label>
+                                                <br>
+                                                <span class="text-secondary">test</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label"
+                                                    for="country">{{'common.SubsistenceAllowance'|translate}}:</label>
+                                                <br>
+                                                <span class="text-secondary">test</span>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label"
+                                                    for="country">{{'common.HousingAllowance'|translate}}:</label>
+                                                <br>
+                                                <span class="text-secondary">test</span>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label"
+                                                    for="country">{{'common.RelocationAllowance'|translate}}:</label>
+                                                <br>
+                                                <span class="text-secondary">test</span>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label"
+                                                    for="country">{{'common.TotalSalary'|translate}}:</label>
+                                                <br>
+                                                <span class="text-secondary">test</span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </ng-template>
+                            </li>
+                            <li ngbNavItem>
+                                <a href="javascript:void(0)" ngbNavLink> <span
+                                        class="bs-stepper-title">{{'common.PasportDetail'|
+                                        translate}}</span></a>
+                                <ng-template ngbNavContent>
+                                    <form #addressForm="ngForm">
+                                        <div class="content-header">
+                                            <h5 class="mb-0">{{'common.PasportDetail'| translate}}</h5>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label" for="PassportNumber">
+                                                    {{'common.PassportNumber'|translate}}:</label>
+                                                <br>
+                                                <span class="text-secondary">test</span>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label"
+                                                    for="PassportDate">{{'common.StartDataPassport'|translate}}:</label>
+                                                <br>
+                                                <span class="text-secondary">test</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label"
+                                                    for="PassportEndDate">{{'common.EndDataPassport'|translate}}:</label>
+                                                <br>
+                                                <span class="text-secondary">test</span>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label"
+                                                    for="PassportEndDate">{{'common.CopyPassport'|translate}}:</label>
+                                                <br>
+                                                <span class="text-secondary">test</span>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label"
+                                                    for="PassportEndDate">{{'common.PhotoVisa'|translate}}:</label>
+                                                <br>
+                                                <span class="text-secondary">test</span>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label"
+                                                    for="TDvisa_number">{{'common.VisaNumber'|translate}}:</label>
+                                                <br>
+                                                <span class="text-secondary">test</span>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label"
+                                                    for="carrier_company">{{'common.CarrierCompany'|
+                                                    translate}}:
+                                                </label>
+                                                <br>
+                                                <span class="text-secondary">test</span>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label"
+                                                    for="travel_date">{{'common.TravelDate'|translate}}:</label>
+                                                <br>
+                                                <span class="text-secondary">test</span>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label"
+                                                    for="PassportEndDate">{{'common.PhotoTicket'|translate}}:</label>
+                                                <br>
+                                                <span class="text-secondary">test</span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </ng-template>
+                            </li>
+                            <li ngbNavItem>
+                                <a ngbNavLink> <span class="bs-stepper-title"> {{'common.uniformDetail'|
+                                        translate}}
+                                    </span></a>
+                                <ng-template ngbNavContent>
+                                    <form #socialLinkForm="ngForm">
+                                        <div class="content-header">
+                                            <h5 class="mb-0"> {{'common.uniformDetail'| translate}}</h5>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label"
+                                                    for="T_shirtSizeVar">{{'common.TshirtSize'|translate}}:
+                                                </label>
+                                                <br>
+                                                <span class="text-secondary">test</span>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label" for="PantsSize">
+                                                    {{'common.PantsSize'|translate}}: </label>
+                                                <br>
+                                                <span class="text-secondary">test</span>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label"
+                                                    for="shoeSize">{{'common.ShoeSize'|translate}}:</label>
+                                                <br>
+                                                <span class="text-secondary">test</span>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label"
+                                                    for="PhoneType">{{'common.PhoneType'|translate}}:</label>
+                                                <br>
+                                                <span class="text-secondary">test</span>
+                                            </div>
+
+                                        </div>
+                                    </form>
+                                </ng-template>
+                            </li>
+                        </ul>
+                        <div [ngbNavOutlet]="nav" class="mt-2"></div>
+                        <div class="d-flex">
+                            <div>
+                                <button type="button" (click)="this.editDisplayModal = false"
+                                    class="btn btn-gradient-danger mt-1 text-left">{{'btn.Cancel'|translate}}</button>
                             </div>
-                        </section>
-                        <!--/ Horizontal Wizard --> 
-                        <div class="DialogBtnRight">
-                            <button type="button" (click)="UpdateEmployeeOffices()"
-                                class="btn btn-gradient-success mt-1">{{'IssueDraftContract'|translate}}</button>
-                            <button type="button" (click)="this.editDisplayModal = false"
-                                class="btn btn-gradient-danger mt-1 ml-1">{{'Refuse'|translate}}</button>
-                        </div>
-                        <div class="DialogBtnLeft">
-                            <button type="button" (click)="this.editDisplayModal = false"
-                                class="btn btn-gradient-danger mt-1 text-left">{{'Cancel'|translate}}</button>
+                            <div class="ml-auto">
+                                <button type="button" (click)="this.editDisplayModal = false"
+                                    class="btn btn-gradient-danger mt-1 mr-1">{{'btn.Refuse'|translate}}</button>
+                                <button type="button" (click)="UpdateEmployeeOffices()"
+                                    class="btn btn-gradient-success mt-1">{{'btn.Add'|translate}}</button>
+                            </div>
                         </div>
                     </div>
                 </div>

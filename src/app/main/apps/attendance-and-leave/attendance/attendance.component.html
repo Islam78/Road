@@ -2,14 +2,14 @@
     <div class="content-body">
         <!-- content-header component -->
         <app-search></app-search>
-        <app-content-header [contentHeader]="contentHeader"></app-content-header>
+        <!-- <app-content-header [contentHeader]="contentHeader"></app-content-header> -->
 
         <!-- Table Basic -->
         <div class="row" id="basic-table">
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">{{'Attendance' | translate}}</h4>
+                        <h4 class="card-title">{{'AttendanceAndLeave.title' | translate}}</h4>
                     </div>
                     <div class="card-body col-6">
                         <select name="" id="" class="form-control">
@@ -22,13 +22,13 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th> {{'Name' | translate}} </th>
-                                    <th> {{'OfficesName' | translate}} </th>
-                                    <th> {{'AttendTime' | translate}} </th>
-                                    <th> {{'LeaveTime' | translate}} </th>
-                                    <th> {{'Date' | translate}} </th>
-                                    <th> {{'Location' | translate}} </th>
-                                    <th> {{'Type' | translate}} </th>
+                                    <th> {{'common.Name' | translate}} </th>
+                                    <th> {{'common.OfficesName' | translate}} </th>
+                                    <th> {{'AttendanceAndLeave.AttendTime' | translate}} </th>
+                                    <th> {{'AttendanceAndLeave.LeaveTime' | translate}} </th>
+                                    <th> {{'common.Date' | translate}} </th>
+                                    <th> {{'AttendanceAndLeave.Location' | translate}} </th>
+                                    <th> {{'AttendanceAndLeave.Type' | translate}} </th>
                                 </tr>
                             </thead>
                             <tbody>

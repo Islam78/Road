@@ -2,15 +2,16 @@
     <div class="content-body">
         <!-- content-header component -->
         <app-search></app-search>
+        <!-- <app-content-header [contentHeader]="contentHeader"></app-content-header> -->
 
         <!-- Table Basic -->
         <div class="row" id="basic-table">
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">{{'TransferRequestDepartment' | translate}}</h4>
+                        <h4 class="card-title">{{'contracts.TransferRequestDepartment' | translate}}</h4>
                         <button type="button" class="btn btn-info mr-1" (click)="NewDisplayModal = true"
-                            rippleEffect>{{'DemandeDeTransfert'|translate}}</button>
+                            rippleEffect>{{'contracts.DemandeDeTransfert'|translate}}</button>
                     </div>
                     <div class="card-body">
                     </div>
@@ -18,11 +19,11 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th> {{'Name' | translate}}</th>
-                                    <th> {{'Email' | translate}} </th>
-                                    <th> {{'Date' | translate}} </th>
-                                    <th> {{'JobTybe' | translate}} </th>
-                                    <th> {{'Action' | translate}} </th>
+                                    <th> {{'common.Name' | translate}}</th>
+                                    <th> {{'common.Email' | translate}} </th>
+                                    <th> {{'common.Date' | translate}} </th>
+                                    <th> {{'common.JobTybe' | translate}} </th>
+                                    <th> {{'common.Action' | translate}} </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -39,7 +40,7 @@
                                     <td><span class="badge badge-pill badge-light-primary mr-1">sales</span></td>
                                     <td class="overflow-hidden">
                                         <button type="button" class="btn btn-danger" (click)="showEditModalDialog()"
-                                            rippleEffect>{{'ExaminerTransfert' |translate}}</button>
+                                            rippleEffect>{{'contracts.ExaminerTransfert' |translate}}</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -59,7 +60,7 @@
                             <div class="row">
                                 <div class="col-md-12 col-12">
                                     <div class="form-group">
-                                        <label for="company-column">{{'SelectEmployee'|translate}}</label>
+                                        <label for="company-column">{{'common.SelectEmployee'|translate}}</label>
                                         <select class="form-control" name="" id="">
                                             <option value="">islam</option>
                                         </select>
@@ -67,7 +68,7 @@
                                 </div>
                                 <div class="col-md-12 col-12">
                                     <div class="form-group">
-                                        <label for="company-column">{{'TransferToManagement'|translate}}</label>
+                                        <label for="company-column">{{'contracts.TransferToManagement'|translate}}</label>
                                         <select class="form-control" name="" id="">
                                             <option value="">القاهره</option>
                                         </select>
@@ -75,19 +76,21 @@
                                 </div>
                                 <div class="col-md-12 col-12">
                                     <div class="form-group">
-                                        <label for="email-id-column">{{'reason'|translate}}</label>
+                                        <label for="email-id-column">{{'common.Reason'|translate}}</label>
                                         <textarea class="form-control" cols="30" rows="10"></textarea>
                                     </div>
                                 </div>
                             </div>
                         </form>
-                        <div class="DialogBtnRight">
-                            <button type="button" (click)="UpdateEmployeeOffices()"
-                                class="btn btn-gradient-success mt-1">{{'Add'|translate}}</button>
-                        </div>
-                        <div class="DialogBtnLeft">
-                            <button type="button" (click)="this.editDisplayModal = false"
-                                class="btn btn-gradient-danger mt-1 text-left">{{'Cancel'|translate}}</button>
+                        <div class="d-flex">
+                            <div>
+                                <button type="button" (click)="this.editDisplayModal = false"
+                                    class="btn btn-gradient-danger mt-1 text-left">{{'btn.Cancel'|translate}}</button>
+                            </div>
+                            <div class="ml-auto">
+                                <button type="button" (click)="UpdateEmployeeOffices()"
+                                    class="btn btn-gradient-success mt-1">{{'btn.Add'|translate}}</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -104,57 +107,59 @@
                             <div class="row">
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
-                                        <label for="first-name-column">{{'EmployeeName'|translate}}</label>
+                                        <label for="first-name-column">{{'common.EmployeeName'|translate}}</label>
                                         <input disabled ngModel="اسلام" type="text" id="first-name-column"
                                             class="form-control" placeholder="اسلام" name="fname-column" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
-                                        <label for="last-name-column">{{'nationality'|translate}}</label>
+                                        <label for="last-name-column">{{'common.nationality'|translate}}</label>
                                         <input disabled ngModel="مصري" type="text" id="last-name-column"
                                             class="form-control" placeholder="مصري" name="lname-column" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
-                                        <label for="city-column">{{'RealJob'|translate}}</label>
+                                        <label for="city-column">{{'common.RealJob'|translate}}</label>
                                         <input disabled ngModel="مهندس" type="text" id="city-column"
                                             class="form-control" placeholder="مهندس" name="city-column" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
-                                        <label for="country-floating">{{'TransferTimes'|translate}}</label>
+                                        <label for="country-floating">{{'contracts.TransferTimes'|translate}}</label>
                                         <input disabled ngModel="3" type="text" id="country-floating"
                                             class="form-control" name="country-floating" placeholder="3" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
-                                        <label for="company-column">{{'CurrentAdministration'|translate}}</label>
+                                        <label for="company-column">{{'contracts.CurrentAdministration'|translate}}</label>
                                         <input disabled ngModel="مصر" type="text" id="company-column"
                                             class="form-control" name="company-column" placeholder="مصر" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
-                                        <label for="email-id-column">{{'AdministrationTransferredTo'|translate}}</label>
+                                        <label for="email-id-column">{{'contracts.AdministrationTransferredTo'|translate}}</label>
                                         <input disabled ngModel="السعودية" type="email" id="email-id-column"
                                             class="form-control" name="email-id-column" placeholder="السعودية" />
                                     </div>
                                 </div>
                             </div>
                         </form>
-                        <div class="DialogBtnRight">
-                            <button type="button" (click)="UpdateEmployeeOffices()"
-                                class="btn btn-gradient-success mt-1">{{'Accept'|translate}}</button>
-                            <button type="button" (click)="this.editDisplayModal = false"
-                                class="btn btn-gradient-danger mt-1 ml-1">{{'Refuse'|translate}}</button>
-                        </div>
-                        <div class="DialogBtnLeft">
-                            <button type="button" (click)="this.editDisplayModal = false"
-                                class="btn btn-gradient-danger mt-1 text-left">{{'Cancel'|translate}}</button>
+                        <div class="d-flex">
+                            <div>
+                                <button type="button" (click)="this.editDisplayModal = false"
+                                    class="btn btn-gradient-danger mt-1 text-left">{{'btn.Cancel'|translate}}</button>
+                            </div>
+                            <div class="ml-auto">
+                                <button type="button" (click)="this.editDisplayModal = false"
+                                    class="btn btn-gradient-danger mt-1 mr-1">{{'btn.Refuse'|translate}}</button>
+                                <button type="button" (click)="UpdateEmployeeOffices()"
+                                    class="btn btn-gradient-success mt-1">{{'btn.Add'|translate}}</button>
+                            </div>
                         </div>
                     </div>
                 </div>

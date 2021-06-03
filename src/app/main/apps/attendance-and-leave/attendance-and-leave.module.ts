@@ -12,6 +12,7 @@ import { EmployeesRefusingWorkComponent } from './employees-refusing-work/employ
 import { TranslateModule } from '@ngx-translate/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContentHeaderModule } from 'app/layout/components/content-header/content-header.module';
+import { OfficesWorkComponent } from './offices-work/offices-work.component';
 
 
 @NgModule({
@@ -21,7 +22,7 @@ import { ContentHeaderModule } from 'app/layout/components/content-header/conten
     EmployeeExistRequestComponent,
     RunawayEmployeesComponent, 
     EmployeesRefusingWorkComponent, 
-    VacationRequestComponent
+    VacationRequestComponent, OfficesWorkComponent
 
   ],
   imports: [

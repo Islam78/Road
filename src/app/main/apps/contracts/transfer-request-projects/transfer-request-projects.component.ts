@@ -9,17 +9,13 @@ export class TransferRequestProjectsComponent implements OnInit {
 
   editDisplayModal: boolean
   NewDisplayModal :boolean
-  constructor() { }
+  ngOnInit(): void {}
 
   showEditModalDialog() {
     this.editDisplayModal = true;
   }
   UpdateEmployeeOffices() {
     this.editDisplayModal = false
-  }
-  ngOnInit(): void {
-   
-   
   }
 
 }

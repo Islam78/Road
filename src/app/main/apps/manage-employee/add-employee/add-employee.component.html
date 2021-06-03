@@ -6,12 +6,11 @@
         <!-- Horizontal Wizard -->
         <section class="horizontal-wizard">
             <app-search [Show]="true" [SearchArr]="SearchArr" (click)="MakeSearchArr()"></app-search>
-
-          
+            
             <div id="stepper1" class="bs-stepper horizontal-wizard-example">
-             
+
                 <div class="bs-stepper-header">
-                    
+
                     <div class="step" data-target="#account-details">
                         <button class="step-trigger">
                             <span class="bs-stepper-box">1</span>
@@ -26,7 +25,8 @@
                             <span class="bs-stepper-box">2</span>
                             <span class="bs-stepper-label">
 
-                                <span class="bs-stepper-title">{{'ManageEmployee.DetailsSalaryAndJob'| translate}}</span>
+                                <span class="bs-stepper-title">{{'ManageEmployee.DetailsSalaryAndJob'|
+                                    translate}}</span>
                             </span>
                         </button>
                     </div>
@@ -75,8 +75,9 @@
                             <form #accountDetailsForm="ngForm">
                                 <div class="row">
                                     <div class="form-group col-md-6">
-                                        <label class="form-label" for="user_name">{{'ManageEmployee.EmployeeName'| translate}} </label>
-                                        <input  [(ngModel)]="TDNameVar" #TDNameRef="ngModel" type="text" name="user_name"
+                                        <label class="form-label" for="user_name">{{'ManageEmployee.EmployeeName'|
+                                            translate}} </label>
+                                        <input [(ngModel)]="TDNameVar" #TDNameRef="ngModel" type="text" name="user_name"
                                             id="user_name" class="form-control"
                                             [class.error]="!TDNameRef.valid && accountDetailsForm.submitted" />
                                         <span *ngIf="accountDetailsForm.submitted && TDNameRef.invalid"
@@ -86,7 +87,8 @@
                                         </span>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label class="form-label" for="phone_number">{{'ManageEmployee.PhoneNumber'| translate}}
+                                        <label class="form-label" for="phone_number">{{'ManageEmployee.PhoneNumber'|
+                                            translate}}
                                         </label>
                                         <input [(ngModel)]="TDPhoneVar" #TDPhoneRef="ngModel" type="number"
                                             name="phone_number" id="phone_number" class="form-control"
@@ -129,7 +131,8 @@
 
                                 <div class="row">
                                     <div class="form-group col-md-6">
-                                        <label class="form-label" for="Nationality"> {{'ManageEmployee.nationality'| translate}}
+                                        <label class="form-label" for="Nationality"> {{'ManageEmployee.nationality'|
+                                            translate}}
                                         </label>
                                         <input [(ngModel)]="TDNationalityVar" #TDNationalityRef="ngModel" type="text"
                                             name="Nationality" id="Nationality" class="form-control"
@@ -142,7 +145,8 @@
                                         </span>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label class="form-label" for="Type"> {{'ManageEmployee.gender'| translate}}</label>
+                                        <label class="form-label" for="Type"> {{'ManageEmployee.gender'|
+                                            translate}}</label>
                                         <div class="form-group">
                                             <ng-select [items]="TDTypeVar" #TDTypeRef (change)="Gender($event)"
                                                 bindLabel="name"> </ng-select>
@@ -159,7 +163,8 @@
                                 <div class="row">
                                     <div class="form-group col-md-6">
                                         <!-- DateOfBirth -->
-                                        <label class="form-label" for="DateOfBirth">{{'ManageEmployee.BirthDate'| translate}}</label>
+                                        <label class="form-label" for="DateOfBirth">{{'ManageEmployee.BirthDate'|
+                                            translate}}</label>
                                         <div class="input-group">
                                             <input class="form-control" name="Basic Date Picker"
                                                 [(ngModel)]="TDDateOfBirthVar" ngbDatepicker
@@ -217,7 +222,8 @@
                                     <button (click)="horizontalWizardStepperPrevious()"
                                         class="btn btn-outline-secondary btn-prev" disabled rippleEffect>
                                         <i data-feather="arrow-left" class="align-middle mr-sm-25 mr-0"></i>
-                                        <span class="align-middle d-sm-inline-block d-none">{{'btn.previous' | translate}}</span>
+                                        <span class="align-middle d-sm-inline-block d-none">{{'btn.previous' |
+                                            translate}}</span>
                                     </button>
                                     <button (click)="horizontalWizardStepperNext(accountDetailsForm)" type="submit"
                                         class="btn btn-primary btn-next" rippleEffect>
@@ -246,7 +252,8 @@
                                         </span>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label class="form-label" for="subsistence_allowance">{{'ManageEmployee.HousingAllowance'|
+                                        <label class="form-label"
+                                            for="subsistence_allowance">{{'ManageEmployee.HousingAllowance'|
                                             translate}} </label>
                                         <input [(ngModel)]="TDsubsistence_allowanceVar"
                                             #TDsubsistence_allowanceRef="ngModel" type="text" name="last-name"
@@ -263,7 +270,8 @@
 
                                 <div class="row">
                                     <div class="form-group col-md-6">
-                                        <label class="form-label" for="Subsistence">{{'ManageEmployee.SubsistenceAllowance'|
+                                        <label class="form-label"
+                                            for="Subsistence">{{'ManageEmployee.SubsistenceAllowance'|
                                             translate}} </label>
                                         <input [(ngModel)]="TDSubsistenceVar" #TDSubsistenceRef="ngModel" type="text"
                                             name="Subsistence" id="Subsistence" class="form-control"
@@ -275,7 +283,8 @@
                                         </span>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label class="form-label" for="TDSalaryVar">{{'ManageEmployee.BasicSalary'| translate}}
+                                        <label class="form-label" for="TDSalaryVar">{{'ManageEmployee.BasicSalary'|
+                                            translate}}
                                         </label>
                                         <input [(ngModel)]="TDSalaryVar" #TDTDSalaryVarRef="ngModel" type="text"
                                             name="TDSalaryVar" id="TDSalaryVar" class="form-control"
@@ -291,7 +300,8 @@
 
                                 <div class="row">
                                     <div class="form-group col-md-6">
-                                        <label class="form-label" for="RelocationAllowance"> {{'ManageEmployee.RelocationAllowance'|
+                                        <label class="form-label" for="RelocationAllowance">
+                                            {{'ManageEmployee.RelocationAllowance'|
                                             translate}}</label>
                                         <input [(ngModel)]="TDRelocationAllowanceVar"
                                             #TDRelocationAllowanceRef="ngModel" type="text" name="RelocationAllowance"
@@ -305,7 +315,8 @@
                                         </span>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label class="form-label" for="TotalSalary">{{'ManageEmployee.TotalSalary'| translate}}</label>
+                                        <label class="form-label" for="TotalSalary">{{'ManageEmployee.TotalSalary'|
+                                            translate}}</label>
                                         <input [(ngModel)]="TDTotalSalaryVar" #TDTotalSalaryRef="ngModel" type="text"
                                             name="TotalSalary" id="TotalSalary" class="form-control"
                                             [class.error]="personalInfoForm.submitted && TDTotalSalaryRef.invalid" />
@@ -320,11 +331,13 @@
                                     <button (click)="horizontalWizardStepperPrevious()" class="btn btn-primary btn-prev"
                                         rippleEffect>
                                         <i data-feather="arrow-left" class="align-middle mr-sm-25 mr-0"></i>
-                                        <span class="align-middle d-sm-inline-block d-none">{{'btn.previous' | translate}}</span>
+                                        <span class="align-middle d-sm-inline-block d-none">{{'btn.previous' |
+                                            translate}}</span>
                                     </button>
                                     <button (click)="horizontalWizardStepperNext(personalInfoForm)"
                                         class="btn btn-primary btn-next" rippleEffect>
-                                        <span class="align-middle d-sm-inline-block d-none">{{'btn.next' |translate}}</span>
+                                        <span class="align-middle d-sm-inline-block d-none">{{'btn.next'
+                                            |translate}}</span>
                                         <i data-feather="arrow-right" class="align-middle ml-sm-25 ml-0"></i>
                                     </button>
                                 </div>
@@ -334,7 +347,8 @@
                             <form #addressForm="ngForm">
                                 <div class="row">
                                     <div class="form-group col-md-12">
-                                        <label class="form-label" for="PassportNumber"> {{'ManageEmployee.PassportNumber'|
+                                        <label class="form-label" for="PassportNumber">
+                                            {{'ManageEmployee.PassportNumber'|
                                             translate}}</label>
                                         <input [(ngModel)]="PassportNumberVar" #PassportNumber="ngModel" type="text"
                                             id="address" name="address" class="form-control"
@@ -349,7 +363,8 @@
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-md-6">
-                                        <label class="form-label" for="PassportDate">{{'ManageEmployee.StartDataPassport'|
+                                        <label class="form-label"
+                                            for="PassportDate">{{'ManageEmployee.StartDataPassport'|
                                             translate}}</label>
                                         <div class="input-group">
                                             <input class="form-control" name="Basic Date Picker"
@@ -362,7 +377,8 @@
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label class="form-label" for="PassportEndDate">{{'ManageEmployee.EndDataPassport'|
+                                        <label class="form-label"
+                                            for="PassportEndDate">{{'ManageEmployee.EndDataPassport'|
                                             translate}}</label>
                                         <div class="input-group">
                                             <input class="form-control" name="Basic Date Picker"
@@ -378,7 +394,8 @@
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-md-6">
-                                        <label class="form-label" for="PassportEndDate">{{'ManageEmployee.UploadCopyPassport'|
+                                        <label class="form-label"
+                                            for="PassportEndDate">{{'ManageEmployee.UploadCopyPassport'|
                                             translate}}</label>
                                         <fieldset class="form-group">
                                             <div class="custom-file">
@@ -409,7 +426,8 @@
                                         </fieldset>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label class="form-label" for="PassportEndDate"> {{'ManageEmployee.UploadPhotoVisa'|
+                                        <label class="form-label" for="PassportEndDate">
+                                            {{'ManageEmployee.UploadPhotoVisa'|
                                             translate}}</label>
                                         <fieldset class="form-group">
                                             <div class="custom-file">
@@ -447,7 +465,8 @@
                                         </span>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label class="form-label" for="carrier_company"> {{'ManageEmployee.CarrierCompany'| translate}}
+                                        <label class="form-label" for="carrier_company">
+                                            {{'ManageEmployee.CarrierCompany'| translate}}
                                         </label>
                                         <input [(ngModel)]="TDcarrier_companyVar" #carrier_companyRef="ngModel"
                                             type="text" name="carrier_company" id="carrier_company" class="form-control"
@@ -462,7 +481,8 @@
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-md-6">
-                                        <label class="form-label" for="travel_date"> {{'ManageEmployee.TravelDate'| translate}}</label>
+                                        <label class="form-label" for="travel_date"> {{'ManageEmployee.TravelDate'|
+                                            translate}}</label>
                                         <div class="input-group">
                                             <input class="form-control" name="Basic Date Picker"
                                                 [(ngModel)]="TDtravel_dateVar" ngbDatepicker
@@ -474,7 +494,8 @@
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label class="form-label" for="PassportEndDate">{{'ManageEmployee.UploadPhotoTicket'|
+                                        <label class="form-label"
+                                            for="PassportEndDate">{{'ManageEmployee.UploadPhotoTicket'|
                                             translate}}</label>
                                         <fieldset class="form-group">
                                             <div class="custom-file">
@@ -502,11 +523,13 @@
                                     <button (click)="horizontalWizardStepperPrevious()" class="btn btn-primary btn-prev"
                                         rippleEffect>
                                         <i data-feather="arrow-left" class="align-middle mr-sm-25 mr-0"></i>
-                                        <span class="align-middle d-sm-inline-block d-none">{{'btn.previous' | translate}}</span>
+                                        <span class="align-middle d-sm-inline-block d-none">{{'btn.previous' |
+                                            translate}}</span>
                                     </button>
                                     <button (click)="horizontalWizardStepperNext(addressForm)"
                                         class="btn btn-primary btn-next" rippleEffect>
-                                        <span class="align-middle d-sm-inline-block d-none">{{'btn.next' | translate}}</span>
+                                        <span class="align-middle d-sm-inline-block d-none">{{'btn.next' |
+                                            translate}}</span>
                                         <i data-feather="arrow-right" class="align-middle ml-sm-25 ml-0"></i>
                                     </button>
                                 </div>
@@ -516,7 +539,8 @@
                             <form #socialLinkForm="ngForm">
                                 <div class="row">
                                     <div class="form-group col-md-6 ">
-                                        <label class="form-label" for="T_shirtSizeVar">{{'ManageEmployee.TshirtSize'| translate}}
+                                        <label class="form-label" for="T_shirtSizeVar">{{'ManageEmployee.TshirtSize'|
+                                            translate}}
                                         </label>
                                         <input [(ngModel)]="T_shirtSizeVar" #T_shirtSizeVarkRef="ngModel" type="text"
                                             id="T_shirtSizeVar" name="T_shirtSizeVar" class="form-control"
@@ -529,7 +553,8 @@
                                         </span>
                                     </div>
                                     <div class="form-group col-md-6 ">
-                                        <label class="form-label" for="PantsSize"> {{'ManageEmployee.PantsSize'| translate}} </label>
+                                        <label class="form-label" for="PantsSize"> {{'ManageEmployee.PantsSize'|
+                                            translate}} </label>
                                         <input [(ngModel)]="PantsSizeVar" #PantsSizeRef="ngModel" type="text"
                                             id="PantsSize" name="PantsSize" class="form-control"
                                             [class.error]="socialLinkForm.submitted && PantsSizeRef.invalid" />
@@ -542,7 +567,8 @@
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-md-6 ">
-                                        <label class="form-label" for="shoeSize">{{'ManageEmployee.ShoeSize'| translate}}</label>
+                                        <label class="form-label" for="shoeSize">{{'ManageEmployee.ShoeSize'|
+                                            translate}}</label>
                                         <input [(ngModel)]="shoeSizeVar" #shoeSizeRef="ngModel" type="text"
                                             id="shoeSize" name="shoeSize" class="form-control"
                                             [class.error]="socialLinkForm.submitted && shoeSizeRef.invalid" />
@@ -554,7 +580,8 @@
                                         </span>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label class="form-label" for="PhoneType">{{'ManageEmployee.PhoneType'| translate}}</label>
+                                        <label class="form-label" for="PhoneType">{{'ManageEmployee.PhoneType'|
+                                            translate}}</label>
                                         <input [(ngModel)]="PhoneTypeVar" #PhoneTypeRef="ngModel" type="text"
                                             id="PhoneType" name="PhoneType" class="form-control"
                                             [class.error]="socialLinkForm.submitted && PhoneTypeRef.invalid" />
@@ -569,11 +596,13 @@
                                     <button (click)="horizontalWizardStepperPrevious()" class="btn btn-primary btn-prev"
                                         rippleEffect>
                                         <i data-feather="arrow-left" class="align-middle mr-sm-25 mr-0"></i>
-                                        <span class="align-middle d-sm-inline-block d-none">{{'btn.previous' | translate}}</span>
+                                        <span class="align-middle d-sm-inline-block d-none">{{'btn.previous' |
+                                            translate}}</span>
                                     </button>
                                     <button (click)="horizontalWizardStepperNext(personalInfoForm)"
                                         class="btn btn-primary btn-next" rippleEffect>
-                                        <span class="align-middle d-sm-inline-block d-none">{{'btn.next' | translate}}</span>
+                                        <span class="align-middle d-sm-inline-block d-none">{{'btn.next' |
+                                            translate}}</span>
                                         <i data-feather="arrow-right" class="align-middle ml-sm-25 ml-0"></i>
                                     </button>
                                 </div>

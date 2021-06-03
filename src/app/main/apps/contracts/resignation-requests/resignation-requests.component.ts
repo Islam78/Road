@@ -9,6 +9,7 @@ export class ResignationRequestsComponent implements OnInit {
 
   editDisplayModal: boolean
   constructor() { }
+  ngOnInit(): void {}
 
   showEditModalDialog() {
     this.editDisplayModal = true;
@@ -16,6 +17,5 @@ export class ResignationRequestsComponent implements OnInit {
   UpdateEmployeeOffices() {
     this.editDisplayModal = false
   }
-  ngOnInit(): void {
-  }
+  
 }

@@ -7,11 +7,7 @@ import Stepper from 'bs-stepper';
   styleUrls: ['./issuance-contracts.component.scss']
 })
 export class IssuanceContractsComponent implements OnInit {
-
-
-  public contentHeader: object
   constructor() { }
-
   ngOnInit(): void {}
 
   SearchArr
@@ -28,9 +24,6 @@ export class IssuanceContractsComponent implements OnInit {
   editDisplayModal: boolean = false;
   ReviewDialog() {
     this.editDisplayModal = true
-    setTimeout(() => {
-      this.horizontalWizardStepper = new Stepper(document.querySelector('#stepper1'), {});
-    }, 100);
   }
   horizontalWizardStepper: Stepper;
   horizontalWizardStepperPrevious() {

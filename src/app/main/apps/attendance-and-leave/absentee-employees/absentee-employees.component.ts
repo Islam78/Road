@@ -6,9 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./absentee-employees.component.scss']
 })
 export class AbsenteeEmployeesComponent implements OnInit {
-
-
-  public contentHeader: object
   editDisplayModal: boolean
   constructor() { }
 
@@ -18,25 +15,6 @@ export class AbsenteeEmployeesComponent implements OnInit {
   UpdateEmployeeOffices() {
     this.editDisplayModal = false
   }
-  ngOnInit(): void {
-    this.contentHeader = {
-      headerTitle: '',
-      actionButton: true,
-      breadcrumb: {
-        type: '',
-        links: [
-          {
-            name: '',
-            isLink: true,
-            link: '/'
-          },
-          {
-            name: '',
-            isLink: false
-          }
-        ]
-      }
-    }
-  }
+  ngOnInit(): void {}
 
 }

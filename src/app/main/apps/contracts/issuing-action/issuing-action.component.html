@@ -2,13 +2,14 @@
     <div class="content-body">
         <!-- content-header component -->
         <app-search [Show]="true" [SearchArr]="SearchArr" [SearchHeader]="SearchHeader" (click)="MakeSearchArr()"></app-search>
+        <!-- <app-content-header [contentHeader]="contentHeader"></app-content-header> -->
 
         <!-- Table Basic -->
         <div class="row" id="basic-table">
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">{{'IssuingAction' | translate}}</h4>
+                        <h4 class="card-title">{{'contracts.IssuingAction' | translate}}</h4>
                     </div>
                     <div class="card-body">
                     </div>
@@ -16,13 +17,13 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th> {{'Name' | translate}}</th>
-                                    <th> {{'JobTybe' | translate}} </th>
-                                    <th> {{'EmployeeId' | translate}} </th>
-                                    <th> {{'Administration' | translate}} </th>
-                                    <th> {{'OfficeName' | translate}} </th>
-                                    <th> {{'Date' | translate}} </th>
-                                    <th> {{'Action' | translate}} </th>
+                                    <th> {{'common.Name' | translate}}</th>
+                                    <th> {{'common.JobTybe' | translate}} </th>
+                                    <th> {{'common.EmployeeId' | translate}} </th>
+                                    <th> {{'contracts.Administration' | translate}} </th>
+                                    <th> {{'common.OfficeName' | translate}} </th>
+                                    <th> {{'common.Date' | translate}} </th>
+                                    <th> {{'common.Action' | translate}} </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -36,7 +37,7 @@
                                     <td>Test</td>
                                     <td><span class="badge badge-pill badge-light-primary mr-1">1/2/2021</span></td>
                                     <td class="overflow-hidden">
-                                        <button type="button" class="btn btn-danger" rippleEffect>{{'StartWork' |
+                                        <button type="button" class="btn btn-danger" rippleEffect>{{'contracts.StartWork' |
                                             translate}}</button>
                                     </td>
                                 </tr>

@@ -4,7 +4,6 @@
         <app-search [Show]="true" [SearchArr]="SearchArr" [SearchHeader]="SearchHeader" (click)="MakeSearchArr()">
         </app-search>
         <!-- <app-content-header [contentHeader]="contentHeader"></app-content-header> -->
-
         <!-- Basic Alerts start -->
         <section id="sample-page">
             <div class="card">                
@@ -21,20 +20,20 @@
                             </div>
                             <ng-template pTemplate="footer">
                                 <button icon="pi pi-check" (click)="add(addGroup)" label="Add"
-                                    class="btn btn-primary btn-next">{{'ADD' | translate}}</button>
+                                    class="btn btn-primary btn-next">{{'adminOffices.Add' | translate}}</button>
                             </ng-template>
                         </p-dialog>
                         <button type="button" class="btn btn-info ml-1 mt-1" (click)="showAddModalDialog()"
-                            rippleEffect>{{'Add'|translate}}</button>
+                            rippleEffect>{{'adminOffices.Add'|translate}}</button>
                     </div>
                     <div class="form-group col-md-12">
                         <p-table [value]="groups" [paginator]="true" [lazy]="true" [loading]="loading" [rows]="7">
                             <ng-template pTemplate="header">
                                 <tr>
-                                    <th>{{'Code' | translate}}</th>
-                                    <th>{{'Name' | translate}}</th>
-                                    <th>{{'Update' | translate}}</th>
-                                    <th>{{'Action' | translate}}</th>
+                                    <th>{{'adminOffices.Code' | translate}}</th>
+                                    <th>{{'adminOffices.Name' | translate}}</th>
+                                    <th>{{'adminOffices.Date' | translate}}</th>
+                                    <th>{{'adminOffices.Action' | translate}}</th>
                                 </tr>
                             </ng-template>
                             <ng-template pTemplate="body" let-item>
@@ -44,9 +43,9 @@
                                     <td>{{item.updated_at |date}}</td>
                                     <td>
                                         <button type="button" (click)="OpenEdit(item)"
-                                            class="btn btn-info mr-1 mb-1">{{'Edit'|translate}}</button>
+                                            class="btn btn-info mr-1 mb-1">{{'adminOffices.Edit'|translate}}</button>
                                         <button type="button" (click)="remove(item)"
-                                            class="btn btn-danger mr-1 mb-1">{{'Delete'|translate}}</button>
+                                            class="btn btn-danger mr-1 mb-1">{{'adminOffices.Delete'|translate}}</button>
                                     </td>
                                 </tr>
                             </ng-template>
@@ -127,7 +126,7 @@
                                     </ng-template>
                                 </p-table> -->
                                 <button type="button" style="float: right;" (click)="UpdateGroupPermisions()"
-                                    class="btn btn-gradient-success mt-1">{{'Save'|translate}}</button>
+                                    class="btn btn-gradient-success mt-1">{{'adminOffices.Save'|translate}}</button>
                             </div>
                         </div>
                     </div>

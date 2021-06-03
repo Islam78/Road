@@ -8,14 +8,10 @@ import Stepper from 'bs-stepper';
 })
 export class EndingServicesComponent implements OnInit {
 
-  public contentHeader: object
   NewDisplayModal:boolean
   constructor() { }
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void {}
 
-  
   editDisplayModal :boolean = false;
   ReviewDialog() {
     this.editDisplayModal =true

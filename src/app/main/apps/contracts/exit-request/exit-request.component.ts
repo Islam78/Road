@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class ExitRequestComponent implements OnInit {
 
 
-  public contentHeader: object
   editDisplayModal: boolean
   NewDisplayModal: boolean
   constructor() { }
@@ -19,24 +18,6 @@ export class ExitRequestComponent implements OnInit {
   UpdateEmployeeOffices() {
     this.editDisplayModal = false
   }
-  ngOnInit(): void {
-    this.contentHeader = {
-      headerTitle: 'Hr',
-      actionButton: true,
-      breadcrumb: {
-        type: '',
-        links: [
-          {
-            name: 'Contract',
-            isLink: true,
-            link: '/'
-          },
-          {
-            name: 'exist request',
-            isLink: false
-          }
-        ]
-      }
-    }
-  }
+  ngOnInit(): void {}
+
 }

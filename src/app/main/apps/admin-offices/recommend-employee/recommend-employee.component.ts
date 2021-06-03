@@ -14,9 +14,6 @@ export class RecommendEmployeeComponent implements OnInit {
 
   showEditModalDialog() {
     this.editDisplayModal = true;
-    setTimeout(() => {
-      this.horizontalWizardStepper = new Stepper(document.querySelector('#stepper1'), {});
-    }, 100);
   }
   UpdateEmployeeOffices() {
     this.editDisplayModal = false

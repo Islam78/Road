@@ -7,29 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IssuingActionComponent implements OnInit {
 
-  public contentHeader: object
   constructor() { }
 
-  ngOnInit(): void {
-    this.contentHeader = {
-      headerTitle: '',
-      actionButton: true,
-      breadcrumb: {
-        type: '',
-        links: [
-          {
-            name: '',
-            isLink: true,
-            link: '/'
-          },
-          {
-            name: '',
-            isLink: false
-          }
-        ]
-      }
-    }
-  }
+  ngOnInit(): void {}
+
   SearchArr
   SearchHeader
   MakeSearchArr() {

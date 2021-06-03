@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class EmployeesRefusingWorkComponent implements OnInit {
 
 
-  public contentHeader: object
   editDisplayModal: boolean
   constructor() { }
   
@@ -18,25 +17,7 @@ export class EmployeesRefusingWorkComponent implements OnInit {
   UpdateEmployeeOffices() {
     this.editDisplayModal = false
   }
-  ngOnInit(): void {
-    this.contentHeader = {
-      headerTitle: 'Hr',
-      actionButton: true,
-      breadcrumb: {
-        type: '',
-        links: [
-          {
-            name: 'Contract',
-            isLink: true,
-            link: '/'
-          },
-          {
-            name: 'Employees refusing work',
-            isLink: false
-          }
-        ]
-      }
-    }
-  }
+  ngOnInit(): void {}
+
   
 }
